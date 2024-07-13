@@ -1,5 +1,6 @@
 'use strict'
 const definedLanguages = ["en", "br"];
+var language = localStorage.getItem("violetoolkit-language")
 
 var English = {
     "welcome": "Welcome to my website!",
@@ -112,23 +113,8 @@ Está usando um navegador antigo (possívelmente um de 2010)? Não se preocupe! 
     }
 }
 
-// function langSetup() {
-//     if (definedLanguages.includes(language)) {
-//         console.log("Loading language.");
-//         langSet(false);
-//     }
-//     else {
-//         console.warn("Language not set. If this is your first visit to the website, disregard this message.");
-//         console.warn("Defaulting to English.");
-//         langSet(false);
-//     }
-// }
-
-function langSet() {
-    English.englishUpdate();
-    Portuguese.portugueseUpdate();
-    document.getElementById("titlev").textContent = version
-    return;
+function langSet(change) {
+    document.getElementById("titlev").textContent = version;
     console.log("Writing words into elements!");
     if (change !== false) {
         console.log("Changing language.")
@@ -144,24 +130,12 @@ function langSet() {
         default:
             console.log("Current Language: English (default option)");
             localStorage.setItem("violetool-lang", "en");
-            for (var x in English) {
-                English.englishUpdate();
-                if (x == "englishUpdate") {
-                    continue;
-                }
-                document.getElementById(x).textContent = English[x];
-            }
+            English.englishUpdate();
             break;
-            case "br":
+        case "br":
             console.log("Ídioma atual: Português Brasileiro");
             localStorage.setItem("violetool-lang", "br");
-            for (var x in Portuguese) {
-                Portuguese.portugueseUpdate();
-                if (x == "portugueseUpdate") {
-                    continue;
-                }
-                document.getElementById(x).textContent = Portuguese[x];
-            }
+            Portuguese.portugueseUpdate();
             break;
     }
 }

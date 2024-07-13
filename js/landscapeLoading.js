@@ -5,7 +5,6 @@ function landscapeLoading() {
 
     document.getElementById("screen").style.top = `${percenter("y", 6)}px`;
     document.getElementById("screen").style.width = `${percenter("x", 95)}px`;
-    // document.getElementById("screen").style.height = `${percenter("y", 49.25)}px`;
     document.getElementById("screen").style.height = `${percenter("y", 85)}px`;
 
     document.getElementById("top-left").style.top = `${percenter("y", 0.05)}px`;
@@ -40,11 +39,6 @@ function landscapeLoading() {
         document.getElementsByClassName("bottom")[i].style.bottom = `${percenter("y", 0.05)}px`;
         document.getElementsByClassName("bottom")[i].style.fontSize = `${percenter("x", 1.5)}px`;
     }
-
-    // The <hr> lines that separate the buttons.
-    document.getElementById("top").style.top = `${percenter("y", 3.5)}px`;
-    // document.getElementById("top").style.left = `${percenter("x", 0)}px`;
-    document.getElementById("bottom").style.bottom = `${percenter("y", 3.5)}px`;
 
     document.getElementById("tl1-text").style.minWidth = `${percenter("x", 60)}px`;
     document.getElementById("tl1-text").style.minHeight = `${percenter("y", 20)}px`;

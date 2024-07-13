@@ -11,6 +11,5 @@ function percenter(pos, number) {
         default:
             console.error(`${pos} is not valid position.`)
     }
-    // if (debugMode) console.log(results)
     return results
 }

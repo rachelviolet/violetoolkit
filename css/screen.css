@@ -4,12 +4,6 @@
 #tool-t1-char-count {display: none;}
 #settings-div * {display: block;}
 
-/* .top  {
-    top: 1px;
-}
-.bottom {
-    bottom: 1px;
-} */
 p, a {font-size: 14px;}
 button {font-size: 14px;}
 h1 {font-size: 18px;}
@@ -34,19 +28,6 @@ margin: 0;}
     width: auto;
     padding: 2px;
     margin: 2px;}
-
-#top {
-    left: 0px;
-    top: 20px;
-    width: 100%;
-}
-
-
-#bottom {
-    left: 0px;
-    bottom: 20px;
-    width: 100%;
-}
 
 #top-left {
     top: 0.5px;

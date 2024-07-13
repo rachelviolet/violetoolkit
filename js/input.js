@@ -15,10 +15,6 @@ document.addEventListener('keydown', function(event) {
   drawApp();
 
   if (event.ctrlKey && page == "tool-t1-char-count") {
-    // if (preinput == 3) {
-    //   preinput = 4;
-    //   return;
-    // }
     console.log(event.key);
     if (event.ctrlKey && preinput == 3 && event.key.toLowerCase() == "control") {
       switchPage('tools-div')

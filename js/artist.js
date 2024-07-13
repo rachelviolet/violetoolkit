@@ -66,8 +66,6 @@ function drawApp() {
         }
         document.getElementById("titlev").style.fontSize = "12px";
     }
-
-    // if (debugMode) document.getElementById("screen").style.border = "2px black solid";
 }
 
 function fontSet(change) {
@@ -80,8 +78,6 @@ function fontSet(change) {
     else font = "OpenSans"
     for(var i = 0; i < document.body.getElementsByTagName("*").length; i++) {
         document.body.getElementsByTagName("*")[i].style.fontFamily = font;
-        // if (difference > 260 && vh > vw) document.body.getElementsByTagName("*")[i].style.fontSize = `${percenter("x", 3)}px`;
-        // else document.body.getElementsByTagName("*")[i].style.fontSize = `${percenter("x", 2)}px`;
     }
 }
 

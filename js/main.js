@@ -1,12 +1,13 @@
 'use strict'
 const namePortuguese = "Ferramenta Violeta";
 const nameEnglish = "Violet Toolkit"
-const version = "24.7a";
+const version = "24.7a2";
 var page = "0";
 var theme; // 0 Black text / White BG; 1 White text / Black BG; 2 Purple text / Black BG
 var themeDisabledColor = "#101010";
 var themeEnabledColor = "#5C00A3";
 var font;
+
 if (localStorage.getItem("violetool-retro-font") == 1) font = "VT323";
 else {
     font = "OpenSans";
@@ -25,12 +26,11 @@ switch (localStorage.getItem("violetool-theme")) {
         theme = 2;
         break;
 }
-const debugMode = true;
+const debugMode = false;
 const freezeMode = false;
 
 if (!debugMode) {
     console.log = function() {}
-    codeMarkup = undefined;
 }
 
 function websiteLoaded(source) {
@@ -62,7 +62,7 @@ function websiteLoaded(source) {
         document.getElementById("js-err").style.display = "none";
         console.warn("Modified code detected.");
     }
-    langSet(undefined);
+    // langSet(undefined);
     fontSet(undefined);
     themeSet(undefined);
     document.getElementById("home-div").style.display = "block";

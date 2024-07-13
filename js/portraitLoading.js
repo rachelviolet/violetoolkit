@@ -34,10 +34,6 @@ function portraitLoading() {
         document.getElementsByClassName("bottom")[i].style.fontSize = `${percenter("x", 3.33)}px`;
     }
 
-    // The <hr> lines that separate the buttons.
-    document.getElementById("top").style.top = `${percenter("y", 3.5)}px`;
-    document.getElementById("bottom").style.bottom = `${percenter("y", 3.5)}px`;
-
     document.getElementById("tl1-text").style.minWidth = `${percenter("x", 40)}px`;
     document.getElementById("tl1-text").style.minHeight = `${percenter("y", 20)}px`;
     document.getElementById("tl1-text").style.maxWidth = `${percenter("x", 55)}px`;
