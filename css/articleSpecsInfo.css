@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'VT323';
+    src: url("../font/VT323.ttf");
+}
+@font-face {
+    font-family: 'OpenSans';
+    src: url("../font/open-sans.ttf");
+}
+#back, #top {
+    border: 0.5px solid #cf9fff;
+    color: #2A002A;
+    text-decoration: none;
+}
+
+#back {
+    /* position: absolute; */
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    display: block;
+    opacity: 85%;
+}
+#top {
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    opacity: 75%;
+}
+body {
+    background-color: #fafafa;
+    font-family: 'OpenSans', 'VT323'
+}
+
+a {width: fit-content;}
+
+p, a {font-size: 120%;
+    margin: 0%;
+white-space: break-spaces;}
+span {font-size: 50%;}
+
+hr {
+    border-bottom: 100% solid #101010;
+}
+.tbcont {display: block;}
+.boldme {
+    font-size: 120%;
+    font-weight: bold;
+}

@@ -1,0 +1,120 @@
+#top-left, #top-right, #bottom-left, #bottom-right, #screen, #top, #bottom {display: inline; position: fixed;}
+#top-left * {display: inline;}
+#home-div, #info-div, #skill-div, #tools-div, #tool-t1-char-count, #settings-div, #about-div {display: none; width: 100%;}
+#tool-t1-char-count {display: none;}
+#settings-div * {display: block;}
+
+/* .top  {
+    top: 1px;
+}
+.bottom {
+    bottom: 1px;
+} */
+p, a {font-size: 14px;}
+button {font-size: 14px;}
+h1 {font-size: 18px;}
+h3 {font-size: 16px;
+padding: 0;
+margin: 0;}
+#titlev {font-size: 10px;}
+
+#short-a, #short-b, #short-c {display: inline;}
+
+#screen-alert {display: none;}
+#screen {
+    border: 1px solid #aaa;
+    overflow: auto;
+    top: 3.5%;
+    left: 0px;
+    width: 99.6%;
+    height: 90.5%;
+}
+
+#screen * {
+    width: auto;
+    padding: 2px;
+    margin: 2px;}
+
+#top {
+    left: 0px;
+    top: 20px;
+    width: 100%;
+}
+
+
+#bottom {
+    left: 0px;
+    bottom: 20px;
+    width: 100%;
+}
+
+#top-left {
+    top: 0.5px;
+    left: 2px;
+}
+#top-right {
+    top: 0.5px;
+    right: 2px;
+}
+
+#bottom-left {
+    bottom: 1px;
+    left: 2px;
+}
+
+#bottom-right {
+    bottom: 1px;
+    right: 2px;
+}
+
+#tl1-text {
+    min-width: 40px;
+    max-width: 300px;
+    min-height: 40px;
+    max-height: 150px;
+}
+
+@media (max-width: 345px) or (max-height: 335px) {
+    * {
+        position: relative !important;
+    }
+    #top-left *, #top-right *, #bottom-left *, #bottom-right *, #home-div *, #info-div *, #skill-div *, 
+    #tools-div *, #tool-t1-char-count *, #settings-div *, #about-div * {
+        display: block !important;
+    }
+    #screen-alert {display: block;}
+    #bottom-left{bottom: 0 !important;}
+    #screen {border: 0;}
+    #bottom-right {display: block !important;}
+    #titlev {display: block !important;}
+}
+@media (max-width: 375px) {
+    p, a {font-size: 6px !important;}
+    button {font-size: 6px !important;}
+    h1 {font-size: 10px !important;}
+    h3 {font-size: 8px;}
+    #screen {border: 0;}
+    #titlev {display: none;}
+    #bottom-left {bottom: 1.5px}
+    #bottom-right {bottom: 0px} 
+    #screen-alert {display: block;}
+}
+@media (max-width: 480px) {
+    p, a {font-size: 10px !important;}
+    button {font-size: 10px !important;}
+    h1 {font-size: 14px !important;}
+    h3 {font-size: 12px;}
+    #titlev {font-size: 8px !important;}
+    #bottom-left {bottom: 1.5px}
+    #bottom-right {bottom: 0px}
+}
+@media (max-width: 790px) {
+    #bottom-left {bottom: 24px}
+    #bottom-right {left: 0px; bottom: 0px}
+}
+@media (max-height: 680px) {
+    #screen {
+        top: 6.5%;
+        height: 81%;
+    }
+}

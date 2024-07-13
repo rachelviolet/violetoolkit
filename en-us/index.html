@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Raquel Violeta">
+        <meta name="description" content="Welcome To The Violet Toolkit Website, where information and tools are accessible to all!">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Violet Toolkit</title>
+
+        <style id="no-js-style">
+            @font-face {
+                font-family: 'VT323';
+                src: url("../font/VT323.ttf");
+            }
+            @font-face {
+                font-family: 'OpenSans';
+                src: url("../font/open-sans.ttf");
+            }
+
+            body {
+                font-family: 'OpenSans'
+            }
+
+            p, a {font-size: 120%;
+            white-space: break-spaces;}
+            span {font-size: 50%;}
+
+            hr {
+                border-bottom: 1vw solid #101010;
+            }
+            #js-err {display:inline}
+            .js-exclusive {display: none;}
+        </style>
+
+        <!-- <link href="../css/test.css" rel="stylesheet"> -->
+        <script src="../js/characterCount.js"></script>
+        <script src="../js/language.js"></script>
+        <script src="../js/main.js"></script>
+        <script src="../js/percenter.js"></script>
+        <script src="../js/landscapeLoading.js"></script>
+        <script src="../js/portraitLoading.js"></script>
+        <script src="../js/artist.js"></script>
+        <script src="../js/input.js"></script>
+        <script src="../js/ui.js"></script>
+
+        <link rel="alternate" href="../pt-br/index.html" hreflang="pt-br"/>
+
+    </head>
+    <body onload="websiteLoaded(1); setView()">
+   
+        <div id="top-left">
+            <h1 id="title" class="top">Violet Toolkit</p><p id="titlev"></h1>
+        </div>
+
+        <div id="top-right">
+            <a href="../en-us/index.html" class="nojs">English</a>
+            <a href="../pt-br/index.html" class="nojs">Português Brasileiro</a>
+            <button id="stt" class="top js-exclusive" onclick="switchPage('settings-div')">(E)Settings</button>
+        </div>
+
+        <div id="screen">
+            <div id="home-div" class="sdiv">
+                <h1 id="welcome" class="screen-title">Welcome to my website!</h1>
+                <p id="screen-alert">Your device screen may be too small. The website is now in limited mode.</p>
+            </div>
+
+            <div id="info-div" class="sdiv">
+                <h1 id="infoTitle" class="screen-title">Information</h1>
+                <a href="./specs-info.html" id="comp-specs-info" class="info-list-item">(1)How to choose a computer, laptop or phone? Which specifications to look out for?</a>
+                <!-- <button id="comp-specs-info" class="info-list-item js-exclusive" onclick="window.open('./specs-info.html', '_self')"></button> -->
+            </div>
+
+            <div id="skill-div" class="sdiv">
+                <h1 id="skillTitle" class="screen-title">CV / Resumé</h1>
+                <h3>Information and Contact</h3>
+                <p class="skills-list">E-mail: </p>
+                <p class="skills-list">Location: Brazil</p>
+                <h3>Education</h3>
+                <p class="skills-list">High school degree (complete)</p>
+                <p class="skills-list">College degree on Security Management and Cyberdefense (ongoing)</p>
+                <h3>Languages</h3>
+                <p class="skills-list">Portuguese (Native)</p>
+                <p class="skills-list">English (Fluent)</p>
+                <!-- <p class="skills-list">Spanish (Basic)</p> -->
+                <h3>Hard Skills</h3>
+                <p class="skills-list">Microsoft Office and Google Suite (Advanced)</p>
+                <p class="skills-list">HTML, JavaScript and CSS (Advanced)</p>
+                <p class="skills-list">Microsoft Windows and Linux (Advanced)</p>
+                <p class="skills-list">Photoshop and GIMP (Basic)</p>
+                <h3>Soft Skills</h3>
+                <p class="skills-list">Adaptability</p>
+                <p class="skills-list">Teamwork</p>
+                <p class="skills-list">Critical thinking</p>
+                <p class="skills-list">Proactivity</p>
+                <p class="skills-list">Problem solving</p>
+            </div>
+
+            <div id="tools-div" class="sdiv js-exclusive">
+                <h1 id="toolsTitle" class="screen-title">Tools</h1>
+                <div id="tools-list">
+                    <button id="s5Writing" onclick="switchPage('tool-t1-char-count')">(1) Character count</button>
+                </div>
+
+            </div>
+            <div id="tool-t1-char-count" class="sdiv js-exclusive">
+                <textarea id="tl1-text" onkeyup="charCount.count();"></textarea>
+                <p id="tl1-count-full">0 character(s), spaces included.</p>
+                <p id="tl1-count-space0">0 character(s), no spaces.</p>
+                <p id="tl1-count-space1">0 space character(s).</p>
+                <p id="tl1-count-text">Press (CTRL) twice to leave or use the menu bar.</p>
+            </div>
+
+            <div id="settings-div" class="sdiv js-exclusive">
+                <h1 id="settingsTitle" class="screen-title">Settings</h1>
+                <button id="stt-theme" onclick="themeSet(true)">(1)Toggle theme</button>
+                <button id="stt-font" onclick="fontSet(true)">(2)Toggle font</button>
+            </div>
+
+            <div id="about-div" class="sdiv">
+                <h1 id="aboutTitle" class="screen-title">About</h1>
+                <p id="aboutP1">
+Welcome To The Violet Toolkit Website, where information and tools are accessible to all!</p>
+                <p id="aboutP2">
+Do you have limited access to the internet?
+Do you lack a keyboard or a mouse?
+Are you using legacy browsers? Fear not! This website still works.
+Smaller screens and older devices may view a limited version ot the website.
+                </p>
+            </div>
+
+        </div>
+
+        <div id="bottom-left">
+            <button id="home" class="bottom js-exclusive" onclick="switchPage('home-div')">(1) HOME</button>
+            <button id="information" class="bottom js-exclusive" onclick="switchPage('info-div')">(2) INFO</button>
+            <button id="skill" class="bottom js-exclusive" onclick="switchPage('skill-div')">(3) CV</button>
+            <button id="tools" class="bottom js-exclusive" onclick="switchPage('tools-div')">(4) TOOLS</button>
+            <button id="about" class="bottom js-exclusive" onclick="switchPage('about-div')">(5) ABOUT</button>
+        </div>
+
+        <div id="bottom-right">
+            <p id="short-a" class="bottom js-exclusive">(A+NUM)Menu buttons</p>
+            <p id="short-b" class="bottom js-exclusive">(S+NUM)Screen buttons</p>
+            <p id="short-c" class="bottom js-exclusive">(D)Cancel shortcut</p>
+        </div>
+        <!-- Placeholder. Don't tell anyone. Winking emoticon .-->
+        <p id="test" style="display: none;"></p>
+    </body>
+</html>

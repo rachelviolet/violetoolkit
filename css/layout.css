@@ -1,0 +1,34 @@
+body {
+    color: #101010;
+    background-color: #fafafa;
+    /* background-color: #6a00aa; */ /* desired purple color */
+}
+
+@font-face {
+    font-family: 'VT323';
+    src: url("../font/VT323.ttf");
+}
+@font-face {
+    font-family: 'OpenSans';
+    src: url("../font/open-sans.ttf");
+}
+
+* {
+    font-family: 'VT323'
+}
+
+
+
+button, p, a, input {
+    color: #101010;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    white-space: break-spaces;
+}
+
+button:hover {
+    /* #2A002A for light theme ; #cf9fff for dark theme */
+    color: #2A002A
+}
