@@ -1,7 +1,6 @@
 body {
     color: #101010;
     background-color: #fafafa;
-    /* background-color: #6a00aa; */ /* desired purple color */
 }
 
 @font-face {
@@ -16,8 +15,6 @@ body {
 * {
     font-family: 'VT323'
 }
-
-
 
 button, p, a, input {
     color: #101010;

@@ -13,7 +13,6 @@
 }
 
 #back {
-    /* position: absolute; */
     text-align: center;
     padding: 0;
     margin: 0;
@@ -33,15 +32,19 @@ body {
 
 a {width: fit-content;}
 
-p, a {font-size: 120%;
+p, a {
+    font-size: 120%;
     margin: 0%;
-white-space: break-spaces;}
+    white-space: break-spaces;
+}
 span {font-size: 50%;}
 
 hr {
     border-bottom: 100% solid #101010;
 }
+
 .tbcont {display: block;}
+
 .boldme {
     font-size: 120%;
     font-weight: bold;

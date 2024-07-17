@@ -3,6 +3,7 @@
 #home-div, #info-div, #skill-div, #tools-div, #tool-t1-char-count, #settings-div, #about-div {display: none; width: 100%;}
 #tool-t1-char-count {display: none;}
 #settings-div * {display: block;}
+#tools-list * {display: block;}
 
 p, a {font-size: 14px;}
 button {font-size: 14px;}

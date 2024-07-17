@@ -35,13 +35,11 @@
         <script src="../js/characterCount.js"></script>
         <script src="../js/language.js"></script>
         <script src="../js/main.js"></script>
-        <script src="../js/percenter.js"></script>
-        <script src="../js/landscapeLoading.js"></script>
-        <script src="../js/portraitLoading.js"></script>
         <script src="../js/artist.js"></script>
         <script src="../js/input.js"></script>
         <script src="../js/ui.js"></script>
 
+        <link rel="alternate" href="./tool-note.html"/>
         <link rel="alternate" href="../en-us/index.html" hreflang="en-us"/>
 
     </head>
@@ -52,15 +50,15 @@
         </div>
 
         <div id="top-right">
-            <a href="../en-us/index.html" class="nojs">English</a>
-            <a href="../pt-br/index.html" class="nojs">Português Brasileiro</a>
+            <a href="../en-us/index.html" class="nojs">(Q) English</a>
+            <a href="../pt-br/index.html" class="nojs">(W) Português Brasileiro</a>
             <button id="stt" class="top js-exclusive" onclick="switchPage('settings-div')">(E)Configurações</button>
         </div>
 
         <div id="screen">
             <div id="home-div" class="sdiv">
                 <h1 id="welcome" class="screen-title">Boas-vindas ao meu site!</h1>
-                <p id="screen-alert">A tela do seu dispositivo é pequena demais. O site está agora na versão limitada.</p>
+                <p id="screen-alert">O modo limitado está ativo.</p>
             </div>
 
             <div id="info-div" class="sdiv">
@@ -98,6 +96,7 @@
                 <h1 id="toolsTitle" class="screen-title">Ferramentas</h1>
                 <div id="tools-list">
                     <button id="s5Writing" onclick="switchPage('tool-t1-char-count')">(1) Contagem de caracteres</button>
+                    <a id="s5Note" href="../tool-note.html">(2) Anotações</a>
                 </div>
 
             </div>

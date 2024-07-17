@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ferramenta Violeta</title>
+        <link href="./css/layout.css" rel="stylesheet">
+        <link href="./css/notes.css" rel="stylesheet">
+
+        <script src="./js/toolsetTheme.js"></script>
+        <script src="./js/notes.js" defer></script>
+    </head>
+    <body onload="languageSwitch(false); noteStart();">
+        <h1 id="js-err">(JAVASCRIPT_ERR) No JavaScript Detected</h1>
+        <div id="top-right">
+            <button id="l-eng" class="ub1" onclick="languageSwitch('en')">English</button>
+            <button id="l-por" class="ub2" onclick="languageSwitch('br')">Português</button>
+        </div>
+        <button id="return" onclick="window.open('./index.html', '_self')">&lt;-- (CTRL)</button>
+        <textarea id="note"></textarea>
+        <input id="filesys" type="file" style="display: none;" onchange="noteLoad()">
+        <button class="note-options" id="load-note" onclick="notePreload(false)">Load Note</button>
+        <button class="note-options" id="load-note2" onclick="notePreload(true)">Load Note (Encrypted)</button>
+        <button class="note-options" id="save-note" onclick="noteSave(false)">Save Note</button>
+        <button class="note-options" id="save-note2" onclick="noteSave(true)">Save Note (Encrypted)</button>
+        <p id="encrypt-disclaimer">The encryption system used in this application is NOT as secure as other major industry-standard protocols.</p>
+    </body>
+</html>

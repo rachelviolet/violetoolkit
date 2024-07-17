@@ -48,6 +48,7 @@ Are you using an older browser (possibly one from the 2010s)? Fear not! This web
 
     "test": "test",
     "englishUpdate": function() {
+        if (page == "tool") return;
         this["tl1-count-full"] =  `${charCount.full} characters, spaces included.`;
         this["tl1-count-space0"] = `${charCount.space0} characters, no spaces.`;
         this["tl1-count-space1"] = `${charCount.space1} characters, only spaces.`;
@@ -104,6 +105,7 @@ Está usando um navegador antigo (possívelmente um de 2010)? Não se preocupe! 
 
     "test": "test",
     "portugueseUpdate": function() {
+        if (page == "tool") return;
         this["tl1-count-full"] = `${charCount.full} caractere(s), com espaços.`;
         this["tl1-count-space0"] = `${charCount.space0} caractere(s), sem espaços.`;
         this["tl1-count-space1"] = `${charCount.space1} espaços.`;

@@ -1,0 +1,23 @@
+p, button {font-size: 16px;}
+
+#note {
+    display: block;
+    min-width: 40px;
+    min-height: 1%;
+
+    width: 240px;
+    height: 2%;
+
+    max-width: 100%;
+    max-height: 45vh;
+}
+
+#return {
+    display: block;
+    font-size: 20px;
+}
+.note-options {
+    display: inline;
+    border-left: 3px solid #ead4ff;
+    border-right: 3px solid #ead4ff;
+}

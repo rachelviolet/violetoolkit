@@ -72,6 +72,7 @@ document.addEventListener('keydown', function(event) {
         case "games-div":
           break;
         case "tools-div":
+          window.open("../tool-note.html", "_self");
           break;
         case "about-div":
           break;

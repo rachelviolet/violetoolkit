@@ -1,13 +1,6 @@
 'use strict'
-var vw;
-var vh;
-var difference
-var deviceRAMSpeed;
 
 function setView() {
-    vw = window.innerWidth;
-    vh = window.innerHeight;
-    difference = Math.abs(vh - vw);
     drawApp();
 }
 
@@ -117,9 +110,3 @@ function themeSet(change) {
             break;
     }
 }
-
-// Frequency of artist call.
-if (navigator.deviceMemory < 4) deviceRAMSpeed = 2000;
-else if (navigator.deviceMemory < 8) deviceRAMSpeed = 500;
-else deviceRAMSpeed = 250;
-if (!freezeMode) {const drawingGame = setInterval(setView, deviceRAMSpeed);}
