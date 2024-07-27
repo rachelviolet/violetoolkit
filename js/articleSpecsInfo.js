@@ -9,8 +9,6 @@ function setView() {
     themeSet();
 }
 
-setView();
-
 document.addEventListener('keypress', function(event) {
     if (event.key == '0') {
     window.open("./index.html", "_self")   
