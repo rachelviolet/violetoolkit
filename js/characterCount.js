@@ -26,3 +26,5 @@ var charCount = {
         langSet();
     }
 }
+
+console.log("characterCount.js loaded");

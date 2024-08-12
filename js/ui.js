@@ -10,3 +10,5 @@ function switchPage(pg) {
     catch (error) {console.error("Page does not exist.")}
     page = pg;
 }
+
+console.log("ui.js loaded");

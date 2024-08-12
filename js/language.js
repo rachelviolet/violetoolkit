@@ -54,3 +54,5 @@ function langSet(change) {
             break;
     }
 }
+
+console.log("languages.js loaded");

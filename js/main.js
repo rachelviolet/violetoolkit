@@ -1,7 +1,7 @@
 'use strict'
 const namePortuguese = "Ferramenta Violeta";
 const nameEnglish = "Violet Toolkit"
-const version = "24.7a3";
+const version = "v24.8a";
 var page = "0";
 var theme;
 var themeDisabledColor = "#101010";
@@ -26,11 +26,14 @@ switch (localStorage.getItem("violetool-theme")) {
         theme = 2;
         break;
 }
-const debugMode = false;
+const debugMode = true;
 const freezeMode = false;
 
 if (!debugMode) {
-    console.log = function() {}
+    console.warn("Please make sure you know what you are doing.");
+    console.log = function() {};
+    console.warn = function() {};
+    console.error = function() {};
 }
 
 function websiteLoaded(source) {

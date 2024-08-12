@@ -63,3 +63,5 @@ function themeSet() {
             break;
     }
 }
+
+console.log("toolsetTheme.js loaded");

@@ -35,3 +35,5 @@ document.addEventListener('keypress', function(event) {
     window.open("#final", "_self")   
     }
 });
+
+console.log("main.js loaded");

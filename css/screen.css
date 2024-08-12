@@ -1,4 +1,4 @@
-#top-left, #top-right, #bottom-left, #bottom-right, #screen, #top, #bottom {display: inline; position: fixed;}
+#top-left, #top-right, #bottom-left, #screen, #top, #bottom {display: inline; position: fixed;}
 #top-left * {display: inline;}
 #home-div, #info-div, #skill-div, #tools-div, #tool-t1-char-count, #settings-div, #about-div {display: none; width: 100%;}
 #tool-t1-char-count {display: none;}
@@ -22,7 +22,7 @@ margin: 0;}
     top: 3.5%;
     left: 0px;
     width: 99.6%;
-    height: 90.5%;
+    height: 92.5%;
 }
 
 #screen * {
@@ -44,11 +44,6 @@ margin: 0;}
     left: 2px;
 }
 
-#bottom-right {
-    bottom: 1px;
-    right: 2px;
-}
-
 #tl1-text {
     min-width: 40px;
     max-width: 300px;
@@ -60,14 +55,13 @@ margin: 0;}
     * {
         position: relative !important;
     }
-    #top-left *, #top-right *, #bottom-left *, #bottom-right *, #home-div *, #info-div *, #skill-div *, 
+    #top-left *, #top-right *, #bottom-left *, #home-div *, #info-div *, #skill-div *, 
     #tools-div *, #tool-t1-char-count *, #settings-div *, #about-div * {
         display: block !important;
     }
     #screen-alert {display: block;}
     #bottom-left{bottom: 0 !important;}
     #screen {border: 0;}
-    #bottom-right {display: block !important;}
     #titlev {display: block !important;}
 }
 @media (max-width: 375px) {
@@ -78,8 +72,6 @@ margin: 0;}
     #screen {border: 0;}
     #titlev {display: none;}
     #bottom-left {bottom: 1.5px}
-    #bottom-right {bottom: 0px} 
-    #screen-alert {display: block;}
 }
 @media (max-width: 480px) {
     p, a {font-size: 10px !important;}
@@ -88,11 +80,6 @@ margin: 0;}
     h3 {font-size: 12px;}
     #titlev {font-size: 8px !important;}
     #bottom-left {bottom: 1.5px}
-    #bottom-right {bottom: 0px}
-}
-@media (max-width: 790px) {
-    #bottom-left {bottom: 24px}
-    #bottom-right {left: 0px; bottom: 0px}
 }
 @media (max-height: 680px) {
     #screen {

@@ -164,3 +164,4 @@ document.addEventListener('keydown', function(event) {
 
 fontSet();
 themeSet();
+console.log("notes.js loaded");

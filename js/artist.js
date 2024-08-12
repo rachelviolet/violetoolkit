@@ -7,21 +7,6 @@ function setView() {
 function drawApp() {
     // Shortcut highlighting.
     fontSet();
-    if (preinput == 0) {
-        document.getElementById("short-a").style.color = themeDisabledColor;
-        document.getElementById("short-b").style.color = themeDisabledColor;
-        document.getElementById("short-c").style.color = themeDisabledColor;
-    }
-    else if (preinput == 1) {
-        document.getElementById("short-a").style.color = themeEnabledColor;
-        document.getElementById("short-b").style.color = themeDisabledColor;
-        document.getElementById("short-c").style.color = themeDisabledColor;
-    }
-    else if (preinput == 2) {
-        document.getElementById("short-a").style.color = themeDisabledColor;
-        document.getElementById("short-b").style.color = themeEnabledColor;
-        document.getElementById("short-c").style.color = themeDisabledColor;
-    }
 
     if (font == "OpenSans"){
         for(var i = 0; i < document.body.getElementsByTagName("p").length; i++) {
@@ -89,6 +74,10 @@ function themeSet(change) {
             for(var i = 0; i < document.body.getElementsByTagName("*").length; i++) {
                 document.body.getElementsByTagName("*")[i].style.color = "#101010";
             }
+            for(var i = 0; i < document.body.getElementsByTagName("textarea").length; i++) {
+                document.body.getElementsByTagName("textarea")[i].style.backgroundColor = "#fafafa";
+                document.body.getElementsByTagName("textarea")[i].style.color = "#101010";
+            }
             themeDisabledColor = "#101010";
             themeEnabledColor = "#5C00A3";
             break;
@@ -96,6 +85,10 @@ function themeSet(change) {
             document.body.style.backgroundColor = "#101010";
             for(var i = 0; i < document.body.getElementsByTagName("*").length; i++) {
                 document.body.getElementsByTagName("*")[i].style.color = "#fafafa";
+            }
+            for(var i = 0; i < document.body.getElementsByTagName("textarea").length; i++) {
+                document.body.getElementsByTagName("textarea")[i].style.backgroundColor = "#101010";
+                document.body.getElementsByTagName("textarea")[i].style.color = "#fafafa";
             }
             themeDisabledColor = "#fafafa";
             themeEnabledColor = "#5C00A3";
@@ -105,8 +98,14 @@ function themeSet(change) {
             for(var i = 0; i < document.body.getElementsByTagName("*").length; i++) {
                 document.body.getElementsByTagName("*")[i].style.color = "#cf9fff";
             }
+            for(var i = 0; i < document.body.getElementsByTagName("textarea").length; i++) {
+                document.body.getElementsByTagName("textarea")[i].style.backgroundColor = "#101010";
+                document.body.getElementsByTagName("textarea")[i].style.color = "#cf9fff";
+            }
             themeDisabledColor = "#CF9FFF";
             themeEnabledColor = "#ead4ff";
             break;
     }
 }
+
+console.log("artist.js loaded");
