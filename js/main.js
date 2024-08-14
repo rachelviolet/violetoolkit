@@ -1,7 +1,7 @@
 'use strict'
 const namePortuguese = "Ferramenta Violeta";
 const nameEnglish = "Violet Toolkit"
-const version = "v24.8a";
+const version = "v24.8b";
 var page = "0";
 var theme;
 var themeDisabledColor = "#101010";

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Raquel Violeta">
+        <meta name="description" content="Character counting web app">
+        <meta name="keywords" content="Raquel Violeta, Rachel Violet, violetoolkit, Violet Toolkit, Ferramenta Violeta, ferramentavioleta, Toolkit Website, foss app, foss character count app, free online character count app, charcount">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ferramenta Violeta</title>
+        <link href="./css/layout.css" rel="stylesheet">
+        <link href="./css/toolset.css" rel="stylesheet">
+        <link href="./css/calculator.css" rel="stylesheet">
+
+        <script src="./js/toolsetTheme.js"></script>
+        <script src="./js/calculator.js" defer></script>
+    </head>
+    <body onload="languageSwitch(false); themeSet(); fontSet(); document.getElementById('js-err').remove();">
+        <h1 id="js-err">(JAVASCRIPT_ERR) No JavaScript Detected</h1>
+        <div id="top-right">
+            <button id="l-eng" class="ub1" onclick="languageSwitch('en')">English</button>
+            <button id="l-por" class="ub2" onclick="languageSwitch('br')">Português</button>
+        </div>
+
+        <button id="return" onclick="window.open('./index.html', '_self')">&lt;-- (CTRL)</button>
+        <div>
+            <div class="calcs">
+                <div>
+                    <label id="num1-text">Number 1:</label>
+                    <input id="num1" type="number" value="1" class="num" onchange="Calculator.calculate(Calculator.memory)" onkeydown="Calculator.calculate(Calculator.memory)">
+                </div>
+                <div>
+                    <label id="num2-text">Number 2:</label>
+                    <input id="num2" type="number" value="1" class="num" onchange="Calculator.calculate(Calculator.memory)" onkeydown="Calculator.calculate(Calculator.memory)">
+                </div>
+            </div>
+            <div class="calcs">
+                <button id="math-plus" class="op" onclick="Calculator.calculate(1)">+</button>
+                <button id="math-minus" class="op" onclick="Calculator.calculate(2)">-</button>
+                <button id="math-multiplication" class="op" onclick="Calculator.calculate(3)">*</button>
+                <button id="math-division" class="op" onclick="Calculator.calculate(4)">/</button>
+            </div>
+            <div>
+                <input id="results" type="number" disabled value="2" class="num">
+            </div>
+        </div>
+    </body>
+</html>

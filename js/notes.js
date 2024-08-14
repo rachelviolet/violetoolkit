@@ -47,6 +47,10 @@ function languageSwitch(change) {;
             language = "br";
         }
     }
+    else {
+        if (navigator.language.toLowerCase().includes("pt")) language = "br";
+        else language = "en";
+    }
     switch (language) {
         case "en":
         default:

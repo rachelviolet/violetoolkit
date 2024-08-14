@@ -27,5 +27,6 @@ button, p, a, input {
 
 button:hover {
     /* #2A002A for light theme ; #cf9fff for dark theme */
+    cursor: pointer;
     color: #2A002A
 }

@@ -33,7 +33,6 @@
             .js-exclusive {display: none;}
         </style>
 
-        <script src="../js/characterCount.js"></script>
         <script src="../js/language.js"></script>
         <script src="../js/main.js"></script>
         <script src="../js/artist.js"></script>
@@ -78,6 +77,10 @@
             </div>
 
             <div id="skill-div" class="sdiv">
+                <div class="skill-tab">
+                    <button id="skills-cv">Currículo</button>
+                    <button id="skills-summary" style="cursor: not-allowed;">Resumo</button>
+                </div>
                 <h1 id="skillTitle" class="screen-title">Currículo</h1>
                 <h3>Informação e Contato</h3>
                 <p class="skills-list">E-mail: raquelvioleta.contato@gmail.com</p>
@@ -106,17 +109,11 @@
             <div id="tools-div" class="sdiv js-exclusive">
                 <h1 id="toolsTitle" class="screen-title">Ferramentas</h1>
                 <div id="tools-list">
-                    <button id="s5Writing" onclick="switchPage('tool-t1-char-count')">(1) Contagem de caracteres</button>
+                    <a id="s5Writing" href="../tool-char-count.html">(1) Contagem de caracteres</a>
                     <a id="s5Note" href="../tool-note.html">(2) Anotações</a>
+                    <a id="s5Calc" href="../tool-calculator.html">(3) Calculadora</a>
                 </div>
 
-            </div>
-            <div id="tool-t1-char-count" class="sdiv js-exclusive">
-                <textarea id="tl1-text" onkeyup="charCount.count();"></textarea>
-                <p id="tl1-count-full">0 caractere(s), com espaços.</p>
-                <p id="tl1-count-space0">0 caractere(s), sem espaços.</p>
-                <p id="tl1-count-space1">0 espaços.</p>
-                <p id="tl1-count-text">Aperte (CTRL) duas vezes para sair ou use a barra do menu.</p>
             </div>
 
             <div id="settings-div" class="sdiv js-exclusive">
@@ -141,7 +138,7 @@ Telas pequenas e dispositivos pequenos podem ver uma versão limitada do site.
 
         <div id="bottom-left">
             <button id="home" class="bottom js-exclusive" onclick="switchPage('home-div')">(H)OME</button>
-            <button id="information" class="bottom js-exclusive" onclick="switchPage('info-div')">CON(T)EÚDO</button>
+            <button id="information" class="bottom js-exclusive" onclick="switchPage('info-div')">CO(N)TEÚDO</button>
             <button id="skill" class="bottom js-exclusive" onclick="switchPage('skill-div')">(C)URRÍCULO</button>
             <button id="tools" class="bottom js-exclusive" onclick="switchPage('tools-div')">FERRAMEN(T)AS</button>
             <button id="about" class="bottom js-exclusive" onclick="switchPage('about-div')">S(O)BRE</button>

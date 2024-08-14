@@ -9,32 +9,18 @@ document.addEventListener('keydown', function(event) {
     if (page.includes(blockedPages[x])) preinputBlock = true;
     else preinputBlock = false;
   }
-  if (event.key.toLowerCase() == 'a' && !preinputBlock) preinput = 1;
-  if (event.key.toLowerCase() == 's' && !preinputBlock) preinput = 2;
-  if (event.key.toLowerCase() == 'd' && !preinputBlock) preinput = 0;
+  // if (event.key.toLowerCase() == 'a' && !preinputBlock) preinput = 1;
+  // if (event.key.toLowerCase() == 's' && !preinputBlock) preinput = 2;
+  // if (event.key.toLowerCase() == 'd' && !preinputBlock) preinput = 0;
 
   drawApp();
-
-  if (event.ctrlKey && page == "tool-t1-char-count") {
-    console.log(event.key);
-    if (event.ctrlKey && preinput == 3 && event.key.toLowerCase() == "control") {
-      switchPage('tools-div')
-      preinput = 0;
-      preinputBlock = false;
-      return;
-    }
-    preinput = 3;
-    setTimeout(() => {
-      if (page == "tool-t1-char-count") preinput = 0;
-    },  700);
-  }
 
   if (!blockedPages.includes(page)) {
     switch (kPRess) {
       case "h":
         switchPage("home-div");
         break;
-      case "t":
+      case "n":
         switchPage("info-div");
         break;
       case "c":
@@ -66,7 +52,7 @@ document.addEventListener('keydown', function(event) {
           case "games-div":
             break;
           case "tools-div":
-            switchPage('tool-t1-char-count');
+            window.open('../tool-char-count.html', '_self')
             preinputBlock = true;
             break;
           case "about-div":
@@ -87,6 +73,25 @@ document.addEventListener('keydown', function(event) {
             break;
           case "tools-div":
             window.open("../tool-note.html", "_self");
+            break;
+          case "about-div":
+            break;
+          case "settings-div":
+            fontSet(true);
+            break;
+        }
+        break;
+      case "3":
+        switch (page) {
+          default:
+          case "home-div":
+            break;
+          case "info-div":
+            break;
+          case "games-div":
+            break;
+          case "tools-div":
+            window.open("../tool-calculator.html", "_self");
             break;
           case "about-div":
             break;

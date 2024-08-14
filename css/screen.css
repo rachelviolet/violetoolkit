@@ -4,6 +4,7 @@
 #tool-t1-char-count {display: none;}
 #settings-div * {display: block;}
 #tools-list * {display: block;}
+.skill-tab {display: inline;}
 
 p, a {font-size: 14px;}
 button {font-size: 14px;}

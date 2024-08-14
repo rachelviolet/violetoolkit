@@ -32,8 +32,6 @@
             #js-err {display:inline}
             .js-exclusive {display: none;}
         </style>
-
-        <script src="../js/characterCount.js"></script>
         <script src="../js/language.js"></script>
         <script src="../js/main.js"></script>
         <script src="../js/artist.js"></script>
@@ -78,6 +76,10 @@
             </div>
 
             <div id="skill-div" class="sdiv">
+                <div class="skill-tab">
+                    <button id="skills-cv">CV</button>
+                    <button id="skills-summary" style="cursor: not-allowed;">Summary</button>
+                </div>
                 <h1 id="skillTitle" class="screen-title">CV / Resumé</h1>
                 <h3>Information and Contact</h3>
                 <p class="skills-list">E-mail: raquelvioleta.contato@gmail.com</p>
@@ -106,18 +108,13 @@
             <div id="tools-div" class="sdiv js-exclusive">
                 <h1 id="toolsTitle" class="screen-title">Tools</h1>
                 <div id="tools-list">
-                    <button id="s5Writing" onclick="switchPage('tool-t1-char-count')">(1) Character count</button>
+                    <a id="s5Writing" href="../tool-char-count.html">(1) Character count</a>
                     <a id="s5Note" href="../tool-note.html">(2) Notes</a>
+                    <a id="s5Calc" href="../tool-calculator.html">(3) Calculator</a>
                 </div>
 
             </div>
-            <div id="tool-t1-char-count" class="sdiv js-exclusive">
-                <textarea id="tl1-text" onkeyup="charCount.count();"></textarea>
-                <p id="tl1-count-full">0 character(s), spaces included.</p>
-                <p id="tl1-count-space0">0 character(s), no spaces.</p>
-                <p id="tl1-count-space1">0 space character(s).</p>
-                <p id="tl1-count-text">Press (CTRL) twice to leave or use the menu bar.</p>
-            </div>
+            
 
             <div id="settings-div" class="sdiv js-exclusive">
                 <h1 id="settingsTitle" class="screen-title">Settings</h1>
@@ -141,7 +138,7 @@ Smaller screens and older devices may view a limited version of the website.
 
         <div id="bottom-left">
             <button id="home" class="bottom js-exclusive" onclick="switchPage('home-div')">(H)OME</button>
-            <button id="information" class="bottom js-exclusive" onclick="switchPage('info-div')">CON(T)ENT</button>
+            <button id="information" class="bottom js-exclusive" onclick="switchPage('info-div')">CO(N)TENT</button>
             <button id="skill" class="bottom js-exclusive" onclick="switchPage('skill-div')">(C)V</button>
             <button id="tools" class="bottom js-exclusive" onclick="switchPage('tools-div')">(T)OOLS</button>
             <button id="about" class="bottom js-exclusive" onclick="switchPage('about-div')">AB(O)UT</button>

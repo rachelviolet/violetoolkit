@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Raquel Violeta">
+        <meta name="description" content="Character counting web app">
+        <meta name="keywords" content="Raquel Violeta, Rachel Violet, violetoolkit, Violet Toolkit, Ferramenta Violeta, ferramentavioleta, Toolkit Website, foss app, foss character count app, free online character count app, charcount">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ferramenta Violeta</title>
+        <link href="./css/layout.css" rel="stylesheet">
+        <link href="./css/toolset.css" rel="stylesheet">
+
+        <script src="./js/toolsetTheme.js"></script>
+        <script src="./js/characterCount.js" defer></script>
+    </head>
+    <body onload="languageSwitch(false); themeSet(); fontSet(); document.getElementById('js-err').remove();">
+        <h1 id="js-err">(JAVASCRIPT_ERR) No JavaScript Detected</h1>
+        <div id="top-right">
+            <button id="l-eng" class="ub1" onclick="languageSwitch('en')">English</button>
+            <button id="l-por" class="ub2" onclick="languageSwitch('br')">Português</button>
+        </div>
+        <div id="tool-t1-char-count" class="sdiv js-exclusive">
+            <button id="return" onclick="window.open('./index.html', '_self')">&lt;-- (CTRL)</button>
+            <textarea id="tl1-text" onkeyup="charCount.count();"></textarea>
+            <p id="tl1-count-full">0 character(s), spaces included.</p>
+            <p id="tl1-count-space0">0 character(s), no spaces.</p>
+            <p id="tl1-count-space1">0 space character(s).</p>
+        </div>
+    </body>
+</html>

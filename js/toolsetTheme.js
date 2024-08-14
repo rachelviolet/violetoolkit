@@ -28,6 +28,7 @@ function fontSet() {
 }
 
 function themeSet() {
+    console.log("Setting theme");
     theme = localStorage.getItem("violetool-theme");
     switch (theme) {
         case "0":
