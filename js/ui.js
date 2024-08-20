@@ -6,8 +6,12 @@ function switchPage(pg) {
         pageDivs[x].style.display = 'none';
     }
 
-    try {document.getElementById(pg).style.display = "block";}
-    catch (error) {console.error("Page does not exist.")}
+    try {
+        document.getElementById(pg).style.display = "block";
+    }
+    catch (error) {
+        console.error("Page does not exist.")
+    }
     page = pg;
 }
 

@@ -32,12 +32,18 @@
             #js-err {display:inline}
             .js-exclusive {display: none;}
         </style>
+
+        <script src="../js/theme.js"></script>
         <script src="../js/language.js"></script>
         <script src="../js/main.js"></script>
         <script src="../js/artist.js"></script>
         <script src="../js/input.js"></script>
         <script src="../js/ui.js"></script>
+        <script src="../js/cv.js" defer></script>
 
+        <link rel="alternate" href="./tool-char-count.html"/>
+        <link rel="alternate" href="./tool-note.html"/>
+        <link rel="alternate" href="./tool-calculator.html"/>
         <link rel="alternate" href="./tool-note.html"/>
         <link rel="alternate" href="../pt-br/index.html" hreflang="pt-br"/>
 
@@ -58,51 +64,70 @@
             <div id="home-div" class="sdiv">
                 <h1 id="welcome" class="screen-title">Welcome to my website!</h1>
                 <p id="screen-alert">Limited mode is on.</p>
-                <!-- <div id="whats-new"></div> -->
+                <div id="whats-new">
+                    <h2>What's new?</h2>
+                    <p>2024.08 Edition C</p>
+                    <ul>
+                        <li>Refined code and UI</li>
+                        <li>Added "What's New?" section</li>
+                        <li>Added more information in the About Tab</li>
+                        <li>Added more information in the CV Tab</li>
+                        <li>New possibility to fully customize your theme</li>
+                    </ul>
+                </div>
+
                 <!-- <div id="see-this"></div> -->
                 <!-- <div id="glimpse"></div> -->
             </div>
 
             <div id="info-div" class="sdiv">
                 <h1 id="infoTitle" class="screen-title">Information</h1>
-                <a href="./specs-info.html" id="comp-specs-info" class="info-list-item">(1)How to choose a computer, laptop or phone? Which specifications to look out for?</a>
-                <!-- <h1 id="videoTitle" class="screen-title">Videos</h1> -->
-                <!-- <p>Coming soon...</p> -->
-                <h1 id="ebooksTitle" lass="screen-title">E-books</h1>
-                <a href="https://www.amazon.com.br/dp/B0DCTY9LXD">Where Life Rebooted (English only)</a>
+                <h2 class="screen-title">Articles</h2>
+                <a href="./specs-info.html" id="comp-specs-info" class="info-list-item">(1) How to choose a computer, laptop or phone? Which specifications to look out for?</a>
+                <h2 class="screen-title">Videos</h2>
+                <a href="https://youtu.be/LHyMaIi_vAk">(2) Laptop Ad (Link to YouTube)</a>
+                <h2 id="ebooksTitle" class="screen-title">E-books</h2>
+                <a href="https://www.amazon.com.br/dp/B0DCTY9LXD">(3) Where Life Rebooted (English only; Link to Amazon)</a>
                 <!-- <h1 id="sampleWebsitesTitle" class="screen-title">Websites (samples)</h1> -->
                 <!-- <a href="../samples/e-commerce/index.html">Laptop website (e-commerce store sample)</a> -->
-                <!-- <p>Coming soon...</p> -->
             </div>
 
             <div id="skill-div" class="sdiv">
                 <div class="skill-tab">
-                    <button id="skills-cv">CV</button>
+                    <button id="skills-cv" class="cv">CV</button>
                     <button id="skills-summary" style="cursor: not-allowed;">Summary</button>
                 </div>
-                <h1 id="skillTitle" class="screen-title">CV / Resumé</h1>
-                <h3>Information and Contact</h3>
-                <p class="skills-list">E-mail: raquelvioleta.contato@gmail.com</p>
-                <p class="skills-list">Location: Brazil</p>
-                <p class="skills-list">My mission is to provide the best service possible, working with a team and prioritizing people’s well-being.</p>
-                <h3>Education</h3>
-                <p class="skills-list">High school degree (complete)</p>
-                <p class="skills-list">Associate degree in Cyber ​​Security and Defense Management (ongoing)</p>
-                <h3>Languages</h3>
-                <p class="skills-list">Portuguese (Native)</p>
-                <p class="skills-list">English (Fluent)</p>
-                <!-- <p class="skills-list">Spanish (Basic)</p> -->
-                <h3>Hard Skills</h3>
-                <p class="skills-list">Microsoft Office and Google Suite (Advanced)</p>
-                <p class="skills-list">HTML, JavaScript and CSS (Advanced)</p>
-                <p class="skills-list">Microsoft Windows and Linux (Advanced)</p>
-                <p class="skills-list">Photoshop and GIMP (Basic)</p>
-                <h3>Soft Skills</h3>
-                <p class="skills-list">Adaptability</p>
-                <p class="skills-list">Teamwork</p>
-                <p class="skills-list">Critical thinking</p>
-                <p class="skills-list">Proactivity</p>
-                <p class="skills-list">Problem solving</p>
+
+                <div>
+                    <h1 id="skillTitle" class="screen-title">CV / Resumé</h1>
+                    <h3>Information and Contact</h3>
+                    <p class="skills-list">E-mail: raquelvioleta.contato@gmail.com</p>
+                    <p class="skills-list">Location: Brazil</p>
+                    <p class="skills-list">My mission is to provide the best service possible, working with a team and prioritizing people’s well-being.</p>
+                    <h3>Education</h3>
+                    <p class="skills-list">High school degree (complete)</p>
+                    <p class="skills-list">Associate degree in Cyber ​​Security and Defense Management (ongoing)</p>
+                    <h3>Languages</h3>
+                    <p class="skills-list">Portuguese (Native)</p>
+                    <p class="skills-list">English (Fluent)</p>
+                    <!-- <p class="skills-list">Spanish (Basic)</p> -->
+                    <h3>Hard Skills</h3>
+                    <p class="skills-list">Microsoft Office and Google Suite (Advanced)</p>
+                    <p class="skills-list">HTML, JavaScript and CSS (Advanced)</p>
+                    <p class="skills-list">Microsoft Windows and Linux (Advanced)</p>
+                    <p class="skills-list">Photoshop and GIMP (Basic)</p>
+                    <h3>Soft Skills</h3>
+                    <p class="skills-list">Adaptability</p>
+                    <p class="skills-list">Teamwork</p>
+                    <p class="skills-list">Critical thinking</p>
+                    <p class="skills-list">Proactivity</p>
+                    <p class="skills-list">Problem solving</p>
+                </div>
+
+                <div id="skills-sum">
+                    <h1 class="screen-title">Summary</h1>
+                </div>
+
             </div>
 
             <div id="tools-div" class="sdiv js-exclusive">
@@ -112,18 +137,20 @@
                     <a id="s5Note" href="../tool-note.html">(2) Notes</a>
                     <a id="s5Calc" href="../tool-calculator.html">(3) Calculator</a>
                 </div>
-
             </div>
             
 
             <div id="settings-div" class="sdiv js-exclusive">
                 <h1 id="settingsTitle" class="screen-title">Settings</h1>
                 <button id="stt-theme" onclick="themeSet(true)">(1)Toggle theme</button>
+                <p>Hint: You can modify the theme if you change the optiong in LocalStorage (Browser DevTools)</p>
+                <p style="font-style: italic;">Set the "violetool-theme" value to the letter "x"</p>
                 <button id="stt-font" onclick="fontSet(true)">(2)Toggle font</button>
             </div>
 
             <div id="about-div" class="sdiv">
                 <h1 id="aboutTitle" class="screen-title">About</h1>
+                <h2>The website</h2>
                 <p id="aboutP1">
 Welcome To The Violet Toolkit Website, where information and tools are accessible to all!</p>
                 <p id="aboutP2">
@@ -131,6 +158,12 @@ Do you have limited access to the internet?
 Do you lack a keyboard or a mouse?
 Are you using legacy browsers? Fear not! This website still works.
 Smaller screens and older devices may view a limited version of the website.
+                </p>
+                <h2>Rachel Violet</h2>
+                <p>
+Hi, I'm Raquel Violeta (Rachel Violet)! My mission is to cause a positive impact and make the world a better place.
+For more information on my skills, check out the CV Tab.
+For more information on my creations, check out the Content Tab.
                 </p>
             </div>
 

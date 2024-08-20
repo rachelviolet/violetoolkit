@@ -9,7 +9,7 @@ const decoder = new TextDecoder();
 var loadEncrypt = false;
 
 function noteStart() {
-    document.getElementById('js-err').remove();
+    // document.getElementById('js-err').remove();
     if (localStorage.getItem("violetoolkit-notes-txt") != undefined) {
         document.getElementById("note").value = localStorage.getItem("violetoolkit-notes-txt");
     }
@@ -121,7 +121,6 @@ function noteLoad() {
             console.log(noteContent)
             if (loadEncrypt) {
                 let arrayContent = noteContent.split(",");
-                // var fileEncrypted = new ArrayBuffer([arrayFile]);
                 var fileEncrypted = new Uint8Array(arrayContent);
                 let tempEncrypt = decoder.decode(fileEncrypted);
                 noteContent = tempEncrypt;
@@ -140,7 +139,7 @@ function noteLoad() {
 
 var ctrl2 = 0
 document.addEventListener('keydown', function(event) {
-    console.log(event.key);
+    // console.log(event.key);
     if (event.key.toLowerCase() == "f1") {
         event.preventDefault();
         notePreload(false);

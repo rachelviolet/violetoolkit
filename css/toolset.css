@@ -1,6 +1,12 @@
-p, button, label {font-size: 20px !important;}
+p, button, label {
+    font-size: 20px !important;
+}
 
 #return {
     display: block;
     font-size: 20px;
+}
+
+textarea, input {
+    border: 1px solid #cf9fff;
 }

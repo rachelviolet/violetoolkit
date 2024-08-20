@@ -6,12 +6,15 @@ document.addEventListener('keydown', function(event) {
   // console.log(event.key);
   let kPRess = event.key.toLowerCase();
   for (x = 0; x < blockedPages.length; x++) {
-    if (page.includes(blockedPages[x])) preinputBlock = true;
-    else preinputBlock = false;
+    if (page.includes(blockedPages[x])) {
+      preinputBlock = true;
+    }
+    else {
+      preinputBlock = false;
+    }
   }
-  // if (event.key.toLowerCase() == 'a' && !preinputBlock) preinput = 1;
-  // if (event.key.toLowerCase() == 's' && !preinputBlock) preinput = 2;
-  // if (event.key.toLowerCase() == 'd' && !preinputBlock) preinput = 0;
+
+  if (event.ctrlKey) return
 
   drawApp();
 
@@ -41,6 +44,7 @@ document.addEventListener('keydown', function(event) {
       case "e":
         switchPage("settings-div");
         break;
+
       case "1":
         switch (page) {
           default:
@@ -63,11 +67,19 @@ document.addEventListener('keydown', function(event) {
         }
         break;
       case "2":
+
         switch (page) {
           default:
           case "home-div":
             break;
           case "info-div":
+            // LAPTOP AD
+            if (language == "br") {
+              window.open('https://youtu.be/DXbbWhK0mag', '_blank');
+            }
+            else {
+              window.open('https://youtu.be/LHyMaIi_vAk', '_blank');
+            }
             break;
           case "games-div":
             break;
@@ -87,6 +99,7 @@ document.addEventListener('keydown', function(event) {
           case "home-div":
             break;
           case "info-div":
+            window.open('https://www.amazon.com.br/dp/B0DCTY9LXD', '_blank');
             break;
           case "games-div":
             break;
@@ -100,6 +113,7 @@ document.addEventListener('keydown', function(event) {
             break;
         }
         break;
+
       case "h":
         switchPage("home-div");
         break;

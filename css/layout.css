@@ -16,6 +16,28 @@ body {
     font-family: 'VT323'
 }
 
+.screen-title {
+    margin-left: 5% !important;
+}
+h2 {
+    margin-left: 3% !important;
+}
+
+p, a {
+    font-size: 14px;
+}
+button {
+    font-size: 14px;
+}
+h1 {
+    font-size: 18px;
+}
+h3 {
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+}
+
 button, p, a, input {
     color: #101010;
     border: 0;

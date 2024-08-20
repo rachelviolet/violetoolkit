@@ -1,24 +1,28 @@
-#top-left, #top-right, #bottom-left, #screen, #top, #bottom {display: inline; position: fixed;}
-#top-left * {display: inline;}
+#top-left, #top-right, #bottom-left, #screen, #top, #bottom {position: fixed;}
+#top-left, #top-right, #bottom-left, #screen, #top, #bottom, #top-left *, .skill-tab {display: inline;}
 #home-div, #info-div, #skill-div, #tools-div, #tool-t1-char-count, #settings-div, #about-div {display: none; width: 100%;}
 #tool-t1-char-count {display: none;}
 #settings-div * {display: block;}
 #tools-list * {display: block;}
-.skill-tab {display: inline;}
 
-p, a {font-size: 14px;}
-button {font-size: 14px;}
-h1 {font-size: 18px;}
-h3 {font-size: 16px;
-padding: 0;
-margin: 0;}
-#titlev {font-size: 10px;}
+.skill-tab button {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 1px solid #cf9fff;
+}
+.skill-tab .cv {
+    width: 50px !important;
+}
 
-#short-a, #short-b, #short-c {display: inline;}
+#titlev {
+    font-size: 10px;
+}
 
-#screen-alert {display: none;}
+#screen-alert {
+    display: none;
+}
+
 #screen {
-    border: 1px solid #aaa;
     overflow: auto;
     top: 3.5%;
     left: 0px;
@@ -29,7 +33,7 @@ margin: 0;}
 #screen * {
     width: auto;
     padding: 2px;
-    margin: 2px;}
+    margin: 5px;}
 
 #top-left {
     top: 0.5px;

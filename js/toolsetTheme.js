@@ -1,5 +1,5 @@
 'use strict'
-function fontSet() {
+function fontSet() { // Different from artist.js
     console.log(localStorage.getItem("violetool-retro-font"))
     console.log(font == "OpenSans")
     if (localStorage.getItem("violetool-retro-font") == "1") font = "VT323";
@@ -30,38 +30,17 @@ function fontSet() {
 function themeSet() {
     console.log("Setting theme");
     theme = localStorage.getItem("violetool-theme");
-    switch (theme) {
-        case "0":
-        default:
-            document.body.style.backgroundColor = "#fafafa";
-            for(var i = 0; i < document.body.getElementsByTagName("*").length; i++) {
-                document.body.getElementsByTagName("*")[i].style.color = "#101010";
-            }
-            for(var i = 0; i < document.body.getElementsByTagName("textarea").length; i++) {
-                document.body.getElementsByTagName("textarea")[i].style.backgroundColor = "#fafafa";
-                document.body.getElementsByTagName("textarea")[i].style.color = "#101010";
-            }
-            break;
-        case "1":
-            document.body.style.backgroundColor = "#101010";
-            for(var i = 0; i < document.body.getElementsByTagName("*").length; i++) {
-                document.body.getElementsByTagName("*")[i].style.color = "#fafafa";
-            }
-            for(var i = 0; i < document.body.getElementsByTagName("textarea").length; i++) {
-                document.body.getElementsByTagName("textarea")[i].style.backgroundColor = "#101010";
-                document.body.getElementsByTagName("textarea")[i].style.color = "#fafafa";
-            }
-            break;
-        case "2":
-            document.body.style.backgroundColor = "#101010";
-            for(var i = 0; i < document.body.getElementsByTagName("*").length; i++) {
-                document.body.getElementsByTagName("*")[i].style.color = "#cf9fff";
-            }
-            for(var i = 0; i < document.body.getElementsByTagName("textarea").length; i++) {
-                document.body.getElementsByTagName("textarea")[i].style.backgroundColor = "#101010";
-                document.body.getElementsByTagName("textarea")[i].style.color = "#cf9fff";
-            }
-            break;
+    document.body.style.backgroundColor = bodyColor;
+    for(var i = 0; i < document.body.getElementsByTagName("*").length; i++) {
+        document.body.getElementsByTagName("*")[i].style.color = fontColor;
+    }
+    for(var i = 0; i < document.body.getElementsByTagName("textarea").length; i++) {
+        document.body.getElementsByTagName("textarea")[i].style.backgroundColor = backgroundColor;
+        document.body.getElementsByTagName("textarea")[i].style.color = fontColor;
+    }
+    for(var i = 0; i < document.body.getElementsByTagName("input").length; i++) {
+        document.body.getElementsByTagName("input")[i].style.backgroundColor = backgroundColor;
+        document.body.getElementsByTagName("input")[i].style.color = fontColor;
     }
 }
 
