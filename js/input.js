@@ -113,6 +113,26 @@ document.addEventListener('keydown', function(event) {
             break;
         }
         break;
+      case "4":
+        switch (page) {
+          default:
+          case "home-div":
+            break;
+          case "info-div":
+            window.open('../brazil.html', '_self');
+            break;
+          case "games-div":
+            break;
+          case "tools-div":
+            window.open("../tool-calculator.html", "_self");
+            break;
+          case "about-div":
+            break;
+          case "settings-div":
+            fontSet(true);
+            break;
+        }
+        break;
 
       case "h":
         switchPage("home-div");

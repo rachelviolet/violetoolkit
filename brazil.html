@@ -7,11 +7,14 @@
         <meta name="keywords" content="Raquel Violeta, Rachel Violet, violetoolkit, Violet Toolkit, Ferramenta Violeta, ferramentavioleta, Toolkit Website, brazil map, brazilian states information, mapa do brasil, informações sobre os estados brasileiros">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ferramenta Violeta</title>
+        <link href="./css/brazil.css" rel="stylesheet">
         <link href="./css/layout.css" rel="stylesheet">
         <link href="./css/toolset.css" rel="stylesheet">
 
+        <link rel="icon" type="image/x-icon" href="./favicon.png">
         <script src="./js/theme.js"></script>
         <script src="./js/toolsetTheme.js"></script>
+        <script src="./js/brazil.js"></script>
     </head>
     <body onload="languageSwitch(false); themeSet(); fontSet(); document.getElementById('js-err').remove();">
         <h1 id="js-err">(JAVASCRIPT_ERR) No JavaScript Detected</h1>
@@ -22,7 +25,47 @@
 
         <button id="return" onclick="window.open('./index.html', '_self')">&lt;-- (CTRL)</button>
         <div>
-            <!-- TO-DO: Brazilian Map -->
+            <div id="states-div">
+                <h1 id="brazil-federative-units">Unidades Federativas</h1>
+                <button id="ac" onclick="toggleState('Acre')">(1) Acre</button>
+                <button id="al" onclick="toggleState('Alagoas')">(2) Alagoas</button>
+                <button id="am" onclick="toggleState('Amazonas')">(3) Amazonas</button>
+                <button id="ap" onclick="toggleState('Amapa')">(4) Amapá</button>
+                <button id="ba" onclick="toggleState('Bahia')">(5) Bahia</button>
+                <button id="ce" onclick="toggleState('Ceara')">(6) Ceará</button>
+                <button id="df" onclick="toggleState('Brasilia')">(7) Distrito Federal (Brasília)</button>
+                <button id="es" onclick="toggleState('EspiritoSanto')">(8) Espirito Santo</button>
+                <button id="go" onclick="toggleState('Goias')">(9) Goiás</button>
+                <button id="ma" onclick="toggleState('Maranhao')">(Q0) Maranhão</button>
+                <button id="mt" onclick="toggleState('MatoGrosso')">(Q1) Mato Grosso</button>
+                <button id="ms" onclick="toggleState('MatoGrossoDoSul')">(Q2) Mato Grosso do Sul</button>
+                <button id="mg" onclick="toggleState('MinasGerais')">(Q3) Minas Gerais</button>
+                <button id="pa" onclick="toggleState('Para')">(Q4) Pará</button>
+                <button id="pb" onclick="toggleState('Paraiba')">(Q5) Paraíba</button>
+                <button id="pe" onclick="toggleState('Pernambuco')">(Q6) Pernambuco</button>
+                <button id="pr" onclick="toggleState('Parana')">(Q7) Paraná</button>
+                <button id="pi" onclick="toggleState('Piaui')">(Q8) Piauí</button>
+                <button id="rj" onclick="toggleState('RioDeJaneiro')">(Q9) Rio de Janeiro</button>
+                <button id="rn" onclick="toggleState('RioGrandeDoNorte')">(W0) Rio Grande do Norte</button>
+                <button id="rs" onclick="toggleState('RioGrandeDoSul')">(W1) Rio Grande do Sul</button>
+                <button id="ro" onclick="toggleState('Rondonia')">(W2) Rondônia</button>
+                <button id="rr" onclick="toggleState('Roraima')">(W3) Roraima</button>
+                <button id="sc" onclick="toggleState('SantaCatarina')">(W4) Santa Catarina</button>
+                <button id="sp" onclick="toggleState('SaoPaulo')">(W5) São Paulo</button>
+                <button id="se" onclick="toggleState('Sergipe')">(W6) Sergipe</button>
+                <button id="to" onclick="toggleState('Tocantins')">(W7) Tocantins</button>
+            </div>
+            <div id="states-info">
+                <h1 id="state-title">Brasília</h1>
+                <!-- <img id="state-flag" src="" alt="Bandeira"> -->
+                <p id="state-capital"></p>
+                <p id="state-population"></p>
+                <p id="state-gdp"></p>
+                <p id="state-gdp-capita"></p>
+                <p id="state-governor-state"></p>
+                <p id="state-mayor-capital"></p>
+                <p id="state-info-sources"></p>
+            </div>
             <!-- TO-DO: Brazilian State info -->
         </div>
     </body>

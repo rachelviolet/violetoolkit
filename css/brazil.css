@@ -1,0 +1,12 @@
+#states-div, #states-info {
+    display: inline-table;
+    width: 30%;
+}
+
+#states-info {
+    float: right;
+}
+
+#states-div * {
+    display: block;
+}
