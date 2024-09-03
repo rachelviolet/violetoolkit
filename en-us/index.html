@@ -63,34 +63,31 @@
 
         <div id="screen">
             <div id="home-div" class="sdiv">
-                <h1 id="welcome" class="screen-title">Welcome to my website!</h1>
                 <p id="screen-alert">Limited mode is on.</p>
                 <div id="whats-new">
                     <h2>What's new?</h2>
-                    <p>2024.08 Edition C</p>
+                    <p>2024.09 Edition A</p>
                     <ul>
-                        <li>Refined code and UI</li>
-                        <li>Added "What's New?" section</li>
-                        <li>Added more information in the About Tab</li>
-                        <li>Added more information in the CV Tab</li>
-                        <li>New possibility to fully customize your theme</li>
+                        <li>Refined code and UI (Seriously)</li>
+                        <li>Added more information in the About Tab (licensing)</li>
+                        <li>Added Math game on the renewed (M)edia tab</li>
+                        <li>Minor tweaks to make the website smaller and faster</li>
                     </ul>
                 </div>
-
-                <!-- <div id="see-this"></div> -->
-                <!-- <div id="glimpse"></div> -->
             </div>
 
             <div id="info-div" class="sdiv">
                 <h1 id="infoTitle" class="screen-title">Information</h1>
-                <h2 class="screen-title">World</h2>
-                <a href="../brazil.html">(4) Brazil</a>
                 <h2 class="screen-title">Articles</h2>
                 <a href="./specs-info.html" id="comp-specs-info" class="info-list-item">(1) How to choose a computer, laptop or phone? Which specifications to look out for?</a>
                 <h2 class="screen-title">Videos</h2>
                 <a href="https://youtu.be/LHyMaIi_vAk">(2) Laptop Ad (Link to YouTube)</a>
                 <h2 id="ebooksTitle" class="screen-title">E-books</h2>
                 <a href="https://www.amazon.com.br/dp/B0DCTY9LXD">(3) Where Life Rebooted (English only; Link to Amazon)</a>
+                <h2 class="screen-title">World</h2>
+                <a href="../brazil.html">(4) Brazil</a>
+                <h2 class="screen-time">Fun</h2>
+                <a href="../math.html">(5) Math</a>
                 <!-- <h1 id="sampleWebsitesTitle" class="screen-title">Websites (samples)</h1> -->
                 <!-- <a href="../samples/e-commerce/index.html">Laptop website (e-commerce store sample)</a> -->
             </div>
@@ -162,6 +159,11 @@ Do you lack a keyboard or a mouse?
 Are you using legacy browsers? Fear not! This website still works.
 Smaller screens and older devices may view a limited version of the website.
                 </p>
+                <p id="aboutP3">
+This website's code (but not its icon, article content and everything non-specific) is licensed under the<a style="font-weight: bold;" href=https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3 license.</a>This grants you permission to:
+>Use this website for any purpose, commercial or not.
+>Use, modify and share its code, as long as you license it under the GPLv3 license.
+                </p>
                 <h2>Rachel Violet</h2>
                 <p>
 Hi, I'm Raquel Violeta (Rachel Violet)! My mission is to cause a positive impact and make the world a better place.
@@ -174,7 +176,7 @@ For more information on my creations, check out the Content Tab.
 
         <div id="bottom-left">
             <button id="home" class="bottom js-exclusive" onclick="switchPage('home-div')">(H)OME</button>
-            <button id="information" class="bottom js-exclusive" onclick="switchPage('info-div')">CO(N)TENT</button>
+            <button id="information" class="bottom js-exclusive" onclick="switchPage('info-div')">(M)EDIA</button>
             <button id="skill" class="bottom js-exclusive" onclick="switchPage('skill-div')">(C)V</button>
             <button id="tools" class="bottom js-exclusive" onclick="switchPage('tools-div')">(T)OOLS</button>
             <button id="about" class="bottom js-exclusive" onclick="switchPage('about-div')">AB(O)UT</button>

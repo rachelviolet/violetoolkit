@@ -10,13 +10,17 @@ function langSet(change) {
     if (change !== false) {
         console.log("Changing language.")
         if (change == "en") {
-            language = "en";
+            Page.language = "en";
         }
         else if (change == "br") {
-            language = "br";
+            Page.language = "br";
         }
     }
-    switch (language) {
+    else {
+        if (navigator.language.toLowerCase().includes("pt")) Page.language = "br";
+        else Page.language = "en";
+    }
+    switch (Page.language) {
         case "en":
         default:
             console.log("Current Language: English (default option)");

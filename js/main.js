@@ -1,17 +1,14 @@
 'use strict'
 const namePortuguese = "Ferramenta Violeta";
 const nameEnglish = "Violet Toolkit"
-const version = "24.8C2";
+const version = "24.9A";
 const debugMode = false;
 const freezeMode = false;
 
-var page = "0";
-var font;
-
-if (localStorage.getItem("violetool-retro-font") == 1) font = "VT323";
+if (localStorage.getItem("violetool-retro-font") == 1) Page.font = "VT323";
 
 else {
-    font = "OpenSans";
+    Page.font = "OpenSans";
     localStorage.setItem("violetool-retro-font", 0);
 }
 

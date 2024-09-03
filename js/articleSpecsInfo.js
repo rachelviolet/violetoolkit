@@ -1,9 +1,3 @@
-var font;
-var theme;
-var vw;
-var vh;
-var difference;
-
 function setView() {
     fontSet();
     themeSet();

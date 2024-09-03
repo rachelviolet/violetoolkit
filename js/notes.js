@@ -1,9 +1,5 @@
 'use strict'
-var page = "tool";
-var font;
-var theme;
 const definedLanguages = ["en", "br"];
-var language = localStorage.getItem("violetoolkit-language");
 const encoder = new TextEncoder();
 const decoder = new TextDecoder();
 var loadEncrypt = false;
@@ -41,17 +37,17 @@ function languageSwitch(change) {;
     if (change !== false) {
         console.log("Changing language.")
         if (change == "en") {
-            language = "en";
+            Page.language = "en";
         }
         else if (change == "br") {
-            language = "br";
+            Page.language = "br";
         }
     }
     else {
-        if (navigator.language.toLowerCase().includes("pt")) language = "br";
-        else language = "en";
+        if (navigator.language.toLowerCase().includes("pt")) Page.language = "br";
+        else Page.language = "en";
     }
-    switch (language) {
+    switch (Page.language) {
         case "en":
         default:
             console.log("Current Language: English (default option)");

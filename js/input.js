@@ -6,7 +6,7 @@ document.addEventListener('keydown', function(event) {
   // console.log(event.key);
   let kPRess = event.key.toLowerCase();
   for (x = 0; x < blockedPages.length; x++) {
-    if (page.includes(blockedPages[x])) {
+    if (Page["current"].includes(blockedPages[x])) {
       preinputBlock = true;
     }
     else {
@@ -18,12 +18,12 @@ document.addEventListener('keydown', function(event) {
 
   drawApp();
 
-  if (!blockedPages.includes(page)) {
+  if (!blockedPages.includes(Page.current)) {
     switch (kPRess) {
       case "h":
         switchPage("home-div");
         break;
-      case "n":
+      case "m":
         switchPage("info-div");
         break;
       case "c":
@@ -46,7 +46,7 @@ document.addEventListener('keydown', function(event) {
         break;
 
       case "1":
-        switch (page) {
+        switch (Page.current) {
           default:
           case "home-div":
             break;
@@ -68,7 +68,7 @@ document.addEventListener('keydown', function(event) {
         break;
       case "2":
 
-        switch (page) {
+        switch (Page.current) {
           default:
           case "home-div":
             break;
@@ -94,7 +94,7 @@ document.addEventListener('keydown', function(event) {
         }
         break;
       case "3":
-        switch (page) {
+        switch (Page.current) {
           default:
           case "home-div":
             break;
@@ -109,12 +109,11 @@ document.addEventListener('keydown', function(event) {
           case "about-div":
             break;
           case "settings-div":
-            fontSet(true);
             break;
         }
         break;
       case "4":
-        switch (page) {
+        switch (Page.current) {
           default:
           case "home-div":
             break;
@@ -124,16 +123,31 @@ document.addEventListener('keydown', function(event) {
           case "games-div":
             break;
           case "tools-div":
-            window.open("../tool-calculator.html", "_self");
             break;
           case "about-div":
             break;
           case "settings-div":
-            fontSet(true);
             break;
         }
         break;
-
+      case "5":
+        switch (Page.current) {
+          default:
+          case "home-div":
+            break;
+          case "info-div":
+            window.open("../math.html", "_self");
+            break;
+          case "games-div":
+            break;
+          case "tools-div":
+            break;
+          case "about-div":
+            break;
+          case "settings-div":
+            break;
+        }
+        break;
       case "h":
         switchPage("home-div");
         break;

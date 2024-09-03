@@ -1,0 +1,29 @@
+#mode *, #difficulty *, #start-math {display: block;}
+
+#mode, #difficulty {
+    display: table-cell;
+    margin: auto;
+}
+
+#difficulty * {
+    text-align: end;
+    margin-left: auto;
+}
+
+#choices {
+    display: table;
+    width: 100%;
+    margin: auto;
+}
+
+#exercises {display: none;}
+
+#start-math {
+    display: block;
+    margin: auto;
+}
+
+#info {
+    font-size: 12px !important;
+    font-style: italic;
+}

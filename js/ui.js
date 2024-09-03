@@ -12,7 +12,7 @@ function switchPage(pg) {
     catch (error) {
         console.error("Page does not exist.")
     }
-    page = pg;
+    Page.current = pg;
 }
 
 console.log("ui.js loaded");

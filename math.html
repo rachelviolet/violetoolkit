@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Raquel Violeta">
+        <meta name="description" content="Character counting web app">
+        <meta name="keywords" content="Raquel Violeta, Rachel Violet, violetoolkit, Violet Toolkit, Ferramenta Violeta, ferramentavioleta, Toolkit Website, foss app, math exercises, math fun">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ferramenta Violeta</title>
+
+        <link rel="icon" type="image/x-icon" href="./favicon.png">
+        <link href="./css/layout.css" rel="stylesheet">
+        <link href="./css/toolset.css" rel="stylesheet">
+        <link href="./css/math.css" rel="stylesheet">
+
+        <script src="./js/theme.js"></script>
+        <script src="./js/toolsetTheme.js"></script>
+        <script src="./js/math.js" defer></script>
+    </head>
+    <body onload="languageSwitch(false); themeSet(); fontSet(); document.getElementById('js-err').remove();">
+        <h1 id="js-err">(JAVASCRIPT_ERR) No JavaScript Detected</h1>
+        <div id="top-right">
+            <button id="l-eng" class="ub1" onclick="languageSwitch('en')">English</button>
+            <button id="l-por" class="ub2" onclick="languageSwitch('br')">Português</button>
+        </div>
+
+        <button id="return" onclick="returnFunction()">&lt;-- (CTRL)</button>
+        <div>
+            <div id="choices">
+                <div id="mode">
+                    <h1 id="title-ops">Operations:</h1>
+                    <p id="title-default1">Default: All</p>
+                    <button id="addition" onclick="toggleOperations(1)">(+) Addition (X)</button>
+                    <button id="subtraction" onclick="toggleOperations(2)">(-) Subtraction ()</button>
+                    <button id="multiplication" onclick="toggleOperations(3)">(*) Multiplication ()</button>
+                    <button id="division" onclick="toggleOperations(4)">(/) Division ()</button>
+                </div>
+                <div id="difficulty">
+                    <h1 id="title-difficulty">Difficulty:</h1>
+                    <p id="title-default2">Default: Regular</p>
+                    <p id="title-chosen">Current Difficulty: Regular</p>
+                    <button id="diff1" onclick="difficultyTweak(1)">(1) Regular, 1-digit numbers</button>
+                    <button id="diff2" onclick="difficultyTweak(2)">(2) Advanced, 2-digit numbers</button>
+                    <button id="diff3" onclick="difficultyTweak(3)">(3) Expert, 3-digit numbers</button>
+                    <button id="diff4" onclick="difficultyTweak(4)">(4) Expert+, 5-digit numbers with small fractional numbers</button>
+                </div>
+            </div>
+            <button id="start-math" onclick="startGame()">(ENTER) START</button>
+
+            <div id="exercises">
+                <p id="score"></p>
+                <p id="equation"></p>
+                <p id="info"></p>
+                <input id="answer" type="number">
+                <button id="enter" onclick="answerQuestion()">ENTER</button>
+                <p id="notepad-text"></p>
+                <input type="text" id="notepad-area">
+            </div>
+        </div>
+    </body>
+</html>

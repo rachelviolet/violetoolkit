@@ -1,7 +1,7 @@
 'use strict'
-var theme;
-var font;
-var language;
+
+const upDateEn = "2024/09/03"
+const upDateBr = "03/09/2023"
 
 var Brazil = {
     "Acre": {
@@ -340,6 +340,7 @@ var English = {
     "Governor": "Governor: ",
     "Mayor": "Capital City Mayor: ",
     "Sources": "Sources: ",
+    "Last": `Last update: ${upDateEn}`
 }
 
 var Portuguese = {
@@ -352,6 +353,7 @@ var Portuguese = {
     "Governor": "Governador: ",
     "Mayor": "Prefeito da Capital: ",
     "Sources": "Fontes: ",
+    "Last": `Última atualização: ${upDateBr}`
 }
 
 var currentState = "Brasilia";
@@ -366,22 +368,23 @@ function languageSwitch(change) {;
     if (change !== false) {
         console.log("Changing language.")
         if (change == "en") {
-            language = "en";
+            Page.language = "en";
         }
         else if (change == "br") {
-            language = "br";
+            Page.language = "br";
         }
     }
     else {
-        if (navigator.language.toLowerCase().includes("pt")) language = "br";
-        else language = "en";
+        if (navigator.language.toLowerCase().includes("pt")) Page.language = "br";
+        else Page.language = "en";
     }
-    switch (language) {
+    switch (Page.language) {
         case "en":
         default:
             console.log("Current Language: English (default option)");
             localStorage.setItem("violetool-lang", "en");
             document.getElementById("brazil-federative-units").textContent = `${English.Units}`;
+            document.getElementById("last-update").textContent = `${English.Last}`;
             document.getElementById("state-title").textContent = `${English.Title}${Brazil[currentState].Title}`;
             document.getElementById("state-capital").textContent = `${English.Capital}${Brazil[currentState].Capital}`;
             document.getElementById("state-population").textContent = `${English.Population}${Brazil[currentState].Population}`;
@@ -395,6 +398,7 @@ function languageSwitch(change) {;
             console.log("Ídioma atual: Português Brasileiro");
             localStorage.setItem("violetool-lang", "br");
             document.getElementById("brazil-federative-units").textContent = `${Portuguese.Units}`;
+            document.getElementById("last-update").textContent = `${Portuguese.Last}`;
             document.getElementById("state-title").textContent = `${Portuguese.Title}${Brazil[currentState].Title}`;
             document.getElementById("state-capital").textContent = `${Portuguese.Capital}${Brazil[currentState].Capital}`;
             document.getElementById("state-population").textContent = `${Portuguese.Population}${Brazil[currentState].Population}`;
