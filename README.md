@@ -6,4 +6,5 @@ Do you lack a keyboard or a mouse?
 Are you using legacy browsers? Fear not! This website still works.
 Smaller screens and older devices may view a limited version of the website.
 
-Current version: 24.8C2 (Updated on August 24, 2024)
+Current version: 24.9A (Updated on September 3, 2024)
+License: GPLv3
