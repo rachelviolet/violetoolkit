@@ -1,7 +1,7 @@
 'use strict'
 const namePortuguese = "Ferramenta Violeta";
 const nameEnglish = "Violet Toolkit"
-const version = "24.9A";
+const version = "24.9AB";
 const debugMode = false;
 const freezeMode = false;
 

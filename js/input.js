@@ -74,7 +74,7 @@ document.addEventListener('keydown', function(event) {
             break;
           case "info-div":
             // LAPTOP AD
-            if (language == "br") {
+            if (Page.language == "br") {
               window.open('https://youtu.be/DXbbWhK0mag', '_blank');
             }
             else {
@@ -99,7 +99,7 @@ document.addEventListener('keydown', function(event) {
           case "home-div":
             break;
           case "info-div":
-            window.open('https://www.amazon.com.br/dp/B0DCTY9LXD', '_blank');
+            window.open('https://www.youtube.com/@AprendaInglesAgoraNow', '_blank');
             break;
           case "games-div":
             break;
@@ -118,7 +118,7 @@ document.addEventListener('keydown', function(event) {
           case "home-div":
             break;
           case "info-div":
-            window.open('../brazil.html', '_self');
+            window.open("https://www.amazon.com.br/dp/B0DCTY9LXD", "blank");
             break;
           case "games-div":
             break;
@@ -131,6 +131,24 @@ document.addEventListener('keydown', function(event) {
         }
         break;
       case "5":
+        switch (Page.current) {
+          default:
+          case "home-div":
+            break;
+          case "info-div":
+            window.open("../brazil.html", "_self");
+            break;
+          case "games-div":
+            break;
+          case "tools-div":
+            break;
+          case "about-div":
+            break;
+          case "settings-div":
+            break;
+        }
+        break;
+      case "6":
         switch (Page.current) {
           default:
           case "home-div":

@@ -27,6 +27,7 @@ if (Page.disabledColor == undefined) {
 if (Page.enabledColor == undefined) {
     Page.enabledColor = "#101010";
 }
+var language = Page.language;
 
 Page.theme = localStorage.getItem("violetool-theme");
 if (Page.theme == undefined && Page.theme != "x") {
