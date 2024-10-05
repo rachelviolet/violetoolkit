@@ -14,7 +14,7 @@ document.addEventListener('keydown', function(event) {
     }
   }
 
-  if (event.ctrlKey) return
+  if (event.ctrlKey && !kPRess) return
 
   drawApp();
 
@@ -155,6 +155,24 @@ document.addEventListener('keydown', function(event) {
             break;
           case "info-div":
             window.open("../math.html", "_self");
+            break;
+          case "games-div":
+            break;
+          case "tools-div":
+            break;
+          case "about-div":
+            break;
+          case "settings-div":
+            break;
+        }
+        break;
+      case "7":
+        switch (Page.current) {
+          default:
+          case "home-div":
+            break;
+          case "info-div":
+            window.open("../samples/e-commerce/index.html", "_self");
             break;
           case "games-div":
             break;

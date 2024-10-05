@@ -28,6 +28,8 @@ const English = {
     "diff2": "(2) Advanced, 2-digit numbers",
     "diff3": "(3) Expert, 3-digit numbers",
     "diff4": "(4) Expert+, 5-digit numbers with small fractional numbers",
+    "diff5": "(5) Custom",
+    "diff5-input": "x digits...",
     "start": "(ENTER) START",
     "info": "Make sure to use one or two decimal places, if necessary.",
     "notepad-text": "Notepad:",
@@ -77,6 +79,8 @@ const Portuguese = {
     "diff2": "(2) Avançado, números com 2 dígitos",
     "diff3": "(3) Experiente, números com 3 dígitos",
     "diff4": "(4) Mais Experiente, números com 5 dígitos com pequenos números fracionários",
+    "diff5": "(5) Personalizado",
+    "diff5-input": "x digitos...",
     "start": "(ENTER) INICIAR",
     "info": "Certifique-se de usar uma ou duas casas decimais, se necessário.",
     "notepad-text": "Bloco de notas:",
@@ -123,10 +127,12 @@ function languageSwitch(change) {;
         else if (change == "br") {
             Page.language = "br";
         }
+        localStorage.setItem("violetoolkit-language", Page.language);
     }
     else {
-        if (navigator.language.toLowerCase().includes("pt")) Page.language = "br";
-        else Page.language = "en";
+        if (navigator.language.toLowerCase().includes("pt") && localStorage.getItem("violetoolkit-language") == null) Page.language = "br";
+        else if (localStorage.getItem("violetoolkit-language") == null) Page.language = "en";
+        else Page.language = localStorage.getItem("violetoolkit-language");
     }
     switch (Page.language) {
         case "en":
@@ -147,6 +153,9 @@ function languageSwitch(change) {;
             document.getElementById("diff2").textContent = English["diff2"];
             document.getElementById("diff3").textContent = English["diff3"];
             document.getElementById("diff4").textContent = English["diff4"];
+            document.getElementById("diff5").textContent = English["diff5"];
+            document.getElementById("diff5-a1").setAttribute("placeholder", English["diff5-input"]);
+            document.getElementById("diff5-a2").setAttribute("placeholder", English["diff5-input"]);
             document.getElementById("start-math").textContent = English["start"];
             document.getElementById("info").textContent = English["info"];
             document.getElementById("notepad-text").textContent = English["notepad-text"];
@@ -168,6 +177,9 @@ function languageSwitch(change) {;
             document.getElementById("diff2").textContent = Portuguese["diff2"];
             document.getElementById("diff3").textContent = Portuguese["diff3"];
             document.getElementById("diff4").textContent = Portuguese["diff4"];
+            document.getElementById("diff5").textContent = Portuguese["diff5"];
+            document.getElementById("diff5-a1").setAttribute("placeholder", Portuguese["diff5-input"]);
+            document.getElementById("diff5-a2").setAttribute("placeholder", Portuguese["diff5-input"]);
             document.getElementById("start-math").textContent = Portuguese["start"];
             document.getElementById("info").textContent = Portuguese["info"];
             document.getElementById("notepad-text").textContent = Portuguese["notepad-text"];
@@ -209,6 +221,14 @@ function difficultyTweak(difficulty) {
             }
             else {
                 Game.difficultyText = "Mais experiente";
+            }
+            break;
+        case 5:
+            if (Page.language == "en") {
+                Game.difficultyText = "Custom";
+            }
+            else {
+                Game.difficultyText = "Personalizado";
             }
             break;
     }
@@ -282,6 +302,14 @@ function createMath() {
                 mathNumber2 = Math.floor(Math.random() * 99)
             }
             break;
+        case 5:
+            let num1d = "9".repeat(document.getElementById("diff5-a1").value);
+            if (num1d < 9) num1d = parseInt(9);
+            let num2d = "9".repeat(document.getElementById("diff5-a2").value);
+            if (num2d < 9) num2d = 9;
+            mathNumber1 = Math.floor(Math.random() * parseInt(num1d))
+            mathNumber2 = Math.floor(Math.random() * parseInt(num2d))
+            break;
     }
     while (satisfied == false) {
         chosenOperation = Math.floor(Math.random() * 6 );
@@ -340,6 +368,10 @@ var ctrl2 = 0;
 document.addEventListener('keydown', function(event) {
     let kPRess = event.key.toLowerCase();
     // console.log(kPRess)
+    if (document.activeElement == document.getElementById("diff5-a1") ||
+        document.activeElement == document.getElementById("diff5-a2")) {
+        return;
+    }
     switch (kPRess) {
         case "+":
             if (!Game.choiceScreen) return;
@@ -373,6 +405,10 @@ document.addEventListener('keydown', function(event) {
             if (!Game.choiceScreen) return;
             difficultyTweak(4);
             break;
+        case "5":
+            if (!Game.choiceScreen) return;
+            difficultyTweak(5);
+            break;
         case "enter":
             if (!Game.choiceScreen) {
                 answerQuestion()
@@ -387,7 +423,7 @@ document.addEventListener('keydown', function(event) {
         if (Game.choiceScreen) setTimeout(function() {ctrl2 = 0}, 1000);
         else setTimeout(function() {ctrl2 = 0}, 300);
     }
-    else if (event.ctrlKey && ctrl2 == 1 && kPRess != "r") {
+    else if (event.ctrlKey && ctrl2 == 1 && kPRess == "control") {
         returnFunction();
     }
 });

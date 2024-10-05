@@ -25,10 +25,12 @@
         <button id="return" onclick="window.open('./index.html', '_self')">&lt;-- (CTRL)</button>
         <textarea id="note"></textarea>
         <input id="filesys" type="file" style="display: none;" onchange="noteLoad()">
-        <button class="note-options" id="load-note" onclick="notePreload(false)">Load Note</button>
-        <button class="note-options" id="load-note2" onclick="notePreload(true)">Load Note (Encrypted)</button>
-        <button class="note-options" id="save-note" onclick="noteSave(false)">Save Note</button>
-        <button class="note-options" id="save-note2" onclick="noteSave(true)">Save Note (Encrypted)</button>
+        <div>
+            <button class="note-options" id="load-note" onclick="notePreload(false)">Load Note</button>
+            <button class="note-options" id="load-note2" onclick="notePreload(true)">Load Note (Encrypted)</button>
+            <button class="note-options" id="save-note" onclick="noteSave(false)">Save Note</button>
+            <button class="note-options" id="save-note2" onclick="noteSave(true)">Save Note (Encrypted)</button>
+        </div>
         <p id="encrypt-disclaimer">The encryption system used in this application is NOT as secure as other major industry-standard protocols.</p>
     </body>
 </html>

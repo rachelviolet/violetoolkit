@@ -52,45 +52,51 @@
     <body onload="websiteLoaded(1); setView(); langSet('en');">
    
         <div id="top-left">
-            <h1 id="title" class="top">Violet Toolkit</p><p id="titlev"></h1>
+            <h1 class="top">Violet Toolkit</p><p id="titlev"></h1>
         </div>
 
         <div id="top-right">
-            <a href="../en-us/index.html" class="nojs">(Q) English</a>
-            <a href="../pt-br/index.html" class="nojs">(W) Português Brasileiro</a>
-            <button id="stt" class="top js-exclusive" onclick="switchPage('settings-div')">(E)Settings</button>
+            <a href="../en-us/index.html" class="nojs">(Q)English</a>
+            <a href="../pt-br/index.html" class="nojs">(W)Português Brasileiro</a>
+            <button class="top js-exclusive" onclick="switchPage('settings-div')">(E)Settings</button>
         </div>
 
         <div id="screen">
             <div id="home-div" class="sdiv">
-                <p id="screen-alert">Limited mode is on.</p>
-                <div id="whats-new">
+                <p id="screen-alert">Limited mode: on.</p>
+                <div>
                     <h2>What's new?</h2>
-                    <p>2024.09 Edition A</p>
+                    <p>2024.10 Edition A</p>
                     <ul>
-                        <li>Refined code and UI (Seriously)</li>
-                        <li>Added more information in the About Tab (licensing)</li>
-                        <li>Added Math game on the renewed (M)edia tab</li>
-                        <li>Minor tweaks to make the website smaller and faster</li>
+                        <li>New difficulty in the Math App/Game</li>
+                        <li>Fixed a bug where the other applications didn't save your language preferences</li>
+                        <li>Fixed a bug with the CTRL key shortcuts</li>
+                        <li>E-commerce website sample</li>
+                        <li>UI/UX fixes</li>
                     </ul>
                 </div>
             </div>
 
             <div id="info-div" class="sdiv">
-                <h1 id="infoTitle" class="screen-title">Information</h1>
+                <h1 class="screen-title">Information</h1>
                 <h2 class="screen-title">Articles</h2>
                 <a href="./specs-info.html" id="comp-specs-info" class="info-list-item">(1) How to choose a computer, laptop or phone? Which specifications to look out for?</a>
+
                 <h2 class="screen-title">Videos and YouTube</h2>
                 <a href="https://youtu.be/LHyMaIi_vAk" class="ytv">(2) Laptop Ad (Link to YouTube)</a>
                 <a href="https://www.youtube.com/@AprendaInglesAgoraNow" class="ytv">(3) Learn English Online (English to Brazilian Portuguese)</a>
+                
                 <h2 id="ebooksTitle" class="screen-title">E-books</h2>
                 <a href="https://www.amazon.com.br/dp/B0DCTY9LXD">(4) Where Life Rebooted (English only; Link to Amazon)</a>
+                
                 <h2 class="screen-title">World</h2>
                 <a href="../brazil.html">(5) Brazil</a>
-                <h2 class="screen-time">Fun</h2>
+                
+                <h2 class="screen-title">Fun</h2>
                 <a href="../math.html">(6) Math</a>
-                <!-- <h1 id="sampleWebsitesTitle" class="screen-title">Websites (samples)</h1> -->
-                <!-- <a href="../samples/e-commerce/index.html">Laptop website (e-commerce store sample)</a> -->
+                
+                <h2 class="screen-title">Websites (samples)</h1>
+                <a href="../samples/e-commerce/index.html">(7) Laptop website (e-commerce store sample; English only)</a>
             </div>
 
             <div id="skill-div" class="sdiv">
@@ -100,7 +106,7 @@
                 </div>
 
                 <div>
-                    <h1 id="skillTitle" class="screen-title">CV / Resumé</h1>
+                    <h1 class="screen-title">CV / Resumé</h1>
                     <h3>Information and Contact</h3>
                     <p class="skills-list">E-mail: raquelvioleta.contato@gmail.com</p>
                     <p class="skills-list">Location: Brazil</p>
@@ -132,35 +138,32 @@
             </div>
 
             <div id="tools-div" class="sdiv js-exclusive">
-                <h1 id="toolsTitle" class="screen-title">Tools</h1>
+                <h1 class="screen-title">Tools</h1>
                 <div id="tools-list">
-                    <a id="s5Writing" href="../tool-char-count.html">(1) Character count</a>
-                    <a id="s5Note" href="../tool-note.html">(2) Notes</a>
-                    <a id="s5Calc" href="../tool-calculator.html">(3) Calculator</a>
+                    <a href="../tool-char-count.html">(1) Character count</a>
+                    <a href="../tool-note.html">(2) Notes</a>
+                    <a href="../tool-calculator.html">(3) Calculator</a>
                 </div>
             </div>
             
 
             <div id="settings-div" class="sdiv js-exclusive">
-                <h1 id="settingsTitle" class="screen-title">Settings</h1>
-                <button id="stt-theme" onclick="themeSet(true)">(1)Toggle theme</button>
+                <h1 class="screen-title">Settings</h1>
+                <button onclick="themeSet(true)">(1)Toggle theme</button>
                 <p>Hint: You can modify the theme if you change the optiong in LocalStorage (Browser DevTools)</p>
                 <p style="font-style: italic;">Set the "violetool-theme" value to the letter "x"</p>
-                <button id="stt-font" onclick="fontSet(true)">(2)Toggle font</button>
+                <button onclick="fontSet(true)">(2)Toggle font</button>
             </div>
 
             <div id="about-div" class="sdiv">
-                <h1 id="aboutTitle" class="screen-title">About</h1>
+                <h1 class="screen-title">About</h1>
                 <h2>The website</h2>
-                <p id="aboutP1">
+                <p>
 Welcome To The Violet Toolkit Website, where information and tools are accessible to all!</p>
-                <p id="aboutP2">
-Do you have limited access to the internet?
-Do you lack a keyboard or a mouse?
-Are you using legacy browsers? Fear not! This website still works.
-Smaller screens and older devices may view a limited version of the website.
+                <p>
+Inspired by retro UIs, this website seeks to improve your life.
                 </p>
-                <p id="aboutP3">
+                <p>
 This website's code (but not its icon, article content and everything non-specific) is licensed under the<a style="font-weight: bold;" href=https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3 license.</a>This grants you permission to:
 >Use this website for any purpose, commercial or not.
 >Use, modify and share its code, as long as you license it under the GPLv3 license.
@@ -176,11 +179,11 @@ For more information on my creations, check out the Content Tab.
         </div>
 
         <div id="bottom-left">
-            <button id="home" class="bottom js-exclusive" onclick="switchPage('home-div')">(H)OME</button>
-            <button id="information" class="bottom js-exclusive" onclick="switchPage('info-div')">(M)EDIA</button>
-            <button id="skill" class="bottom js-exclusive" onclick="switchPage('skill-div')">(C)V</button>
-            <button id="tools" class="bottom js-exclusive" onclick="switchPage('tools-div')">(T)OOLS</button>
-            <button id="about" class="bottom js-exclusive" onclick="switchPage('about-div')">AB(O)UT</button>
+            <button class="bottom js-exclusive" onclick="switchPage('home-div')">(H)OME 🏠</button>
+            <button class="bottom js-exclusive" onclick="switchPage('info-div')">(M)EDIA 📺</button>
+            <button class="bottom js-exclusive" onclick="switchPage('skill-div')">(C)V 📜</button>
+            <button class="bottom js-exclusive" onclick="switchPage('tools-div')">(T)OOLS 🛠️</button>
+            <button class="bottom js-exclusive" onclick="switchPage('about-div')">AB(O)UT ℹ️</button>
         </div>
     </body>
 </html>

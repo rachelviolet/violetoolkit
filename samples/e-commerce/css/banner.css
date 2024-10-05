@@ -1,0 +1,58 @@
+#top {
+    width: 80%;
+    height: 18%;
+    margin-bottom: 2px;
+}
+
+#top1 *, #top2 * {
+    margin-bottom: 12px;
+}
+
+#top .laptop-img {
+    position: relative;
+    top: 14%;
+    left: 5%;
+    display: inline;
+    width: 192px;
+    height: 108px;
+    opacity: 80%;
+    transition: 0.1s;
+}
+
+#top div {
+    border: none;
+    display: inline;
+}
+
+#top #icon {
+    position: relative;
+    display: inline;
+    opacity: 100%;
+}
+
+#top1 * {
+    display: contents;
+}
+
+#top #top2 {
+    width: 300px;
+    float: right;
+}
+
+#laptop-regular {margin-right: -3px;}
+#laptop-regular:hover {opacity: 100%;}
+
+#laptop-gaming {margin-left: -3px;}
+#laptop-gaming:hover {opacity: 100%;}
+
+/* @media (max-width: 1280px) {
+    #top .laptop-img {
+        width: 64px;
+        height: 36px;
+    }
+
+    #top #top2 {
+        width: 100px;
+        font-size: 8px;
+    }
+} */

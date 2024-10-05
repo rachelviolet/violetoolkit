@@ -11,6 +11,10 @@ body {
     font-family: 'OpenSans';
     src: url("../font/open-sans.ttf");
 }
+@font-face {
+    font-family: 'RobotoMono';
+    src: url("../font/roboto-mono.ttf");
+}
 
 * {
     font-family: 'VT323'
@@ -24,7 +28,7 @@ h2 {
 }
 
 p, a {
-    font-size: 14px;
+    font-size: 143px;
 }
 button {
     font-size: 14px;

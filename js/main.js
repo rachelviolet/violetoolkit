@@ -1,11 +1,13 @@
 'use strict'
 const namePortuguese = "Ferramenta Violeta";
 const nameEnglish = "Violet Toolkit"
-const version = "24.9AB";
+const version = "24.10A";
 const debugMode = false;
 const freezeMode = false;
+const fontList = [0, 1, 2]
 
 if (localStorage.getItem("violetool-retro-font") == 1) Page.font = "VT323";
+else if (localStorage.getItem("violetool-retro-font") == 2) Page.font = "RobotoMono";
 
 else {
     Page.font = "OpenSans";

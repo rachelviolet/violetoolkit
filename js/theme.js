@@ -1,7 +1,7 @@
 'use strict'
 var Page = {
     current: "tool",
-    font: undefined,
+    font: localStorage.getItem("violetool-retro-font"),
     theme: undefined,
     language: localStorage.getItem("violetoolkit-language"),
     fontColor: localStorage.getItem("violetool-color-fg"),

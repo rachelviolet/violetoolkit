@@ -10,6 +10,10 @@
     margin-left: auto;
 }
 
+.diff5-input {
+    width: 250px;
+}
+
 #choices {
     display: table;
     width: 100%;
@@ -24,6 +28,5 @@
 }
 
 #info {
-    font-size: 12px !important;
     font-style: italic;
 }

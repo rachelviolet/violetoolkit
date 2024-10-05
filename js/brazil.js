@@ -375,8 +375,9 @@ function languageSwitch(change) {;
         }
     }
     else {
-        if (navigator.language.toLowerCase().includes("pt")) Page.language = "br";
-        else Page.language = "en";
+        if (navigator.language.toLowerCase().includes("pt") && localStorage.getItem("violetoolkit-language") == null) Page.language = "br";
+        else if (localStorage.getItem("violetoolkit-language") == null) Page.language = "en";
+        else Page.language = localStorage.getItem("violetoolkit-language");
     }
     switch (Page.language) {
         case "en":
@@ -416,6 +417,7 @@ var pre1 = false;
 var pre2 = false;
 document.addEventListener('keydown', function(event) {
     // console.log(event.key);
+    let kPRess = event.key.toLowerCase();
     if (event.key.toLowerCase() == "q" && !pre2) {
         pre1 = true;
         setTimeout(function() {
@@ -521,7 +523,7 @@ document.addEventListener('keydown', function(event) {
         ctrl2 = 1;
         setTimeout(function() {ctrl2 = 0}, 1000);
     }
-    else if (event.ctrlKey && ctrl2 == 1) {
+    else if (event.ctrlKey && ctrl2 == 1 && kPRess == "control") {
         window.open("./index.html", "_self");
     }
 });

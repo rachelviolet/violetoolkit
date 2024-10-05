@@ -50,7 +50,7 @@
     <body onload="websiteLoaded(1); setView(); langSet('br');">
    
         <div id="top-left">
-            <h1 id="title" class="top">Ferramenta Violeta</p><p id="titlev"></h1>
+            <h1 class="top">Ferramenta Violeta</p><p id="titlev"></h1>
         </div>
 
         <div id="top-right">
@@ -61,17 +61,16 @@
 
         <div id="screen">
             <div id="home-div" class="sdiv">
-                <h1 id="welcome" class="screen-title">Boas-vindas ao meu site!</h1>
-                <p id="screen-alert">O modo limitado está ativo.</p>
-                <div id="whats-new">
+                <p id="screen-alert">modo limitado: Ativado.</p>
+                <div>
                     <h2>O que há de novo?</h2>
-                    <p>2024.08 Edição C</p>
+                    <p>2024.10 Edição A</p>
                     <ul>
-                        <li>Código e interface refinados</li>
-                        <li>Nova seção "What's New?" adicionada</li>
-                        <li>Novas informações na Aba Sobre adicionadas</li>
-                        <li>Novas informações na Aba Currículo adicionadas</li>
-                        <li>Nova possibilidade de alterar o seu tema completamente</li>
+                        <li>Nova dificuldade para a/o Aplicação/Jogo de Matemática</li>
+                        <li>Foi consertado um erro onde os demais aplicativos não gravavam o idioma selecionado</li>
+                        <li>Foi consertado um erro com os atalhos da tecla CTRL</li>
+                        <li>Exemplo de site e-commerce (comércio digital)</li>
+                        <li>Reparos na interface gráfica</li>
                     </ul>
                 </div>
                 <!-- <div id="see-this"></div> -->
@@ -79,20 +78,25 @@
             </div>
 
             <div id="info-div" class="sdiv">
-                <h1 id="infoTitle" class="screen-title">Informação</h1>
+                <h1 class="screen-title">Informação</h1>
                 <h2>Artigos</h2>
                 <a href="./specs-info.html" id="comp-specs-info" class="info-list-item">(1) Como escolher um computador, notebook ou celular? Quais especificações devo prestar atenção?</a>
-                <h2 id="videoTitle" class="screen-title">Vídeos e YouTube</h2>
+                
+                <h2 class="screen-title">Vídeos e YouTube</h2>
                 <a href="https://youtu.be/DXbbWhK0mag" class="ytv">(2) Anúncio de Notebook (Link para o YouTube)</a>
                 <a href="https://www.youtube.com/@AprendaInglesAgoraNow" class="ytv">(3) Aprenda Inglês Online (Inglês para Português Brasileiro)</a>
-                <h2 id="ebooksTitle" lass="screen-title">Livros virtuais (e-books)</h2>
+               
+                <h2 class="screen-title">Livros virtuais (e-books)</h2>
                 <a href="https://www.amazon.com.br/dp/B0DCTY9LXD">(4) Where Life Rebooted (Apenas em inglês; link para a Amazon)</a>
+                
                 <h2 class="screen-title">Mundo</h2>
                 <a href="../brazil.html">(5) Brasil</a>
-                <h2 class="screen-time">Diversão</h2>
+               
+                <h2 class="screen-title">Diversão</h2>
                 <a href="../math.html">(6) Matemática</a>
-                <!-- <h1 id="sampleWebsitesTitle" class="screen-title">Websites (exemplos)</h1>
-                <a href="../samples/e-commerce/index.html">Site de notebook (exemplo de loja e-commerce)</a> -->
+              
+                <h2 class="screen-title">Websites (exemplos)</h1>
+                <a href="../samples/e-commerce/index.html">(7) Site de notebook (exemplo de loja e-commerce (comércio digital); Apenas em inglês)</a>
             </div>
 
             <div id="skill-div" class="sdiv">
@@ -102,7 +106,7 @@
                 </div>
 
                 <div>
-                    <h1 id="skillTitle" class="screen-title">Currículo</h1>
+                    <h1 class="screen-title">Currículo</h1>
                     <h3>Informação e Contato</h3>
                     <p class="skills-list">E-mail: raquelvioleta.contato@gmail.com</p>
                     <p class="skills-list">Location: Brazil</p>
@@ -133,33 +137,30 @@
             </div>
 
             <div id="tools-div" class="sdiv js-exclusive">
-                <h1 id="toolsTitle" class="screen-title">Ferramentas</h1>
+                <h1 class="screen-title">Ferramentas</h1>
                 <div id="tools-list">
-                    <a id="s5Writing" href="../tool-char-count.html">(1) Contagem de caracteres</a>
-                    <a id="s5Note" href="../tool-note.html">(2) Anotações</a>
-                    <a id="s5Calc" href="../tool-calculator.html">(3) Calculadora</a>
+                    <a href="../tool-char-count.html">(1) Contagem de caracteres</a>
+                    <a  href="../tool-note.html">(2) Anotações</a>
+                    <a  href="../tool-calculator.html">(3) Calculadora</a>
                 </div>
 
             </div>
 
             <div id="settings-div" class="sdiv js-exclusive">
-                <h1 id="settingsTitle" class="screen-title">Configurações</h1>
-                <button id="stt-theme" onclick="themeSet(true)">(1)Alterar tema</button>
+                <h1 class="screen-title">Configurações</h1>
+                <button onclick="themeSet(true)">(1)Alterar tema</button>
                 <p>Dica: Você pode modificar o tema se alterar as opções no LocalStorage (Ferramentas de Desenvolvedor do navegador)</p>
                 <p style="font-style: italic;">Defina o valor de "violetool-theme" para a letra "x"</p>
-                <button id="stt-font" onclick="fontSet(true)">(2)Alterar fonte</button>
+                <button onclick="fontSet(true)">(2)Alterar fonte</button>
             </div>
 
             <div id="about-div" class="sdiv">
-                <h1 id="aboutTitle" class="screen-title">Sobre</h1>
+                <h1 class="screen-title">Sobre</h1>
                 <h2>O site</h2>
-                <p id="aboutP1">
+                <p>
 Boas-vindas ao site Ferramenta Violeta, onde informações e ferramentas são acessíveis para todas as pessoas!</p>
-                <p id="aboutP2">
-Você tem acesso limitado à internet?
-Você não tem um teclado ou um mouse?
-Está usando um navegador antigo (possívelmente um de 2010)? Não se preocupe! Esse site ainda funciona.
-Telas pequenas e dispositivos pequenos podem ver uma versão limitada do site.
+                <p>
+Inspirado em interface gráficas antigas, esse site procura melhorar sua vida.
                 </p>
                 <h2>Raquel Violeta</h2>
                 <p>
@@ -172,11 +173,11 @@ Para mais informações sobre minhas criações, verifique a Aba Conteúdo
         </div>
 
         <div id="bottom-left">
-            <button id="home" class="bottom js-exclusive" onclick="switchPage('home-div')">(H)OME</button>
-            <button id="information" class="bottom js-exclusive" onclick="switchPage('info-div')">(M)ÍDIA</button>
-            <button id="skill" class="bottom js-exclusive" onclick="switchPage('skill-div')">(C)URRÍCULO</button>
-            <button id="tools" class="bottom js-exclusive" onclick="switchPage('tools-div')">FERRAMEN(T)AS</button>
-            <button id="about" class="bottom js-exclusive" onclick="switchPage('about-div')">S(O)BRE</button>
+            <button class="bottom js-exclusive" onclick="switchPage('home-div')">(H)OME 🏠</button>
+            <button class="bottom js-exclusive" onclick="switchPage('info-div')">(M)ÍDIA 📺</button>
+            <button class="bottom js-exclusive" onclick="switchPage('skill-div')">(C)URRÍCULO 📜</button>
+            <button class="bottom js-exclusive" onclick="switchPage('tools-div')">FERRAMEN(T)AS 🛠️</button>
+            <button class="bottom js-exclusive" onclick="switchPage('about-div')">S(O)BRE ℹ️</button>
         </div>
     </body>
 </html>

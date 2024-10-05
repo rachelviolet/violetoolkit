@@ -17,8 +17,9 @@ function langSet(change) {
         }
     }
     else {
-        if (navigator.language.toLowerCase().includes("pt")) Page.language = "br";
-        else Page.language = "en";
+        if (navigator.language.toLowerCase().includes("pt") && localStorage.getItem("violetoolkit-language") == null) Page.language = "br";
+        else if (localStorage.getItem("violetoolkit-language") == null) Page.language = "en";
+        else Page.language = localStorage.getItem("violetoolkit-language");
     }
     switch (Page.language) {
         case "en":
