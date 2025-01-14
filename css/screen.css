@@ -1,14 +1,26 @@
-#top-left, #top-right, #bottom-left, #screen, #top, #bottom {position: fixed;}
-#top-left, #top-right, #bottom-left, #screen, #top, #bottom, #top-left * {display: inline;}
+/* #top-left, #top-right, #bottom, #screen, #top, #bottom {position: fixed;} */
+/* #top-left, #top-right, #bottom, #screen, #top, #bottom, #top-left * {display: inline;} */
 #home-div, #info-div, #skill-div, #tools-div, #tool-t1-char-count, #settings-div, #about-div {display: none; width: 100%;}
-#settings-div * {display: block;}
+#settings-div *, a {display: block;}
 #tools-list * {display: block;}
 
-.skill-tab {
-    display: inline;
-    margin-right: 90px;
+.skill-tab, #languages {
     border: 1px solid #cf9fff;
-    width: 90px !important;
+    border-radius: 5%;
+}
+
+#settings-div-1 {
+    cursor: not-allowed;
+    color: #ff0000 !important;
+}
+
+#skills-summary {
+    display: none;
+}
+
+#skills-skills-list div {
+    display: inline-grid;
+    width: fit-content;
 }
 
 .ytv {display: block;}
@@ -21,12 +33,42 @@
     display: none;
 }
 
+#top, #bottom {
+    position: absolute;
+    width: 100%;
+}
+
+#top {
+    top: 0;
+    border-bottom: #000 solid 0.25px;
+}
+
+#top * {
+    padding: 0;
+    margin: 0;
+}
+
+#menu, #languages, #website-title, #skill-tab, .skill-tab {
+    margin: auto;
+    width: fit-content !important;
+}
+
+#menu {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+#languages {
+    margin-top: 25px;
+}
+
+#languages * {display: inline;}
+
 #screen {
-    overflow: auto;
-    top: 3.5%;
-    left: 0px;
-    width: 99.6%;
-    height: 92.5%;
+    /* overflow: auto; */
+    /* width: 99.6%; */
+    /* height: 92.5%; */
+    width: fit-content;
+    margin: auto;
     z-index: -1;
 }
 
@@ -48,21 +90,17 @@
     top: 0.5px;
     right: 2px;
 }
-#bottom-left {
-    bottom: 1px;
-    left: 2px;
-}
 
 /* @media (max-width: 345px) or (max-height: 335px) {
     * {
         position: relative !important;
     }
-    #top-left *, #top-right *, #bottom-left *, #home-div *, #info-div *, #skill-div *, 
+    #top-left *, #top-right *, #bottom *, #home-div *, #info-div *, #skill-div *, 
     #tools-div *, #tool-t1-char-count *, #settings-div *, #about-div * {
         display: block !important;
     }
     #screen-alert {display: block;}
-    #bottom-left{bottom: 0 !important;}
+    #bottom{bottom: 0 !important;}
     #screen {border: 0;}
     #titlev {display: block !important;}
 } */
@@ -71,7 +109,7 @@
         overflow: hidden;
         display: block;
     }
-    #top-left, #top-right, #bottom-left, #screen, #top, #bottom {
+    #top-left, #top-right, #bottom, #screen, #top, #bottom {
         position: relative;
         display: block;
     }
@@ -81,7 +119,6 @@
     h3 {font-size: 8px;}
     #screen {border: 0;}
     #titlev {display: none;}
-    #bottom-left {bottom: 1.5px}
 }
 @media (max-width: 639px) {
     p, a, label, li {font-size: 10px !important;}
@@ -89,7 +126,6 @@
     h1 {font-size: 14px !important;}
     h3 {font-size: 12px;}
     #titlev {font-size: 8px !important;}
-    #bottom-left {bottom: 1.5px}
 }
 @media (max-height: 680px) {
     #screen {

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Raquel Violeta">
+        <meta name="description" content="Character counting web app">
+        <meta name="keywords" content="Raquel Violeta, Rachel Violet, violetoolkit, Violet Toolkit, Ferramenta Violeta, ferramentavioleta, Toolkit Website, foss app, foss data management app, foss data management, data management, data io">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ferramenta Violeta</title>
+
+        <link rel="icon" type="image/x-icon" href="./favicon.png">
+        <link href="./css/layout.css" rel="stylesheet">
+        <link href="./css/toolset.css" rel="stylesheet">
+        <link href="./css/datam.css" rel="stylesheet">
+        
+        <script src="./js/theme.js"></script>
+        <script src="./js/theme.js"></script>
+        <script src="./js/ui.js"></script>
+        <script src="./js/dataManagement.js" defer></script>
+        <script src="./js/dataMIO.js" defer></script>
+        <script src="./js/dataMText.js" defer></script>
+    </head>
+    <body onload="languageSwitch(false); themeSet(); document.getElementById('js-err').remove();">
+        <h1 id="js-err">(JAVASCRIPT_ERR) No JavaScript Detected</h1>
+        <div id="top-right">
+            <button id="l-eng" class="ub1" onclick="languageSwitch('en')">English</button>
+            <button id="l-por" class="ub2" onclick="languageSwitch('br')">Português</button>
+        </div>
+
+        <button id="return" onclick="window.open('./index.html', '_self')">&lt;-- (ESC)</button>
+        <div id="main-screen">
+            <button id="data-pick-1" onclick="displayTool(1)">Data Input/Output</button>
+            <button id="data-pick-2" onclick="displayTool(2)">Text Alter Tools</button>
+        </div>
+
+        <div id="data-input-output" class="pick-divs">
+            <p>Data is automatically saved on your browser's local storage.</p>
+            <label id="data-id-label">Data ID</label>
+            <input id="data-id">
+            <label id="data-value-label">Data Value</label>
+            <input id="data-value">
+            <div>
+                <button id="data-calculate1">Calculate Data (value)</button>
+                <button id="data-calculate2">Calculate Data (percentage)</button>
+            </div>
+            <p id="data-results"></p>
+            <div>
+                <button id="data-summary">Data Summary</button>
+                <button id="data-load">Import Data</button>
+                <button id="data-save">Export Data</button>
+                <button id="data-reset">Reset Data</button>
+            </div>
+            <hr>
+            <div>
+                <!-- <button id="data-add" onclick="createData()">Add Data</button> -->
+                <button id="data-add" onclick="modifyData()">Add/Modify Data</button>
+            </div>
+        </div>
+
+        <div id="text-alter-tools" class="pick-divs">
+            <label>Main text</label>
+            <input id="text-alter-sample" type="text">
+            <!-- <label>Secondary text</label>
+            <input id="text-alter-sample" type="text"> -->
+            <div>
+                <button id="text-alter-lowercase" onclick="textAct(1)">Lowercase text</button>
+                <button id="text-alter-uppercase" onclick="textAct(2)">Uppercase text</button>
+                <!-- <button id="text-alter-titlecase" onclick="textAct(3)">Titlecase text</button> -->
+                <!-- <button id="text-alter-replace" onclick="textAct(4)">Replace text</button> -->
+                <button id="text-alter-clean" onclick="textAct(0)">Clean</button>
+                <button id="text-alter-restore" onclick="textAct(null)">Restore previous text</button>
+            </div>
+        </div>
+    </body>
+</html>

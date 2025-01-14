@@ -36,9 +36,7 @@ function languageSwitch(change) {;
         }
     }
     else {
-        if (navigator.language.toLowerCase().includes("pt") && localStorage.getItem("violetoolkit-language") == null) Page.language = "br";
-        else if (localStorage.getItem("violetoolkit-language") == null) Page.language = "en";
-        else Page.language = localStorage.getItem("violetoolkit-language");
+        Page.language = localStorage.getItem("violetool-lang");
     }
     switch (Page.language) {
         case "en":
@@ -55,7 +53,7 @@ function languageSwitch(change) {;
     }
 }
 
-var ctrl2 = 0
+var ctrl2 = 1
 document.addEventListener('keydown', function(event) {
     let kPRess = event.key.toLowerCase();
     switch (kPRess) {
@@ -73,11 +71,11 @@ document.addEventListener('keydown', function(event) {
             Calculator.calculate(4);
             break;
     }
-    if (event.ctrlKey && ctrl2 == 0) {
+    if (event.key.toLowerCase() == "escape" && ctrl2 == 0) {
         ctrl2 = 1;
         setTimeout(function() {ctrl2 = 0}, 1000);
     }
-    else if (event.ctrlKey && ctrl2 == 1 && kPRess == "control") {
+    else if (event.key.toLowerCase() == "escape" && ctrl2 == 1) {
         window.open("./index.html", "_self");
     }
 });

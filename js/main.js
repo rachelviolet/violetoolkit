@@ -1,8 +1,7 @@
 'use strict'
 const namePortuguese = "Ferramenta Violeta";
 const nameEnglish = "Violet Toolkit"
-const version = "24.10A";
-const debugMode = false;
+var version;
 const freezeMode = false;
 const fontList = [0, 1, 2]
 
@@ -14,14 +13,10 @@ else {
     localStorage.setItem("violetool-retro-font", 0);
 }
 
-if (!debugMode) {
-    console.warn("Please make sure you know what you are doing.");
-    console.log = function() {};
-    console.warn = function() {};
-    console.error = function() {};
-}
-
 function websiteLoaded(source) {
+    version = document.getElementById("version").textContent;
+    document.getElementById("titlev").textContent = version;
+    themeSet();
     if (source == 1) {
         document.getElementById("no-js-style").remove();
 
@@ -50,9 +45,7 @@ function websiteLoaded(source) {
         document.getElementById("js-err").style.display = "none";
         console.warn("Modified code detected.");
     }
-    // langSet(undefined);
-    fontSet(undefined);
-    themeSet(undefined);
+    inputVisualCheck();
     document.getElementById("home-div").style.display = "block";
 }
 

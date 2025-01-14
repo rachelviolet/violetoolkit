@@ -13,16 +13,17 @@
         <link href="./css/toolset.css" rel="stylesheet">
 
         <script src="./js/theme.js"></script>
-        <script src="./js/toolsetTheme.js"></script>
+        <script src="./js/theme.js"></script>
+        <script src="./js/ui.js"></script>
         <script src="./js/notes.js" defer></script>
     </head>
-    <body onload="languageSwitch(false); themeSet(); fontSet(); document.getElementById('js-err').remove(); noteStart();">
+    <body onload="languageSwitch(false); themeSet(); document.getElementById('js-err').remove(); noteStart();">
         <h1 id="js-err">(JAVASCRIPT_ERR) No JavaScript Detected</h1>
         <div id="top-right">
             <button id="l-eng" class="ub1" onclick="languageSwitch('en')">English</button>
             <button id="l-por" class="ub2" onclick="languageSwitch('br')">Português</button>
         </div>
-        <button id="return" onclick="window.open('./index.html', '_self')">&lt;-- (CTRL)</button>
+        <button id="return" onclick="window.open('./index.html', '_self')">&lt;-- (ESC)</button>
         <textarea id="note"></textarea>
         <input id="filesys" type="file" style="display: none;" onchange="noteLoad()">
         <div>

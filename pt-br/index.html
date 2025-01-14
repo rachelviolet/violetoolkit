@@ -36,8 +36,8 @@
         <script src="../js/theme.js"></script>
         <script src="../js/language.js"></script>
         <script src="../js/main.js"></script>
-        <script src="../js/artist.js"></script>
         <script src="../js/input.js"></script>
+        <script src="../js/inputVisual.js"></script>
         <script src="../js/ui.js"></script>
 
         <link rel="icon" type="image/x-icon" href="../favicon.png">
@@ -47,30 +47,34 @@
         <link rel="alternate" href="../en-us/index.html" hreflang="en-us"/>
 
     </head>
-    <body onload="websiteLoaded(1); setView(); langSet('br');">
+    <body onload="websiteLoaded(1); langSet('br');">
    
-        <div id="top-left">
-            <h1 class="top">Ferramenta Violeta</p><p id="titlev"></h1>
-        </div>
-
-        <div id="top-right">
-            <a href="../en-us/index.html" class="nojs">(Q) English</a>
-            <a href="../pt-br/index.html" class="nojs">(W) Português Brasileiro</a>
-            <button id="stt" class="top js-exclusive" onclick="switchPage('settings-div')">(E)Configurações</button>
+        <h1 id="website-title">Ferramenta Violeta</p><p id="titlev"></h1>
+        
+        <div id="menu">
+            <button class="menu js-exclusive" id="mn-1" onclick="switchPage('home-div')">🏠 PRINCIPAL </button>
+            <button class="menu js-exclusive" id="mn-2" onclick="switchPage('info-div')">📺 MÍDIA </button>
+            <button class="menu js-exclusive" id="mn-3" onclick="switchPage('skill-div')">📜 CURRÍCULO </button>
+            <button class="menu js-exclusive" id="mn-4" onclick="switchPage('tools-div')">🛠️ FERRAMENTAS </button>
+            <button class="menu js-exclusive" id="mn-5" onclick="switchPage('about-div')">ℹ️ SOBRE </button>
+            <button class="menu js-exclusive" id="mn-6" onclick="switchPage('settings-div')">CONFIGURAÇÕES</button>
         </div>
 
         <div id="screen">
             <div id="home-div" class="sdiv">
                 <p id="screen-alert">modo limitado: Ativado.</p>
                 <div>
+                    <p>
+                        Utilize as setas do teclado ou o mouse para navegar o website.
+                        ESC para voltar, ENTER para confirmar.
+                    </p>
                     <h2>O que há de novo?</h2>
-                    <p>2024.10 Edição A</p>
+                    <p id="version">2025.01 A</p>
                     <ul>
-                        <li>Nova dificuldade para a/o Aplicação/Jogo de Matemática</li>
-                        <li>Foi consertado um erro onde os demais aplicativos não gravavam o idioma selecionado</li>
-                        <li>Foi consertado um erro com os atalhos da tecla CTRL</li>
-                        <li>Exemplo de site e-commerce (comércio digital)</li>
-                        <li>Reparos na interface gráfica</li>
+                        <li>Nova interface gráfica</li>
+                        <li>Novos atalhos de teclado</li>
+                        <li>Novos artigos</li>
+                        <li>Pequenas correções.</li>
                     </ul>
                 </div>
                 <!-- <div id="see-this"></div> -->
@@ -78,90 +82,101 @@
             </div>
 
             <div id="info-div" class="sdiv">
-                <h1 class="screen-title">Informação</h1>
-                <h2>Artigos</h2>
-                <a href="./specs-info.html" id="comp-specs-info" class="info-list-item">(1) Como escolher um computador, notebook ou celular? Quais especificações devo prestar atenção?</a>
-                
+                <h2 class="screen-title">Artigos</h2>
+                <a id="info-div-1" class="info-div-elements" href="./specs-info.html" id="comp-specs-info" class="info-list-item">Como escolher um computador, notebook ou celular? Quais especificações devo prestar atenção?</a>
+                <a id="info-div-2" class="info-div-elements" href="./como-viver-uma-vida-feliz.html" id="happy-life-info" class="info-list-item">12 coisas para fazer de 2025 um ótimo ano:</a>
+
                 <h2 class="screen-title">Vídeos e YouTube</h2>
-                <a href="https://youtu.be/DXbbWhK0mag" class="ytv">(2) Anúncio de Notebook (Link para o YouTube)</a>
-                <a href="https://www.youtube.com/@AprendaInglesAgoraNow" class="ytv">(3) Aprenda Inglês Online (Inglês para Português Brasileiro)</a>
+                <a id="info-div-3" class="info-div-elements" href="https://youtu.be/DXbbWhK0mag" class="ytv">Anúncio de Notebook (Link para o YouTube)</a>
+                <a id="info-div-4" class="info-div-elements" href="https://www.youtube.com/@AprendaInglesAgoraNow" class="ytv">Aprenda Inglês Online (Inglês para Português Brasileiro)</a>
                
                 <h2 class="screen-title">Livros virtuais (e-books)</h2>
-                <a href="https://www.amazon.com.br/dp/B0DCTY9LXD">(4) Where Life Rebooted (Apenas em inglês; link para a Amazon)</a>
+                <a id="info-div-5" class="info-div-elements" href="https://www.amazon.com.br/dp/B0DCTY9LXD">Where Life Rebooted (Apenas em inglês; link para a Amazon)</a>
+                <a id="info-div-6" class="info-div-elements" href="https://www.amazon.com.br/dp/B0DRH844LN">Aprender Inglẽs Ebook</a>
                 
                 <h2 class="screen-title">Mundo</h2>
-                <a href="../brazil.html">(5) Brasil</a>
+                <a id="info-div-7" class="info-div-elements" href="../brazil.html">Brasil</a>
                
                 <h2 class="screen-title">Diversão</h2>
-                <a href="../math.html">(6) Matemática</a>
+                <a id="info-div-8" class="info-div-elements" href="../math.html">Matemática</a>
               
                 <h2 class="screen-title">Websites (exemplos)</h1>
-                <a href="../samples/e-commerce/index.html">(7) Site de notebook (exemplo de loja e-commerce (comércio digital); Apenas em inglês)</a>
+                <a id="info-div-9" class="info-div-elements" href="../samples/e-commerce/index.html">Site de notebook (exemplo de loja e-commerce (comércio digital); Apenas em inglês)</a>
             </div>
 
             <div id="skill-div" class="sdiv">
                 <div class="skill-tab">
-                    <button id="skills-cv" class="cv">Currículo</button>
-                    <button id="skills-summary" style="cursor: not-allowed;">Resumo</button>
+                    <button id="skill-div-1" class="skill-div-elements cv" onclick="skillsTabFunction(1)">Currículo</button>
+                    <button id="skill-div-2" class="skill-div-elements" onclick="skillsTabFunction(2)">Resumo</button>
                 </div>
 
-                <div>
+                <div id="skills-info">
                     <h1 class="screen-title">Currículo</h1>
                     <h3>Informação e Contato</h3>
                     <p class="skills-list">E-mail: raquelvioleta.contato@gmail.com</p>
-                    <p class="skills-list">Location: Brazil</p>
+                    <p class="skills-list">Localização: Brazil</p>
                     <p class="skills-list">Minha missão é prover o melhor serviço possível, trabalhando em equipe e priorizando o bem-estar das pessoas.</p>
                     <h3>Formação acadêmica</h3>
                     <p class="skills-list">Ensino médio completo</p>
                     <p class="skills-list">Curso Superior de Tecnologia em Gestão da Segurança e Defesa Cibernética (cursando)</p>
-                    <h3>Languages</h3>
-                    <p class="skills-list">Português (Native)</p>
-                    <p class="skills-list">Inglês (Fluent)</p>
+                    <h3>Línguas</h3>
+                    <p class="skills-list">Português (Nativo)</p>
+                    <p class="skills-list">Inglês (Fluente)</p>
                     <!-- <p class="skills-list">Espanhol (Basic)</p> -->
-                    <h3>Hard Skills</h3>
-                    <p class="skills-list">Microsoft Office e Google Suite (Avançado)</p>
-                    <p class="skills-list">HTML, JavaScript e CSS (Avançado)</p>
-                    <p class="skills-list">Microsoft Windows e Linux (Avançado)</p>
-                    <p class="skills-list">Photoshop e GIMP (Básico)</p>
-                    <h3>Soft Skills</h3>
-                    <p class="skills-list">Adaptabilidade</p>
-                    <p class="skills-list">Trabalho em equipe</p>
-                    <p class="skills-list">Pensamento crítico</p>
-                    <p class="skills-list">Proatividade</p>
-                    <p class="skills-list">Solução de problemas</p>
+                     <div id="skills-skills-list">
+                        <div>
+                            <h3>Hard Skills</h3>
+                            <p class="skills-list">Microsoft Office e Google Suite (Avançado)</p>
+                            <p class="skills-list">HTML, JavaScript e CSS (Avançado)</p>
+                            <p class="skills-list">Microsoft Windows e Linux (Avançado)</p>
+                            <p class="skills-list">Photoshop e GIMP (Básico)</p>
+                        </div>
+                        <div>
+                            <h3>Soft Skills</h3>
+                            <p class="skills-list">Adaptabilidade</p>
+                            <p class="skills-list">Trabalho em equipe</p>
+                            <p class="skills-list">Pensamento crítico</p>
+                            <p class="skills-list">Proatividade</p>
+                            <p class="skills-list">Solução de problemas</p>
+                        </div>
+                     </div>
                 </div>
 
-                <div id="skills-sum">
+                <div id="skills-summary">
                     <h1 class="screen-title">Resumo</h1>
+                    <p>
+Olá, eu sou Raquel. Minha missão é prover os melhores serviços possíveis.
+Eu tenho habilidades úteis relacionadas a TI, escrita e adminstração.
+Sou uma ótima colaboradora em uma equipe.
+                    </p>
                 </div>
             </div>
 
             <div id="tools-div" class="sdiv js-exclusive">
                 <h1 class="screen-title">Ferramentas</h1>
                 <div id="tools-list">
-                    <a href="../tool-char-count.html">(1) Contagem de caracteres</a>
-                    <a  href="../tool-note.html">(2) Anotações</a>
-                    <a  href="../tool-calculator.html">(3) Calculadora</a>
+                    <a id="tools-div-1" class="tools-div-elements" href="../tool-char-count.html">Contagem de Caracteres</a>
+                    <a id="tools-div-2" class="tools-div-elements" href="../tool-note.html">Anotações</a>
+                    <a id="tools-div-3" class="tools-div-elements" href="../tool-calculator.html">Calculadora</a>
+                    <!-- <a id="tools-div-4" class="tools-div-elements" href="../tool-data-management.html">Gerenciamento de Dados</a> -->
                 </div>
 
             </div>
 
             <div id="settings-div" class="sdiv js-exclusive">
                 <h1 class="screen-title">Configurações</h1>
-                <button onclick="themeSet(true)">(1)Alterar tema</button>
-                <p>Dica: Você pode modificar o tema se alterar as opções no LocalStorage (Ferramentas de Desenvolvedor do navegador)</p>
-                <p style="font-style: italic;">Defina o valor de "violetool-theme" para a letra "x"</p>
-                <button onclick="fontSet(true)">(2)Alterar fonte</button>
+                <button id="settings-div-1" class="settings-div-elements" onclick="toggleClassicTheme()">Alterar entre o Tema Clássico e o Tema Moderno</button>
+                <button id="settings-div-2" class="settings-div-elements" onclick="toggleDarkTheme()">Alterar entre o Modo Claro e o Modo Escuro</button>
+
             </div>
 
             <div id="about-div" class="sdiv">
                 <h1 class="screen-title">Sobre</h1>
                 <h2>O site</h2>
                 <p>
-Boas-vindas ao site Ferramenta Violeta, onde informações e ferramentas são acessíveis para todas as pessoas!</p>
-                <p>
-Inspirado em interface gráficas antigas, esse site procura melhorar sua vida.
-                </p>
+Boas-vindas ao site Ferramenta Violeta, onde informações e ferramentas são acessíveis para todas as pessoas!
+O código desse site (e apenas o código) é licensiado sob a <a style="font-weight: bold;" href=https://www.gnu.org/licenses/gpl-3.0.en.html">licença GPLv3.</a>
+</p>
                 <h2>Raquel Violeta</h2>
                 <p>
 Olá, eu sou Raquel Violeta (Rachel Violet)! Minha missão é causar um impacto positivo e tornar o mundo um lugar melhor.
@@ -169,15 +184,10 @@ Para mais informações sobre minhas habilidades, verifique a Aba Currículo
 Para mais informações sobre minhas criações, verifique a Aba Conteúdo
                 </p>
             </div>
-
         </div>
-
-        <div id="bottom-left">
-            <button class="bottom js-exclusive" onclick="switchPage('home-div')">(H)OME 🏠</button>
-            <button class="bottom js-exclusive" onclick="switchPage('info-div')">(M)ÍDIA 📺</button>
-            <button class="bottom js-exclusive" onclick="switchPage('skill-div')">(C)URRÍCULO 📜</button>
-            <button class="bottom js-exclusive" onclick="switchPage('tools-div')">FERRAMEN(T)AS 🛠️</button>
-            <button class="bottom js-exclusive" onclick="switchPage('about-div')">S(O)BRE ℹ️</button>
+        <div id="languages">
+                <a href="../en-us/index.html" class="nojs">(Q) English</a>
+                <a href="../pt-br/index.html" class="nojs">(W) Português Brasileiro</a>
         </div>
     </body>
 </html>

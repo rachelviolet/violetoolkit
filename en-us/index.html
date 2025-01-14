@@ -10,10 +10,6 @@
 
         <style id="no-js-style">
             @font-face {
-                font-family: 'VT323';
-                src: url("../font/VT323.ttf");
-            }
-            @font-face {
                 font-family: 'OpenSans';
                 src: url("../font/open-sans.ttf");
             }
@@ -36,137 +32,146 @@
         <script src="../js/theme.js"></script>
         <script src="../js/language.js"></script>
         <script src="../js/main.js"></script>
-        <script src="../js/artist.js"></script>
         <script src="../js/input.js"></script>
+        <script src="../js/inputVisual.js"></script>
         <script src="../js/ui.js"></script>
-        <script src="../js/cv.js" defer></script>
 
         <link rel="icon" type="image/x-icon" href="../favicon.png">
         <link rel="alternate" href="./tool-char-count.html"/>
         <link rel="alternate" href="./tool-note.html"/>
         <link rel="alternate" href="./tool-calculator.html"/>
-        <link rel="alternate" href="./tool-note.html"/>
-        <link rel="alternate" href="../pt-br/index.html" hreflang="pt-br"/>
+        <link rel="alternate" href="../en-us/index.html" hreflang="en-us"/>
 
     </head>
-    <body onload="websiteLoaded(1); setView(); langSet('en');">
+    <body onload="websiteLoaded(1); langSet('en');">
    
-        <div id="top-left">
-            <h1 class="top">Violet Toolkit</p><p id="titlev"></h1>
-        </div>
-
-        <div id="top-right">
-            <a href="../en-us/index.html" class="nojs">(Q)English</a>
-            <a href="../pt-br/index.html" class="nojs">(W)Português Brasileiro</a>
-            <button class="top js-exclusive" onclick="switchPage('settings-div')">(E)Settings</button>
+        <h1 id="website-title">Violet Toolkit/p><p id="titlev">2</h1>
+        
+        <div id="menu">
+            <button class="menu js-exclusive" id="mn-1" onclick="switchPage('home-div')">🏠 HOME </button>
+            <button class="menu js-exclusive" id="mn-2" onclick="switchPage('info-div')">📺 MEDIA </button>
+            <button class="menu js-exclusive" id="mn-3" onclick="switchPage('skill-div')">📜 CV </button>
+            <button class="menu js-exclusive" id="mn-4" onclick="switchPage('tools-div')">🛠️ TOOLS </button>
+            <button class="menu js-exclusive" id="mn-5" onclick="switchPage('about-div')">ℹ️ ABOUT </button>
+            <button class="menu js-exclusive" id="mn-6" onclick="switchPage('settings-div')">SETTINGS</button>
         </div>
 
         <div id="screen">
             <div id="home-div" class="sdiv">
-                <p id="screen-alert">Limited mode: on.</p>
+                <p id="screen-alert">limited mode: ON.</p>
                 <div>
+                    <p>
+                        Use the keyboard arrows or the mouse to browse the website.
+                        ESC to go back, ENTER to confirm.
+                    </p>
                     <h2>What's new?</h2>
-                    <p>2024.10 Edition A</p>
+                    <p id="version">2025.01 A</p>
                     <ul>
-                        <li>New difficulty in the Math App/Game</li>
-                        <li>Fixed a bug where the other applications didn't save your language preferences</li>
-                        <li>Fixed a bug with the CTRL key shortcuts</li>
-                        <li>E-commerce website sample</li>
-                        <li>UI/UX fixes</li>
+                        <li>New graphics interface</li>
+                        <li>New keyboard shortcuts</li>
+                        <li>New articles</li>
+                        <li>Small tweaks</li>
                     </ul>
                 </div>
+                <!-- <div id="see-this"></div> -->
+                <!-- <div id="glimpse"></div> -->
             </div>
 
             <div id="info-div" class="sdiv">
-                <h1 class="screen-title">Information</h1>
                 <h2 class="screen-title">Articles</h2>
-                <a href="./specs-info.html" id="comp-specs-info" class="info-list-item">(1) How to choose a computer, laptop or phone? Which specifications to look out for?</a>
-
-                <h2 class="screen-title">Videos and YouTube</h2>
-                <a href="https://youtu.be/LHyMaIi_vAk" class="ytv">(2) Laptop Ad (Link to YouTube)</a>
-                <a href="https://www.youtube.com/@AprendaInglesAgoraNow" class="ytv">(3) Learn English Online (English to Brazilian Portuguese)</a>
+                <a id="info-div-1" class="info-div-elements" href="./specs-info.html" id="comp-specs-info" class="info-list-item">How to choose a computer, laptop or phone? Which specifications to look out for?</a>
+                <a id="info-div-2" class="info-div-elements" href="./how-to-live-a-happy-life.html" id="happy-life-info" class="info-list-item">12 things to make 2025 a great year:</a>
                 
-                <h2 id="ebooksTitle" class="screen-title">E-books</h2>
-                <a href="https://www.amazon.com.br/dp/B0DCTY9LXD">(4) Where Life Rebooted (English only; Link to Amazon)</a>
+                <h2 class="screen-title">Videos and YouTube</h2>
+                <a id="info-div-3" class="info-div-elements" href="https://youtu.be/DXbbWhK0mag" class="ytv">Laptop Ad (Link to YouTube)</a>
+                <a id="info-div-4" class="info-div-elements" href="https://www.youtube.com/@AprendaInglesAgoraNow" class="ytv">Learn English Online (English to Brazilian Portuguese)</a>
+               
+                <h2 class="screen-title">E-books</h2>
+                <a id="info-div-5" class="info-div-elements" href="https://www.amazon.com.br/dp/B0DCTY9LXD">Where Life Rebooted (English only; Link to Amazon)</a>
+                <a id="info-div-6" class="info-div-elements" href="https://www.amazon.com.br/dp/B0DRH844LN">Learn English Ebook</a>
                 
                 <h2 class="screen-title">World</h2>
-                <a href="../brazil.html">(5) Brazil</a>
-                
+                <a id="info-div-7" class="info-div-elements" href="../brazil.html">Brazil</a>
+               
                 <h2 class="screen-title">Fun</h2>
-                <a href="../math.html">(6) Math</a>
-                
-                <h2 class="screen-title">Websites (samples)</h1>
-                <a href="../samples/e-commerce/index.html">(7) Laptop website (e-commerce store sample; English only)</a>
+                <a id="info-div-8" class="info-div-elements" href="../math.html">Math</a>
+              
+                <h2 class="screen-title">Websites (examples)</h1>
+                <a id="info-div-9" class="info-div-elements" href="../samples/e-commerce/index.html">Laptop website (e-commerce store sample; English only)</a>
             </div>
 
             <div id="skill-div" class="sdiv">
                 <div class="skill-tab">
-                    <button id="skills-cv" class="cv">CV</button>
-                    <button id="skills-summary" style="cursor: not-allowed;">Summary</button>
+                    <button id="skill-div-1" class="skill-div-elements cv" onclick="skillsTabFunction(1)">CV</button>
+                    <button id="skill-div-2" class="skill-div-elements" onclick="skillsTabFunction(2)">Summary</button>
                 </div>
 
-                <div>
+                <div id="skills-info">
                     <h1 class="screen-title">CV / Resumé</h1>
                     <h3>Information and Contact</h3>
-                    <p class="skills-list">E-mail: raquelvioleta.contato@gmail.com</p>
+                    <p class="skills-list">Email: raquelvioleta.contato@gmail.com</p>
                     <p class="skills-list">Location: Brazil</p>
-                    <p class="skills-list">My mission is to provide the best service possible, working with a team and prioritizing people’s well-being.</p>
+                    <p class="skills-list">My mission is to provide the best service possible, working with a team and prioritizing people's well-being.</p>
                     <h3>Education</h3>
                     <p class="skills-list">High school degree (complete)</p>
-                    <p class="skills-list">Associate degree in Cyber ​​Security and Defense Management (ongoing)</p>
+                    <p class="skills-list">Associate degree in Cyber security and Defense Management (ongoing)</p>
                     <h3>Languages</h3>
                     <p class="skills-list">Portuguese (Native)</p>
                     <p class="skills-list">English (Fluent)</p>
-                    <!-- <p class="skills-list">Spanish (Basic)</p> -->
-                    <h3>Hard Skills</h3>
-                    <p class="skills-list">Microsoft Office and Google Suite (Advanced)</p>
-                    <p class="skills-list">HTML, JavaScript and CSS (Advanced)</p>
-                    <p class="skills-list">Microsoft Windows and Linux (Advanced)</p>
-                    <p class="skills-list">Photoshop and GIMP (Basic)</p>
-                    <h3>Soft Skills</h3>
-                    <p class="skills-list">Adaptability</p>
-                    <p class="skills-list">Teamwork</p>
-                    <p class="skills-list">Critical thinking</p>
-                    <p class="skills-list">Proactivity</p>
-                    <p class="skills-list">Problem solving</p>
+                    <!-- <p class="skills-list">Espanhol (Basic)</p> -->
+                     <div id="skills-skills-list">
+                        <div>
+                            <h3>Hard Skills</h3>
+                            <p class="skills-list">Microsoft Office and Google Suite (Advanced)</p>
+                            <p class="skills-list">HTML, JavaScript and CSS (Advanced)</p>
+                            <p class="skills-list">Microsoft Windows and Linux (Advanced)</p>
+                            <p class="skills-list">Photoshop and GIMP (Basic)</p>
+                        </div>
+                        <div>
+                            <h3>Soft Skills</h3>
+                            <p class="skills-list">Adaptability</p>
+                            <p class="skills-list">Teamwork</p>
+                            <p class="skills-list">Critical thinking</p>
+                            <p class="skills-list">Proactivity</p>
+                            <p class="skills-list">Problem solving</p>
+                        </div>
+                     </div>
                 </div>
 
-                <div id="skills-sum">
+                <div id="skills-summary">
                     <h1 class="screen-title">Summary</h1>
+                    <p>
+Hello, I am Rachel. My mission is to provide the best service possible.
+I have useful IT-related, writing and administration skills.
+I am a great co-worker to have in a team.
+                    </p>
                 </div>
-
             </div>
 
             <div id="tools-div" class="sdiv js-exclusive">
                 <h1 class="screen-title">Tools</h1>
                 <div id="tools-list">
-                    <a href="../tool-char-count.html">(1) Character count</a>
-                    <a href="../tool-note.html">(2) Notes</a>
-                    <a href="../tool-calculator.html">(3) Calculator</a>
+                    <a id="tools-div-1" class="tools-div-elements" href="../tool-char-count.html">Character count</a>
+                    <a id="tools-div-2" class="tools-div-elements" href="../tool-note.html">Notes</a>
+                    <a id="tools-div-3" class="tools-div-elements" href="../tool-calculator.html">Calculator</a>
+                    <!-- <a id="tools-div-4" class="tools-div-elements" href="../tool-data-management.html">Data Management</a> -->
                 </div>
+
             </div>
-            
 
             <div id="settings-div" class="sdiv js-exclusive">
                 <h1 class="screen-title">Settings</h1>
-                <button onclick="themeSet(true)">(1)Toggle theme</button>
-                <p>Hint: You can modify the theme if you change the optiong in LocalStorage (Browser DevTools)</p>
-                <p style="font-style: italic;">Set the "violetool-theme" value to the letter "x"</p>
-                <button onclick="fontSet(true)">(2)Toggle font</button>
+                <button id="settings-div-1" class="settings-div-elements" onclick="toggleClassicTheme()">Toggle between Classic Theme and Modern Theme</button>
+                <button id="settings-div-2" class="settings-div-elements" onclick="toggleDarkTheme()">Toggle between Light Mode and Dark Mode</button>
+
             </div>
 
             <div id="about-div" class="sdiv">
                 <h1 class="screen-title">About</h1>
                 <h2>The website</h2>
                 <p>
-Welcome To The Violet Toolkit Website, where information and tools are accessible to all!</p>
-                <p>
-Inspired by retro UIs, this website seeks to improve your life.
-                </p>
-                <p>
-This website's code (but not its icon, article content and everything non-specific) is licensed under the<a style="font-weight: bold;" href=https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3 license.</a>This grants you permission to:
->Use this website for any purpose, commercial or not.
->Use, modify and share its code, as long as you license it under the GPLv3 license.
+Welcome To The Violet Toolkit Website, where information and tools are accessible to all!
+This website's code (and just the code) is licensed under the <a style="font-weight: bold;" href=https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3 license.</a>
                 </p>
                 <h2>Rachel Violet</h2>
                 <p>
@@ -175,15 +180,10 @@ For more information on my skills, check out the CV Tab.
 For more information on my creations, check out the Content Tab.
                 </p>
             </div>
-
         </div>
-
-        <div id="bottom-left">
-            <button class="bottom js-exclusive" onclick="switchPage('home-div')">(H)OME 🏠</button>
-            <button class="bottom js-exclusive" onclick="switchPage('info-div')">(M)EDIA 📺</button>
-            <button class="bottom js-exclusive" onclick="switchPage('skill-div')">(C)V 📜</button>
-            <button class="bottom js-exclusive" onclick="switchPage('tools-div')">(T)OOLS 🛠️</button>
-            <button class="bottom js-exclusive" onclick="switchPage('about-div')">AB(O)UT ℹ️</button>
+        <div id="languages">
+                <a href="../en-us/index.html" class="nojs">(Q) English</a>
+                <a href="../pt-br/index.html" class="nojs">(W) Português Brasileiro</a>
         </div>
     </body>
 </html>

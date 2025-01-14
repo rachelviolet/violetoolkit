@@ -1,0 +1,7 @@
+div * {
+    display: block;
+}
+
+.pick-divs {
+    display: none;
+}

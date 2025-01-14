@@ -1,3 +1,4 @@
+
 'use strict'
 var Game = {
     "difficulty": 1,
@@ -127,12 +128,9 @@ function languageSwitch(change) {;
         else if (change == "br") {
             Page.language = "br";
         }
-        localStorage.setItem("violetoolkit-language", Page.language);
     }
     else {
-        if (navigator.language.toLowerCase().includes("pt") && localStorage.getItem("violetoolkit-language") == null) Page.language = "br";
-        else if (localStorage.getItem("violetoolkit-language") == null) Page.language = "en";
-        else Page.language = localStorage.getItem("violetoolkit-language");
+        Page.language = localStorage.getItem("violetool-lang");
     }
     switch (Page.language) {
         case "en":
@@ -364,7 +362,7 @@ function answerQuestion() {
     document.getElementById("answer").value = "";
 }
 
-var ctrl2 = 0;
+var ctrl2 = 1;
 document.addEventListener('keydown', function(event) {
     let kPRess = event.key.toLowerCase();
     // console.log(kPRess)
@@ -418,12 +416,12 @@ document.addEventListener('keydown', function(event) {
             }
             break;
     }
-    if (event.ctrlKey && ctrl2 == 0) {
+    if (event.key.toLowerCase() == "escape" && ctrl2 == 0) {
         ctrl2 = 1;
         if (Game.choiceScreen) setTimeout(function() {ctrl2 = 0}, 1000);
         else setTimeout(function() {ctrl2 = 0}, 300);
     }
-    else if (event.ctrlKey && ctrl2 == 1 && kPRess == "control") {
+    else if (event.key.toLowerCase() == "escape" && ctrl2 == 1) {
         returnFunction();
     }
 });

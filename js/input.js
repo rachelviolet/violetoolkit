@@ -14,180 +14,72 @@ document.addEventListener('keydown', function(event) {
     }
   }
 
-  if (event.ctrlKey && !kPRess) return
-
-  drawApp();
+  if (event.key.toLowerCase() == "escape" && !kPRess) return
 
   if (!blockedPages.includes(Page.current)) {
     switch (kPRess) {
-      case "h":
-        switchPage("home-div");
-        break;
-      case "m":
-        switchPage("info-div");
-        break;
-      case "c":
-        switchPage("skill-div");
-        break;
-      case "t":
-        switchPage("tools-div");
-        break;
-      case "o":
-        switchPage("about-div");
-        break;
       case "q":
-        window.open('../en-us/index.html', '_self')
+        window.open("../en-us/index.html", "_self");
         break;
       case "w":
-        window.open('../pt-br/index.html', '_self')
+        window.open("../pt-br/index.html", "_self");
         break;
-      case "e":
-        switchPage("settings-div");
+      case "arrowleft":
+        if (inputLayer <= 1) {
+          return;
+        }
+        inputLayer--;
+        inputOption = 1;
+        inputSender(1);
         break;
-
-      case "1":
-        switch (Page.current) {
-          default:
-          case "home-div":
-            break;
-          case "info-div":
-            window.open('./specs-info.html', '_self');
-            break;
-          case "games-div":
-            break;
-          case "tools-div":
-            window.open('../tool-char-count.html', '_self')
-            preinputBlock = true;
-            break;
-          case "about-div":
-            break;
-          case "settings-div":
-            themeSet(true);
-            break;
+      case "arrowright":
+        if (inputLayer >= currentInputLayerCap) {
+          return;
+        }
+        inputLayer++;
+        inputOption = 1;
+        inputSender(1);
+        break;
+      case "arrowup":
+        if (inputOption <= 1) {
+          return;
+        }
+        inputOption--;
+        if (inputLayer == 3) {
+          skillsTabFunction(1)
         }
         break;
-      case "2":
-
-        switch (Page.current) {
-          default:
-          case "home-div":
-            break;
-          case "info-div":
-            // LAPTOP AD
-            if (Page.language == "br") {
-              window.open('https://youtu.be/DXbbWhK0mag', '_blank');
-            }
-            else {
-              window.open('https://youtu.be/LHyMaIi_vAk', '_blank');
-            }
-            break;
-          case "games-div":
-            break;
-          case "tools-div":
-            window.open("../tool-note.html", "_self");
-            break;
-          case "about-div":
-            break;
-          case "settings-div":
-            fontSet(true);
-            break;
+      case "arrowdown":
+        if (inputOption >= currentInputOptionCap) {
+          return;
+        }
+        inputOption++;
+        if (inputLayer == 3) {
+          skillsTabFunction(2)
         }
         break;
-      case "3":
-        switch (Page.current) {
-          default:
-          case "home-div":
-            break;
-          case "info-div":
-            window.open('https://www.youtube.com/@AprendaInglesAgoraNow', '_blank');
-            break;
-          case "games-div":
-            break;
-          case "tools-div":
-            window.open("../tool-calculator.html", "_self");
-            break;
-          case "about-div":
-            break;
-          case "settings-div":
-            break;
-        }
+      case "enter":
+        inputSender(2);
         break;
-      case "4":
-        switch (Page.current) {
-          default:
-          case "home-div":
-            break;
-          case "info-div":
-            window.open("https://www.amazon.com.br/dp/B0DCTY9LXD", "blank");
-            break;
-          case "games-div":
-            break;
-          case "tools-div":
-            break;
-          case "about-div":
-            break;
-          case "settings-div":
-            break;
-        }
-        break;
-      case "5":
-        switch (Page.current) {
-          default:
-          case "home-div":
-            break;
-          case "info-div":
-            window.open("../brazil.html", "_self");
-            break;
-          case "games-div":
-            break;
-          case "tools-div":
-            break;
-          case "about-div":
-            break;
-          case "settings-div":
-            break;
-        }
-        break;
-      case "6":
-        switch (Page.current) {
-          default:
-          case "home-div":
-            break;
-          case "info-div":
-            window.open("../math.html", "_self");
-            break;
-          case "games-div":
-            break;
-          case "tools-div":
-            break;
-          case "about-div":
-            break;
-          case "settings-div":
-            break;
-        }
-        break;
-      case "7":
-        switch (Page.current) {
-          default:
-          case "home-div":
-            break;
-          case "info-div":
-            window.open("../samples/e-commerce/index.html", "_self");
-            break;
-          case "games-div":
-            break;
-          case "tools-div":
-            break;
-          case "about-div":
-            break;
-          case "settings-div":
-            break;
-        }
-        break;
-      case "h":
-        switchPage("home-div");
-        break;
+      case "escape":
+        inputLayer = 1;
+        inputOption = 1;
+        document.getElementById(`mn-1`).click();
     }
+    inputVisualCheck();
   }
 });
+
+function inputSender(option) {
+  if (option == 1) {
+    document.getElementById(`mn-${inputLayer}`).click();
+  }
+  if (option == 2) {
+    try {
+      document.getElementById(`${Page.current}-${inputOption}`).click();
+    }
+    catch {}
+    }
+}
+
 console.log("input.js loaded");

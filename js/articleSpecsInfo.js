@@ -1,12 +1,8 @@
 function setView() {
-    fontSet();
     themeSet();
 }
 
-document.addEventListener('keypress', function(event) {
-    if (event.key == '0') {
-    window.open("./index.html", "_self")   
-    }
+document.addEventListener('keydown', function(event) {
     if (event.key == '1') {
     window.open("#back", "_self")   
     }
