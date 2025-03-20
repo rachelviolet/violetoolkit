@@ -10,7 +10,7 @@ function inputVisualCheck() {
     }
     document.getElementById(`mn-${inputLayer}`).style.fontWeight = "bold";
     
-    for (let n = 1; n < 15; n++) {
+    for (let n = 1; n < 50; n++) {
         try {
             document.getElementById(`${Page.current}-${n}`).style.fontWeight = "normal";
         }
