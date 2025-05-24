@@ -5,14 +5,16 @@ var preinputBlock = false;
 document.addEventListener('keydown', function(event) {
   // console.log(event.key);
   let kPRess = event.key.toLowerCase();
-  for (x = 0; x < blockedPages.length; x++) {
-    if (Page["current"].includes(blockedPages[x])) {
-      preinputBlock = true;
-    }
-    else {
-      preinputBlock = false;
-    }
-  }
+
+  // DEPRECATED CODE. SHOULD BE REMOVED "SOON".
+  // for (x = 0; x < blockedPages.length; x++) {
+  //   if (Page["current"].includes(blockedPages[x])) {
+  //     preinputBlock = true;
+  //   }
+  //   else {
+  //     preinputBlock = false;
+  //   }
+  // }
 
   if (event.key.toLowerCase() == "escape" && !kPRess) return
 
@@ -24,47 +26,48 @@ document.addEventListener('keydown', function(event) {
       case "w":
         window.open("../pt-br/index.html", "_self");
         break;
-      case "arrowleft":
-        if (inputLayer <= 1) {
-          return;
-        }
-        inputLayer--;
-        inputOption = 1;
-        inputSender(1);
-        break;
-      case "arrowright":
-        if (inputLayer >= currentInputLayerCap) {
-          return;
-        }
-        inputLayer++;
-        inputOption = 1;
-        inputSender(1);
-        break;
-      case "arrowup":
-        if (inputOption <= 1) {
-          return;
-        }
-        inputOption--;
-        if (inputLayer == 3) {
-          skillsTabFunction(1)
-        }
-        break;
-      case "arrowdown":
-        if (inputOption >= currentInputOptionCap) {
-          return;
-        }
-        inputOption++;
-        if (inputLayer == 3) {
-          skillsTabFunction(2)
-        }
-        break;
-      case "enter":
-        inputSender(2);
-        break;
-      case "escape":
-        inputLayer = 1;
-        inputOption = 1;
-        document.getElementById(`mn-1`).click();
+      // DEPRECATED CODE. SHOULD BE REMOVED "SOON".
+      // case "arrowleft":
+      //   if (inputLayer <= 1) {
+      //     return;
+      //   }
+      //   inputLayer--;
+      //   inputOption = 1;
+      //   inputSender(1);
+      //   break;
+      // case "arrowright":
+      //   if (inputLayer >= currentInputLayerCap) {
+      //     return;
+      //   }
+      //   inputLayer++;
+      //   inputOption = 1;
+      //   inputSender(1);
+      //   break;
+      // case "arrowup":
+      //   if (inputOption <= 1) {
+      //     return;
+      //   }
+      //   inputOption--;
+      //   if (inputLayer == 3) {
+      //     skillsTabFunction(1)
+      //   }
+      //   break;
+      // case "arrowdown":
+      //   if (inputOption >= currentInputOptionCap) {
+      //     return;
+      //   }
+      //   inputOption++;
+      //   if (inputLayer == 3) {
+      //     skillsTabFunction(2)
+      //   }
+      //   break;
+      // case "enter":
+      //   inputSender(2);
+      //   break;
+      // case "escape":
+      //   inputLayer = 1;
+      //   inputOption = 1;
+      //   document.getElementById(`mn-1`).click();
     }
     inputVisualCheck();
   }

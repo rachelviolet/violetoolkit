@@ -45,7 +45,7 @@ function websiteLoaded(source) {
         document.getElementById("js-err").style.display = "none";
         console.warn("Modified code detected.");
     }
-    inputVisualCheck();
+    // inputVisualCheck();
     document.getElementById("home-div").style.display = "block";
 }
 

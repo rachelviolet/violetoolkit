@@ -51,7 +51,7 @@
     </head>
     <body onload="websiteLoaded(1); langSet('br');">
    
-        <h1 id="website-title">Ferramenta Violeta<p id="titlev"></p></h1>
+        <h1 id="website-title">Ferramenta Violeta</p><p id="titlev"></h1>
         
         <div id="menu">
             <button class="menu js-exclusive" id="mn-1" onclick="switchPage('home-div')">🏠 PRINCIPAL </button>
@@ -67,19 +67,14 @@
                 <p id="screen-alert">modo limitado: Ativado.</p>
                 <div>
                     <p>
-                        Esse site é completamente compatível com recursos padrões do teclado.
-                        TAB/SHIFT+TAB para mover, ENTER/ESPAÇO para confirmar ou pular para o primeiro item.
+                        Utilize as setas do teclado ou o mouse para navegar o website.
+                        ESC para voltar, ENTER para confirmar.
                     </p>
                     <h2>O que há de novo?</h2>
                     <p id="version">2025.03 A</p>
                     <ul>
-                        <li>Alterações na forma que o teclado funciona.</li>
-                        <li>Categorias no campo Mídia.</li>
-                        <li>Remoção de configurações sem funções.</li>
-                        <li>Currículo atualizado.</li>
-                        <li>Adicionado novos artigos.</li>
-                        <li>Adicionado uma ferramenta de edição de texto.</li>
-                        <li>Adicionado uma ferramenta de cópia de texto.</li>
+                        <li>Novos Artigos</li>
+                        <li>Pequenas correções.</li>
                     </ul>
                 </div>
                 <!-- <div id="see-this"></div> -->
@@ -89,64 +84,55 @@
             <div id="info-div" class="sdiv">
                 <!-- <button id="info-div-goback"></button> -->
                 <h2 class="screen-title">Artigos</h2>
-                <a id="info-div-1" class="info-div-elements" href="./specs-info.html" id="comp-specs-info" class="info-list-item">[SUGESTÃO] Como escolher um computador, notebook ou celular? Quais especificações devo prestar atenção?</a>
-                <a class="info-div-elements" href="./como-viver-uma-vida-feliz.html" class="info-list-item">[SUGESTÃO] 12 coisas para fazer de 2025 um ótimo ano:</a>
-                <a class="info-div-elements" href="./microsoft-teams-ransomware-jan2024-portuguese.html" class="info-list-item">[NOTÍCIAS] (24 Jan, 2024) Hackers utilizam o Microsoft Teams para atacar vítimas.</a>
-                <a class="info-div-elements" href="./2025-ameacas-ciberneticas-portugues-brasil.html" class="info-list-item">[INFORMAÇÃO] Ameaças Cibernéticas Modernas</a>
-                <a class="info-div-elements" href="./por-que-devo-reiniciar-meu-computador.html" class="info-list-item">[INFORMAÇÃO] Por Que Devo Reiniciar Meu Computador?</a>
-                <a class="info-div-elements" href="./por-que-devo-atualizar-meu-dispositivo-aplicativos.html" class="info-list-item">[INFORMAÇÃO] Por Que Devo Atualizar Meu Dispositivo/Aplicativos?</a>
-                <a class="info-div-elements" href="./o-que-sao-bugs-de-computadores.html" class="info-list-item">[INFORMAÇÃO] O Que São Bugs de Computadores</a>
-                <a class="info-div-elements" href="./virus-de-computador-e-software-de-antivirus.html" class="info-list-item">[INFORMAÇÃO] Vírus de Computador e Software de Antivírus</a>
-                <a class="info-div-elements" href="./nunca-caia-em-golpes.html" class="info-list-item">[INFORMAÇÃO] Como Nunca Cair Em Golpes, Ter Sua Conta Hackeada Ou O Computador Infectado Com Um Vírus?</a>
-                <a class="info-div-elements" href="./inteligencia-artificial-geral.html" class="info-list-item">[INFORMAÇÃO] O Que É Inteligência Artificial Geral</a>
-                <a class="info-div-elements" href="./o-que-sao-requisitos-de-hardware.html" class="info-list-item">[INFORMAÇÃO] O Que São Requisitos de Hardware</a>
-                <a class="info-div-elements" href="./como-prevenir-seu-computador-notebook-celular-de-superaquecer.html" class="info-list-item">[INFORMAÇÃO] Como Previnir Seu Computador ou Notebook de Superaquecer</a>
-                <a class="info-div-elements" href="./extensoes-de-arquivo-que-voce-precisa-conhecer.html" class="info-list-item">[INFORMAÇÃO] Extensões de Arquivos que Você Precisa Conhecer</a>
-                <a class="info-div-elements" href="./o-que-e-uma-vpn.html" class="info-list-item">[INFORMAÇÃO] O Que É Uma VPN?</a>
-                <a class="info-div-elements" href="./como-corretamente-desligar-seu-dispositivo.html" class="info-list-item">[INFORMAÇÃO] Como Corretamente Desligar Seu Dispositivo?</a>
-                <a class="info-div-elements" href="./ms-office-365-gratis.html" class="info-list-item">[INFORMAÇÃO] O Pacote Microsoft Office e como conseguí-lo gratuitamente</a>
-                <a class="info-div-elements" href="./o-que-e-a-lgpd.html" class="info-list-item">[INFORMAÇÃO] O que é a LGPD? Lei Geral de Proteção de Dados Pessoais</a>
+                <a id="info-div-1" class="info-div-elements" href="./specs-info.html" id="comp-specs-info" class="info-list-item">Como escolher um computador, notebook ou celular? Quais especificações devo prestar atenção?</a>
+                <a id="info-div-2" class="info-div-elements" href="./como-viver-uma-vida-feliz.html" id="happy-life-info" class="info-list-item">12 coisas para fazer de 2025 um ótimo ano:</a>
+                <a id="info-div-3" class="info-div-elements" href="./microsoft-teams-ransomware-jan2024-portuguese.html" id="happy-life-info" class="info-list-item">(24 Jan, 2024) Hackers utilizam o Microsoft Teams para atacar vítimas.</a>
+                <a id="info-div-4" class="info-div-elements" href="./2025-ameacas-ciberneticas-portugues-brasil.html" id="happy-life-info" class="info-list-item">Ameaças Cibernéticas Modernas</a>
+                <a id="info-div-5" class="info-div-elements" href="./por-que-devo-reiniciar-meu-computador.html" id="happy-life-info" class="info-list-item">Por Que Devo Reiniciar Meu Computador?</a>
+                <a id="info-div-6" class="info-div-elements" href="./por-que-devo-atualizar-meu-dispositivo-aplicativos.html" id="happy-life-info" class="info-list-item">Por Que Devo Atualizar Meu Dispositivo/Aplicativos?</a>
+                <a id="info-div-7" class="info-div-elements" href="./o-que-sao-bugs-de-computadores.html" id="happy-life-info" class="info-list-item">O Que São Bugs de Computadores</a>
+                <a id="info-div-8" class="info-div-elements" href="./virus-de-computador-e-software-de-antivirus.html" id="happy-life-info" class="info-list-item">Vírus de Computador e Software de Antivírus</a>
+                <a id="info-div-9" class="info-div-elements" href="./nunca-caia-em-golpes.html" id="happy-life-info" class="info-list-item">Como Nunca Cair Em Golpes, Ter Sua Conta Hackeada Ou O Computador Infectado Com Um Vírus?</a>
+                <a id="info-div-10" class="info-div-elements" href="./inteligencia-artificial-geral.html" id="happy-life-info" class="info-list-item">O Que É Inteligência Artificial Geral</a>
+                <a id="info-div-11" class="info-div-elements" href="./o-que-sao-requisitos-de-hardware.html" id="happy-life-info" class="info-list-item">O Que São Requisitos de Hardware</a>
+                <a id="info-div-12" class="info-div-elements" href="./como-prevenir-seu-computador-notebook-celular-de-superaquecer.html" id="happy-life-info" class="info-list-item">Como Previnir Seu Computador ou Notebook de Superaquecer</a>
+                <a id="info-div-13" class="info-div-elements" href="./extensoes-de-arquivo-que-voce-precisa-conhecer.html" id="happy-life-info" class="info-list-item">Extensões de Arquivos que Você Precisa Conhecer</a>
+                <a id="info-div-14" class="info-div-elements" href="./o-que-e-uma-vpn.html" id="happy-life-info" class="info-list-item">O Que É Uma VPN?</a>
+                <a id="info-div-15" class="info-div-elements" href="./como-corretamente-desligar-seu-dispositivo.html" id="happy-life-info" class="info-list-item">Como Corretamente Desligar Seu Dispositivo?</a>
 
                 <h2 class="screen-title">Vídeos e YouTube</h2>
-                <a class="info-div-elements" href="https://youtu.be/DXbbWhK0mag" class="ytv">[YOUTUBE] Anúncio de Notebook</a>
-                <a class="info-div-elements" href="https://www.youtube.com/@AprendaInglesAgoraNow" class="ytv">[YOUTUBE] Aprenda Inglês Online (Inglês para Português Brasileiro)</a>
+                <a id="info-div-16" class="info-div-elements" href="https://youtu.be/DXbbWhK0mag" class="ytv">Anúncio de Notebook (Link para o YouTube)</a>
+                <a id="info-div-17" class="info-div-elements" href="https://www.youtube.com/@AprendaInglesAgoraNow" class="ytv">Aprenda Inglês Online (Inglês para Português Brasileiro)</a>
                
                 <h2 class="screen-title">Livros virtuais (e-books)</h2>
-                <a class="info-div-elements" href="https://www.amazon.com.br/dp/B0DCTY9LXD">[AMAZON] Where Life Rebooted (Apenas em inglês)</a>
-                <a class="info-div-elements" href="https://www.amazon.com.br/dp/B0DRH844LN">[AMAZON] Aprender Inglẽs Ebook</a>
+                <a id="info-div-18" class="info-div-elements" href="https://www.amazon.com.br/dp/B0DCTY9LXD">Where Life Rebooted (Apenas em inglês; link para a Amazon)</a>
+                <a id="info-div-19" class="info-div-elements" href="https://www.amazon.com.br/dp/B0DRH844LN">Aprender Inglẽs Ebook</a>
                 
                 <h2 class="screen-title">Mundo</h2>
-                <a class="info-div-elements" href="../brazil.html">Brasil</a>
+                <a id="info-div-20" class="info-div-elements" href="../brazil.html">Brasil</a>
                
                 <h2 class="screen-title">Diversão</h2>
-                <a class="info-div-elements" href="../math.html">Matemática</a>
+                <a id="info-div-21" class="info-div-elements" href="../math.html">Matemática</a>
               
                 <h2 class="screen-title">Websites (exemplos)</h1>
-                <a class="info-div-elements" href="../samples/e-commerce/index.html">Site de notebook (exemplo de loja e-commerce (comércio digital); Apenas em inglês)</a>
+                <a id="info-div-22" class="info-div-elements" href="../samples/e-commerce/index.html">Site de notebook (exemplo de loja e-commerce (comércio digital); Apenas em inglês)</a>
             </div>
 
             <div id="skill-div" class="sdiv">
                 <div class="skill-tab">
                     <button id="skill-div-1" class="skill-div-elements cv" onclick="skillsTabFunction(1)">Currículo</button>
-                    <button class="skill-div-elements" onclick="skillsTabFunction(2)">Resumo</button>
+                    <button id="skill-div-2" class="skill-div-elements" onclick="skillsTabFunction(2)">Resumo</button>
                 </div>
 
                 <div id="skills-info">
                     <h1 class="screen-title">Currículo</h1>
                     <h3>Informação e Contato</h3>
-                    <a class="skills-list" href="mailto:raquelvioleta.contato@gmail.com">E-mail: raquelvioleta.contato@gmail.com</a>
-                    <a class="skills-list" href="https://www.linkedin.com/in/raquel-soares-820037314/" target="_blank">LinkedIn: Raquel Soares</a>
+                    <p class="skills-list">E-mail: raquelvioleta.contato@gmail.com</p>
                     <p class="skills-list">Localização: Brazil</p>
                     <p class="skills-list">Minha missão é prover o melhor serviço possível, trabalhando em equipe e priorizando o bem-estar das pessoas.</p>
                     <h3>Formação acadêmica</h3>
                     <p class="skills-list">Ensino médio completo</p>
                     <p class="skills-list">Curso Superior de Tecnologia em Gestão da Segurança e Defesa Cibernética (cursando)</p>
-                    <h3>Certificados</h3>
-                    <p class="skills-list">Criação de Algoritmos em Python — Centro de Apoio ao Trabalho e Empreendedorismo</p>
-                    <p class="skills-list">Soft Skills: habilidades dos profissionais do futuro — Centro de Apoio ao Trabalho e Empreendedorismo</p>
-                    <h3>Experiência Profissional</h3>
-                    <p class="skills-list">Para mais informações, por favor, entre em contato comigo.</p>
-                    <p class="skills-list">Operadora de Telemarketing (Julho de 2023 ~ Outubro de 2024)</p>
                     <h3>Línguas</h3>
                     <p class="skills-list">Português (Nativo)</p>
                     <p class="skills-list">Inglês (Fluente)</p>
@@ -184,10 +170,8 @@ Sou uma ótima colaboradora em uma equipe.
                 <h1 class="screen-title">Ferramentas</h1>
                 <div id="tools-list">
                     <a id="tools-div-1" class="tools-div-elements" href="../tool-char-count.html">Contagem de Caracteres</a>
-                    <a class="tools-div-elements" href="../tool-calculator.html">Calculadora</a>
-                    <a class="tools-div-elements" href="../tool-note.html">Anotações</a>
-                    <a class="tools-div-elements" href="../tool-text.html">Edição de Texto</a>
-                    <a class="tools-div-elements" href="../tool-text-copying.html">Cópia de Texto</a>
+                    <a id="tools-div-2" class="tools-div-elements" href="../tool-note.html">Anotações</a>
+                    <a id="tools-div-3" class="tools-div-elements" href="../tool-calculator.html">Calculadora</a>
                     <!-- <a id="tools-div-4" class="tools-div-elements" href="../tool-data-management.html">Gerenciamento de Dados</a> -->
                 </div>
 
@@ -195,8 +179,8 @@ Sou uma ótima colaboradora em uma equipe.
 
             <div id="settings-div" class="sdiv js-exclusive">
                 <h1 class="screen-title">Configurações</h1>
-                <!-- <button id="settings-div-1" class="settings-div-elements" onclick="toggleClassicTheme()">Alterar entre o Tema Clássico e o Tema Moderno</button> -->
-                <button id="settings-div-1" class="settings-div-elements" onclick="toggleDarkTheme()">Alterar entre o Modo Claro e o Modo Escuro</button>
+                <button id="settings-div-1" class="settings-div-elements" onclick="toggleClassicTheme()">Alterar entre o Tema Clássico e o Tema Moderno</button>
+                <button id="settings-div-2" class="settings-div-elements" onclick="toggleDarkTheme()">Alterar entre o Modo Claro e o Modo Escuro</button>
 
             </div>
 
@@ -205,7 +189,7 @@ Sou uma ótima colaboradora em uma equipe.
                 <h2>O site</h2>
                 <p>
 Boas-vindas ao site Ferramenta Violeta, onde informações e ferramentas são acessíveis para todas as pessoas!
-O código desse site (e apenas o código) é licensiado sob a <a id="about-div-1" style="font-weight: bold;" href=https://www.gnu.org/licenses/gpl-3.0.en.html">licença GPLv3.</a>
+O código desse site (e apenas o código) é licensiado sob a <a style="font-weight: bold;" href=https://www.gnu.org/licenses/gpl-3.0.en.html">licença GPLv3.</a>
 </p>
                 <h2>Raquel Violeta</h2>
                 <p>

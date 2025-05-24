@@ -9,11 +9,6 @@
     border-radius: 5%;
 }
 
-#settings-div-1 {
-    cursor: not-allowed;
-    color: #ff0000 !important;
-}
-
 #skills-summary {
     display: none;
 }

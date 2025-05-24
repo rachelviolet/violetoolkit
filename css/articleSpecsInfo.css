@@ -28,8 +28,8 @@ body {
 
 a {width: fit-content;}
 
-p, a {
-    font-size: 120%;
+p, a, li {
+    font-size: 120% !important;
     margin: 0%;
     white-space: break-spaces;
 }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Raquel Violeta">
+        <meta name="description" content="Character counting web app">
+        <meta name="keywords" content="Raquel Violeta, Rachel Violet, violetoolkit, Violet Toolkit, Ferramenta Violeta, ferramentavioleta, Toolkit Website, foss app, foss text editing app, foss text, text editing">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ferramenta Violeta</title>
+
+        <link rel="icon" type="image/x-icon" href="./favicon.png">
+        <link href="./css/layout.css" rel="stylesheet">
+        <link href="./css/toolset.css" rel="stylesheet">
+        <link href="./css/textEdit.css" rel="stylesheet">
+
+        <script src="./js/languageGlobal.js"></script>
+        <script src="./js/theme.js"></script>
+        <script src="./js/ui.js"></script>
+        <script src="./js/textCopy.js" defer></script>
+    </head>
+    <body onload="languageSwitch(false); themeSet(); document.getElementById('js-err').remove(); loadFromBrowser();">
+        <h1 id="js-err">(JAVASCRIPT_ERR) No JavaScript Detected</h1>
+        <div id="top-right">
+            <button id="l-eng" class="ub1" onclick="languageSwitch('en')">English</button>
+            <button id="l-por" class="ub2" onclick="languageSwitch('br')">Português</button>
+        </div>
+
+        <button id="return" onclick="window.open('./index.html', '_self')">&lt;-- (ESC)</button>
+        <div class="inn-all-block">
+            <input id="text" type="text">
+            <label id="text-l">Text to Insert / Texto para inserir</label>
+            <button id="text-ins" onclick="addTextIn(undefined, undefined); saveInBrowser(); themeSet();">Insert / Inserir</button>
+            <button id="text-rst" onclick="resetItems()">RESET</button>
+        </div>
+
+        <hr>
+        <div id="copy-div" class="inn-all-block">
+        </div>
+    </body>
+</html>

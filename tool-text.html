@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Raquel Violeta">
+        <meta name="description" content="Character counting web app">
+        <meta name="keywords" content="Raquel Violeta, Rachel Violet, violetoolkit, Violet Toolkit, Ferramenta Violeta, ferramentavioleta, Toolkit Website, foss app, foss text editing app, foss text, text editing">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ferramenta Violeta</title>
+
+        <link rel="icon" type="image/x-icon" href="./favicon.png">
+        <link href="./css/layout.css" rel="stylesheet">
+        <link href="./css/toolset.css" rel="stylesheet">
+        <link href="./css/textEdit.css" rel="stylesheet">
+
+        <script src="./js/languageGlobal.js"></script>
+        <script src="./js/theme.js"></script>
+        <script src="./js/ui.js"></script>
+        <script src="./js/textEdit.js" defer></script>
+    </head>
+    <body onload="languageSwitch(false); themeSet(); document.getElementById('js-err').remove();">
+        <h1 id="js-err">(JAVASCRIPT_ERR) No JavaScript Detected</h1>
+        <div id="top-right">
+            <button id="l-eng" class="ub1" onclick="languageSwitch('en')">English</button>
+            <button id="l-por" class="ub2" onclick="languageSwitch('br')">Português</button>
+        </div>
+
+        <button id="return" onclick="window.open('./index.html', '_self')">&lt;-- (ESC)</button>
+        <div class="inn-all-block">
+            <input id="text" type="text">
+            <label id="text-l">Text to Edit / Texto para editar</label>
+        </div>
+
+        <div class="inn-all-block">
+            <button onclick="clearText()" id="tx-clear">Clear / Limpar</button>
+            <button onclick="undoText()" id="tx-undo">Undo / Desfazer</button>
+        </div>
+        <hr>
+        <div class="inn-all-block">
+            <button onclick="textAlter(1)" id="tx-lowercase">Lowercase / Caixa baixa</button>
+            <button onclick="textAlter(2)" id="tx-uppercase">Uppercase / Caixa alta</button>
+            <button onclick="textAlter(3)" id="tx-surround-ast">Cover with asterisks / Cobrir com asteriscos</button>
+            <button onclick="textAlter(4)" id="tx-surround-und">Cover with underscores / Cobrir com subtraços</button>
+            <button onclick="textAlter(5)" id="tx-surround-til">Cover with tildes / Cobrir com tis</button>
+            <button onclick="textAlter(6)" id="tx-surround-quo">Cover with quotation marks / Cobrir com aspas duplas</button>
+            <button onclick="textAlter(7)" id="tx-surround-par">Cover with parentheses / Cobrir com parênteses</button>
+            <button onclick="textAlter(8)" id="tx-surround-bra">Cover with brackets / Cobrir com colchetes</button>
+        </div>
+        <hr>
+        <div class="inn-all-block">
+            <p id="text-format">Text formatting tips / Dicas para formatação de texto</p>
+            <a href="https://faq.whatsapp.com/539178204879377/" target="_blank">WhatsApp</a>
+            <a href="https://support.microsoft.com/en-us/office/format-a-message-in-microsoft-teams-9f7c64e4-0316-472f-b1e8-430cebcfc1e5" target="_blank">Micrososft Teams (English)</a>
+            <a href="https://support.microsoft.com/pt-br/office/formatar-uma-mensagem-no-microsoft-teams-9f7c64e4-0316-472f-b1e8-430cebcfc1e5" target="_blank">Micrososft Teams (PT-BR)</a>
+            <a href="https://support.reddithelp.com/hc/en-us/articles/360043033952-Formatting-Guide" target="_blank">Reddit (English)</a>
+            <a href="https://support.reddithelp.com/hc/pt-br/articles/360043033952-Guia-de-formata%C3%A7%C3%A3o" target="_blank">Reddit (PT-BR)</a>
+            <a href="https://support.discord.com/hc/en-us/articles/210298617-Markdown-Text-101-Chat-Formatting-Bold-Italic-Underline" target="_blank">Discord (English)</a>
+            <a href="https://support.discord.com/hc/pt-br/articles/210298617-No%C3%A7%C3%B5es-b%C3%A1sicas-de-marca%C3%A7%C3%A3o-de-texto-Formata%C3%A7%C3%A3o-do-chat-negrito-it%C3%A1lico-e-sublinhado" target="_blank">Discord (PT-BR)</a>
+        </div>
+    </body>
+</html>

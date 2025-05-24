@@ -6,17 +6,24 @@ function switchPage(pg) {
     for (x = 0; x < pageDivs.length; x++) {
         pageDivs[x].style.display = 'none';
     }
-    
     try {
         document.getElementById(pg).style.display = "block";
     }
     catch (error) {
         console.error("Page does not exist.")
     }
+    if (Page.current == pg) {
+        try {
+            document.getElementById(`${pg}-1`).focus();
+        }
+        catch {
+            console.warn("Page has no first element.")
+        }
+    }
     Page.current = pg;
     UpdatedPageDivElement = document.getElementsByClassName(`${Page.current}-elements`);
     currentInputOptionCap = UpdatedPageDivElement.length;
-    inputVisualCheck();
+    // inputVisualCheck();
 }
 
 function skillsTabFunction(x) {

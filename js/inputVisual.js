@@ -1,4 +1,5 @@
 'use strict'
+/* DEPRECATED CODE. SHOULD BE REMOVED SOON.
 var inputLayer = 1;
 var inputOption = 1;
 var currentInputLayerCap = 6;
@@ -24,3 +25,4 @@ function inputVisualCheck() {
     // console.log(`InputVisualLocation: ${inputLayer}x${inputOption}`);
 
 }
+*/
