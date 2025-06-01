@@ -6,6 +6,5 @@ Do you lack a keyboard or a mouse?
 Are you using legacy browsers? Fear not! This website still works.
 Smaller screens and older devices may view a limited version of the website.
 
-Current version: 25.05A (Updated on May, 2025)
-(PS: The 25.05A version is incorrectly identified as 25.06A)
+Current version: 25.06A (Updated on June 1, 2025)
 License: GPLv3
