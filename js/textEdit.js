@@ -4,11 +4,14 @@ let oldValue;
 var Languages = {
     "English": {
         "label": "Text to Edit",
+        "copy": "Copy",
         "clear": "Clear",
         "undo": "Undo",
         "low": "Lowercase",
         "upp": "Uppercase",
         "ast": "Cover with asterisks",
+        "as3": "Cover with three asterisks",
+        "asx": "Cover with three asterisks and uppercase",
         "und": "Cover with underscores",
         "til": "Cover with tildes",
         "quo": "Cover with quotation marks",
@@ -18,6 +21,7 @@ var Languages = {
         update: function() {
             document.getElementById("text-l").textContent = Languages.English.label;
             document.getElementById("tx-clear").textContent = Languages.English.clear;
+            document.getElementById("copy").textContent = Languages.English.copy;
             document.getElementById("tx-undo").textContent = Languages.English.undo;
             document.getElementById("tx-lowercase").textContent = Languages.English.low;
             document.getElementById("tx-uppercase").textContent = Languages.English.upp;
@@ -27,16 +31,21 @@ var Languages = {
             document.getElementById("tx-surround-quo").textContent = Languages.English.quo;
             document.getElementById("tx-surround-par").textContent = Languages.English.par;
             document.getElementById("tx-surround-bra").textContent = Languages.English.bra;
+            document.getElementById("tx-surround-as3").textContent = Languages.English.as3;
+            document.getElementById("tx-surround-asx").textContent = Languages.English.asx;
             document.getElementById("text-format").textContent = Languages.English.chat;
         },
     },
     "Portuguese": {
         "label": "Texto para editar",
+        "copy": "Copiar",
         "clear": "Limpar",
         "undo": "Desfazer",
         "low": "Caixa baixa",
         "upp": "Caixa alta",
         "ast": "Cobrir com asteriscos",
+        "as3": "Cobrir com três asteriscos",
+        "as3": "Cobrir com três asteriscos e caixa alta",
         "und": "Cobrir com subtraços",
         "til": "Cobrir com tis",
         "quo": "Cobrir com aspas duplas",
@@ -45,6 +54,7 @@ var Languages = {
         "chat": "Dicas para formatação de texto",
         update: function() {
             document.getElementById("text-l").textContent = Languages.Portuguese.label;
+            document.getElementById("copy").textContent = Languages.Portuguese.copy;
             document.getElementById("tx-clear").textContent = Languages.Portuguese.clear;
             document.getElementById("tx-undo").textContent = Languages.Portuguese.undo;
             document.getElementById("tx-lowercase").textContent = Languages.Portuguese.low;
@@ -55,6 +65,8 @@ var Languages = {
             document.getElementById("tx-surround-quo").textContent = Languages.Portuguese.quo;
             document.getElementById("tx-surround-par").textContent = Languages.Portuguese.par;
             document.getElementById("tx-surround-bra").textContent = Languages.Portuguese.bra;
+            document.getElementById("tx-surround-as3").textContent = Languages.Portuguese.as3;
+            document.getElementById("tx-surround-asx").textContent = Languages.Portuguese.asx;
             document.getElementById("text-format").textContent = Languages.Portuguese.chat;
         },
     }
@@ -90,6 +102,15 @@ function textAlter(alt) {
             break;
         case 8:
             document.getElementById("text").value = `[${finalRes}]`;
+            break;
+        case 9:
+            document.getElementById("text").value = `***${finalRes}***`;
+            break;
+        case 10:
+            document.getElementById("text").value = `***${finalRes.toUpperCase()}***`;
+            break;
+        case 11:
+            navigator.clipboard.writeText(document.getElementById("text").value);
             break;
     }
 }

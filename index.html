@@ -9,14 +9,15 @@
         <title>Rachel Violet</title>
     
         <link rel="icon" type="image/x-icon" href="./favicon.png">
-        <link rel="alternate" href="./en-us/index.html" hreflang="en-us"/>
-        <link rel="alternate" href="./pt-br/index.html" hreflang="pt-br"/>
+        <link rel="alternate" href="./en/index.html" hreflang="en-us"/>
+        <link rel="alternate" href="./pt/index.html" hreflang="pt-br"/>
         <link rel="alternate" href="./tool-note.html"/>
     </head>
 </html>
 <body>
     <script>
-        if (localStorage.getItem("violetool-lang") == "br") window.open("./pt-br/index.html", "_self");
-        else window.open("./en-us/index.html", "_self");
+        if (localStorage.getItem("violetool-lang") == "br") window.open("./pt/index.html", "_self");
+        else if (localStorage.getItem("violetool-lang") == "es") window.open("./es/index.html", "_self");
+        else window.open("./en/index.html", "_self");
     </script>
 </body>

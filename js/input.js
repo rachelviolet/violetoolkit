@@ -21,10 +21,13 @@ document.addEventListener('keydown', function(event) {
   if (!blockedPages.includes(Page.current)) {
     switch (kPRess) {
       case "q":
-        window.open("../en-us/index.html", "_self");
+        window.open("../en/index.html", "_self");
         break;
       case "w":
-        window.open("../pt-br/index.html", "_self");
+        window.open("../pt/index.html", "_self");
+        break;
+      case "e":
+        // window.open("../es/index.html", "_self");
         break;
       // DEPRECATED CODE. SHOULD BE REMOVED "SOON".
       // case "arrowleft":

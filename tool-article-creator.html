@@ -16,9 +16,9 @@
         <script src="./js/languageGlobal.js"></script>
         <script src="./js/theme.js"></script>
         <script src="./js/ui.js"></script>
-        <script src="./js/textCopy.js" defer></script>
+        <script src="./js/articleMaker.js" defer></script>
     </head>
-    <body onload="languageSwitch(false); themeSet(); document.getElementById('js-err').remove(); loadFromBrowser();">
+    <body onload="languageSwitch(false); themeSet(); document.getElementById('js-err').remove();">
         <h1 id="js-err">(JAVASCRIPT_ERR) No JavaScript Detected</h1>
         <div id="top-right">
             <button id="l-eng" class="ub1" onclick="languageSwitch('en')">English</button>
@@ -27,14 +27,31 @@
 
         <button id="return" onclick="window.open('./index.html', '_self')">&lt;-- (ESC)</button>
         <div class="inn-all-block">
-            <textarea id="text"></textarea>
-            <label id="text-l">Text to Insert / Texto para inserir</label>
-            <button id="text-ins" onclick="addTextIn(undefined, undefined); saveInBrowser(); themeSet();">Insert / Inserir</button>
-            <button id="text-rst" onclick="resetItems()">RESET</button>
+            <label id="label-1">Title / Título</label>
+            <input id="text-1" type="text">
         </div>
-
+        <div class="inn-all-block">
+            <label id="label-2">Content / Conteúdo</label>
+            <textarea id="text-2"></textarea>
+        </div>
+        <div class="inn-all-block">
+            <label id="label-3">Author / Autor</label>
+            <input id="text-3" type="text">
+        </div>
+        <div class="inn-all-block">
+            <label id="label-4">Description / Descrição</label>
+            <textarea id="text-4"></textarea>
+        </div>
+        <div class="inn-all-block">
+            <label id="label-5">Keywords / Palavras-chave</label>
+            <textarea id="text-5"></textarea>
+        </div>
+        <div class="inn-all-block">
+            <label id="label-6">Keywords / Palavras-chave</label>
+            <input id="text-6" type="date">
+        </div>
+        <button id="create" onclick="writeArticle()">Create Article / Criar Artigo</button>
         <hr>
-        <div id="copy-div" class="inn-all-block">
-        </div>
+        <p id="code"></p>
     </body>
 </html>

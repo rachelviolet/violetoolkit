@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Raquel Violeta">
+        <meta name="description" content="Welcome To The Violet Toolkit Website, where information and tools are accessible to all!">
+        <meta name="keywords" content="Raquel Violeta, Rachel Violet, violetoolkit, Violet Toolkit, Ferramenta Violeta, ferramentavioleta, Toolkit Website">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Violet Toolkit</title>
+
+        <style id="no-js-style">
+            @font-face {
+                font-family: 'OpenSans';
+                src: url("../font/open-sans.ttf");
+            }
+
+            body {
+                font-family: 'OpenSans'
+            }
+
+            p, a {
+                font-size: 120%;
+                white-space: break-spaces;
+            }
+            span {font-size: 50%;}
+            #js-err {display:inline}
+            .js-exclusive {display: none;}
+        </style>
+
+        <script src="../js/theme.js"></script>
+        <script src="../js/language.js"></script>
+        <script src="../js/main.js"></script>
+        <script src="../js/input.js"></script>
+        <script src="../js/inputVisual.js"></script>
+        <script src="../js/ui.js"></script>
+
+        <link rel="icon" type="image/x-icon" href="../favicon.png">
+        <link rel="alternate" href="./tool-char-count.html"/>
+        <link rel="alternate" href="./tool-note.html"/>
+        <link rel="alternate" href="./tool-calculator.html"/>
+        <link rel="alternate" href="../en-us/index.html" hreflang="en-us"/>
+
+    </head>
+    <body onload="websiteLoaded(1); langSet('en');">
+   
+        <h1 id="website-title">Violet Toolkit<p id="titlev"></p></h1>
+        
+        <div id="menu">
+            <button class="menu js-exclusive" id="mn-1" onclick="switchPage('home-div')">🏠 HOME </button>
+            <button class="menu js-exclusive" id="mn-2" onclick="switchPage('info-div')">📺 MEDIA </button>
+            <button class="menu js-exclusive" id="mn-3" onclick="switchPage('skill-div')">📜 CV </button>
+            <button class="menu js-exclusive" id="mn-4" onclick="switchPage('tools-div')">🛠️ TOOLS </button>
+            <button class="menu js-exclusive" id="mn-5" onclick="switchPage('about-div')">ℹ️ ABOUT </button>
+            <button class="menu js-exclusive" id="mn-6" onclick="switchPage('settings-div')">⚙️ SETTINGS</button>
+        </div>
+
+        <div id="screen">
+            <div id="home-div" class="sdiv">
+                <p id="screen-alert">limited mode: ON.</p>
+                <div>
+                    <p>
+                        This website is fully compatible with standard keyboard features.
+                        TAB/SHIFT+TAB to move, ENTER/SPACE to confirm or skip to the first item.
+                    </p>
+                    <h2>What's new?</h2>
+                    <p id="version">2025.06 AB</p>
+                    <ul>
+                        <li>An article creator tool</li>
+                        <li>More articles</li>
+                        <li>Spanish files (WIP)</li>
+                        <li>Text Editing Tool update</li>
+                        <li>New internal file names</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="info-div" class="sdiv">
+                <h2 class="screen-title">Articles</h2>
+                <a id="info-div-1" class="info-div-elements" href="./specs-info.html" id="comp-specs-info" class="info-list-item">[SUGGESTION] How to choose a computer, laptop or phone? Which specifications to look out for?</a>
+                <a class="info-div-elements" href="./how-to-live-a-happy-life.html" class="info-list-item">[SUGGESTION] 12 things to make 2025 a great year</a>
+                <a class="info-div-elements" href="./microsoft-teams-ransomware-jan2024-english.html" class="info-list-item">[NEWS] (Jan 24, 2024) Attackers use Microsoft Teams to target victims.</a>
+                <a class="info-div-elements" href="./2025-cybersecurity-modern-threats-english.html" class="info-list-item">[INFORMATION] Modern Cybersecurity Threats</a>
+                <a class="info-div-elements" href="./why-should-i-restart-my-computer.html" class="info-list-item">[INFORMATION] Why Should I Restart My Computer?</a>
+                <a class="info-div-elements" href="./why-update-your-device-app.html" class="info-list-item">[INFORMATION] Why Should I Update My Device/Apps?</a>
+                <a class="info-div-elements" href="./bug-fixes.html" class="info-list-item">[INFORMATION] What Are Computer Bugs?</a>
+                <a class="info-div-elements" href="./computer-virus-and-antivirus-software.html" class="info-list-item">[INFORMATION] Computer Viruses and Antivirus Software</a>
+                <a class="info-div-elements" href="./never-get-scammed.html" class="info-list-item">[INFORMATION] How To Never Get Scammed, Hacked or Infected With A Computer Virus?</a>
+                <a class="info-div-elements" href="./what-is-artificial-general-intelligence.html" class="info-list-item">[INFORMATION] What Is Artificial General Intelligence?</a>
+                <a class="info-div-elements" href="./what-are-hardware-requirements.html" class="info-list-item">[INFORMATION] What Are Hardware Requirements?</a>
+                <a class="info-div-elements" href="./how-to-prevent-your-computer-laptop-phone-from-overheating.html" class="info-list-item">[INFORMATION] How To Prevent Your Computer Or Laptop From Overheating</a>
+                <a class="info-div-elements" href="./file-exensions-you-need-to-know-about.html" class="info-list-item">[INFORMATION] File Extensions You NEED To Know About</a>
+                <a class="info-div-elements" href="./what-is-a-vpn.html" class="info-list-item">[INFORMATION] What Is A VPN? (Virtual Private Network)</a>
+                <a class="info-div-elements" href="./how-to-appropriately-turn-your-device-off.html" class="info-list-item">[INFORMATION] How To Appropriately Turn Your Device Off</a>
+                <a class="info-div-elements" href="./ms-office-365-free.html" class="info-list-item">[INFORMATION] The Microsoft 365 Suite and how to get it for free</a>
+                <a class="info-div-elements" href="./what-is-lgpd-br.html" class="info-list-item">[INFORMATION] What is the LGPD? (Brazilian law)</a>
+                <a class="info-div-elements" href="./what-are-active-directories.html" class="info-list-item">[INFORMATION] What are active directories?</a>
+                
+                <h2 class="screen-title">Videos and YouTube</h2>
+                <a class="info-div-elements" href="https://youtu.be/DXbbWhK0mag" class="ytv">[YOUTUBE] Laptop Ad</a>
+                <a class="info-div-elements" href="https://www.youtube.com/@AprendaInglesAgoraNow" class="ytv">[YOUTUBE] Learn English Online (English to Brazilian Portuguese)</a>
+               
+                <h2 class="screen-ttitle">E-books</h2>
+                <a class="info-div-elements" href="https://www.amazon.com.br/dp/B0DCTY9LXD">[AMAZON] Where Life Rebooted (English only; Link to Amazon)</a>
+                <a class="info-div-elements" href="https://www.amazon.com.br/dp/B0DRH844LN">[AMAZON] Learn English Ebook</a>
+                
+                <h2 class="screen-ttitle">World</h2>
+                <a ilass="info-div-elements" href="../brazil.html">Brazil</a>
+               
+                <h2 class="screen-ttitle">Fun</h2>
+                <a class="info-div-elements" href="../math.html">Math</a>
+              
+                <h2 class="screen-ttitle">Websites (examples)</h1>
+                <a class="info-div-elements" href="../samples/e-commerce/index.html">Laptop website (e-commerce store sample; English only)</a>
+            </div>
+
+            <div id="skill-div" class="sdiv">
+                <div class="skill-tab">
+                    <button id="skill-div-1" class="skill-div-elements cv" onclick="skillsTabFunction(1)">CV</button>
+                    <button class="skill-div-elements" onclick="skillsTabFunction(2)">Summary</button>
+                </div>
+
+                <div id="skills-info">
+                    <h1 class="screen-title">CV / Resumé</h1>
+                    <h3>Information and Contact</h3>
+                    <a class="skills-list" href="mailto:raquelvioleta.contato@gmail.com">Email: raquelvioleta.contato@gmail.com</a>
+                    <a class="skills-list" href="https://www.linkedin.com/in/raquel-soares-820037314/" target="_blank">LinkedIn: Raquel Soares</a>
+                    <p class="skills-list">Location: Brazil</p>
+                    <p class="skills-list">My mission is to provide the best service possible, working with a team and prioritizing people's well-being.</p>
+                    <h3>Education</h3>
+                    <p class="skills-list">High school degree (complete)</p>
+                    <p class="skills-list">Associate degree in Cyber security and Defense Management (ongoing)</p>
+                    <h3>Certificates</h3>
+                    <p class="skills-list">Creation of Algorithms in Python — Centro de Apoio ao Trabalho e Empreendedorismo</p>
+                    <p class="skills-list">Soft Skills: Future professionals' skills — Centro de Apoio ao Trabalho e Empreendedorismo</p>
+                    <h3>Professional Experience</h3>
+                    <p class="skills-list">For more information, please contact me.</p>
+                    <p class="skills-list">Telemarketing Operator (July 2023 ~ October 2024).</p>
+                    <h3>Languages</h3>
+                    <p class="skills-list">Portuguese (Native)</p>
+                    <p class="skills-list">English (Fluent)</p>
+                    <!-- <p class="skills-list">Espanhol (Basic)</p> -->
+                     <div id="skills-skills-list">
+                        <div>
+                            <h3>Hard Skills</h3>
+                            <p class="skills-list">Microsoft Office and Google Suite (Advanced)</p>
+                            <p class="skills-list">HTML, JavaScript and CSS (Advanced)</p>
+                            <p class="skills-list">Microsoft Windows and Linux (Advanced)</p>
+                            <p class="skills-list">Photoshop and GIMP (Basic)</p>
+                        </div>
+                        <div>
+                            <h3>Soft Skills</h3>
+                            <p class="skills-list">Adaptability</p>
+                            <p class="skills-list">Teamwork</p>
+                            <p class="skills-list">Critical thinking</p>
+                            <p class="skills-list">Proactivity</p>
+                            <p class="skills-list">Problem solving</p>
+                        </div>
+                     </div>
+                </div>
+
+                <div id="skills-summary">
+                    <h1 class="screen-title">Summary</h1>
+                    <p>
+Hello, I am Rachel. My mission is to provide the best service possible.
+I have useful IT-related, writing and administration skills.
+I am a great co-worker to have in a team.
+                    </p>
+                </div>
+            </div>
+
+            <div id="tools-div" class="sdiv js-exclusive">
+                <h1 class="screen-title">Tools</h1>
+                <div id="tools-list">
+                    <a id="tools-div-1" class="tools-div-elements" href="../tool-char-count.html">Character count</a>
+                    <a class="tools-div-elements" href="../tool-note.html">Notes</a>
+                    <a class="tools-div-elements" href="../tool-calculator.html">Calculator</a>
+                    <a class="tools-div-elements" href="../tool-text.html">Text Editing</a>
+                    <a class="tools-div-elements" href="../tool-text-copying.html">Text Copying</a>
+                    <a class="tools-div-elements" href="../tool-article-creator.html">Article Creator</a>
+                    <!-- <a id="tools-div-4" class="tools-div-elements" href="../tool-data-management.html">Data Management</a> -->
+                </div>
+
+            </div>
+
+            <div id="settings-div" class="sdiv js-exclusive">
+                <h1 class="screen-title">Settings</h1>
+                <!-- <button id="settings-div-1" class="settings-div-elements" onclick="toggleClassicTheme()">Toggle between Classic Theme and Modern Theme</button> -->
+                <button id="settings-div-1" class="settings-div-elements" onclick="toggleDarkTheme()">Toggle between Light Mode and Dark Mode</button>
+
+            </div>
+
+            <div id="about-div" class="sdiv">
+                <h1 class="screen-title">About</h1>
+                <h2>The website</h2>
+                <p>
+Welcome To The Violet Toolkit Website, where information and tools are accessible to all!
+This website's code (and just the code) is licensed under the <a id="about-div-1" style="font-weight: bold;" href=https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3 license.</a>
+                </p>
+                <h2>Rachel Violet</h2>
+                <p>
+Hi, I'm Raquel Violeta (Rachel Violet)! My mission is to cause a positive impact and make the world a better place.
+For more information on my skills, check out the CV Tab.
+For more information on my creations, check out the Content Tab.
+                </p>
+            </div>
+        </div>
+        <div id="languages">
+                <a href="../en/index.html" class="nojs">(Q) English</a>
+                <a href="../pt/index.html" class="nojs">(W) Português Brasileiro</a>
+                <!-- <a href="../es/index.html" class="nojs">(E) Español</a> -->
+        </div>
+    </body>
+</html>

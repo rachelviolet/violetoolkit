@@ -27,11 +27,12 @@
 
         <button id="return" onclick="window.open('./index.html', '_self')">&lt;-- (ESC)</button>
         <div class="inn-all-block">
-            <input id="text" type="text">
+            <textarea id="text"></textarea>
             <label id="text-l">Text to Edit / Texto para editar</label>
         </div>
 
         <div class="inn-all-block">
+            <button onclick="textAlter(11)" id="copy">Copy / Copiar</button>
             <button onclick="clearText()" id="tx-clear">Clear / Limpar</button>
             <button onclick="undoText()" id="tx-undo">Undo / Desfazer</button>
         </div>
@@ -40,6 +41,8 @@
             <button onclick="textAlter(1)" id="tx-lowercase">Lowercase / Caixa baixa</button>
             <button onclick="textAlter(2)" id="tx-uppercase">Uppercase / Caixa alta</button>
             <button onclick="textAlter(3)" id="tx-surround-ast">Cover with asterisks / Cobrir com asteriscos</button>
+            <button onclick="textAlter(9)" id="tx-surround-as3">Cover with three asterisks / Cobrir com três asteriscos</button>
+            <button onclick="textAlter(9)" id="tx-surround-asx">Cover with three asterisks and uppercase / Cobrir com três asteriscos e caixa alta</button>
             <button onclick="textAlter(4)" id="tx-surround-und">Cover with underscores / Cobrir com subtraços</button>
             <button onclick="textAlter(5)" id="tx-surround-til">Cover with tildes / Cobrir com tis</button>
             <button onclick="textAlter(6)" id="tx-surround-quo">Cover with quotation marks / Cobrir com aspas duplas</button>
