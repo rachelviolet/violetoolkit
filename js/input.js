@@ -27,7 +27,10 @@ document.addEventListener('keydown', function(event) {
         window.open("../pt/index.html", "_self");
         break;
       case "e":
-        // window.open("../es/index.html", "_self");
+        window.open("../es/index.html", "_self");
+        break;
+      case "r":
+        // window.open("../ru/index.html", "_self");
         break;
       // DEPRECATED CODE. SHOULD BE REMOVED "SOON".
       // case "arrowleft":

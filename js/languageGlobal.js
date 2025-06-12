@@ -6,6 +6,9 @@ function languageSwitch(change) {;
         if (change == "en") {
             Page.language = "en";
         }
+        else if (change == "es") {
+            Page.language = "es";
+        }
         else if (change == "br") {
             Page.language = "br";
         }
@@ -20,6 +23,10 @@ function languageSwitch(change) {;
             localStorage.setItem("violetool-lang", "en");
             Languages.English.update();
             break;
+        case "es":
+            // console.log("Ídioma atual: Português Brasileiro");
+            // localStorage.setItem("violetool-lang", "br");
+            // break;
         case "br":
             console.log("Ídioma atual: Português Brasileiro");
             localStorage.setItem("violetool-lang", "br");

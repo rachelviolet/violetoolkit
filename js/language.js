@@ -1,5 +1,5 @@
 'use strict'
-const definedLanguages = ["en", "br"];
+const definedLanguages = ["en", "br", "es"];
 var language = localStorage.getItem("violetoolkit-language")
 
 // var Spanish;
@@ -15,9 +15,14 @@ function langSet(change) {
         else if (change == "br") {
             Page.language = "br";
         }
+        else if (change == "es") {
+            Page.language = "es";
+        }
     }
     else {
         if (navigator.language.toLowerCase().includes("pt") && localStorage.getItem("violetoolkit-language") == null) Page.language = "br";
+        // else if (navigator.language.toLowerCase().includes("es") && localStorage.getItem("violetoolkit-language") == null) Page.language = "es";
+        else if (navigator.language.toLowerCase().includes("es") && localStorage.getItem("violetoolkit-language") == null) Page.language = "br";
         else if (localStorage.getItem("violetoolkit-language") == null) Page.language = "en";
         else Page.language = localStorage.getItem("violetoolkit-language");
     }
@@ -27,6 +32,10 @@ function langSet(change) {
             console.log("Current Language: English (default option)");
             localStorage.setItem("violetool-lang", "en");
             break;
+        case "es":
+            // console.log("Ídioma atual: Português Brasileiro");
+            // localStorage.setItem("violetool-lang", "br");
+            // break;
         case "br":
             console.log("Ídioma atual: Português Brasileiro");
             localStorage.setItem("violetool-lang", "br");
