@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Raquel Violeta">
+        <meta name="description" content="Te dou as boas-vindas ao site Ferramenta Violeta, onde informações e ferramentas são accessíveis para todas as pessoas!">
+        <meta name="keywords" content="Raquel Violeta, Rachel Violet, violetoolkit, Violet Toolkit, Ferramenta Violeta, ferramentavioleta, Toolkit Website">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ferramenta Violeta</title>
+
+        <style id="no-js-style">
+            @font-face {
+                font-family: 'VT323';
+                src: url("../font/VT323.ttf");
+            }
+            @font-face {
+                font-family: 'OpenSans';
+                src: url("../font/open-sans.ttf");
+            }
+
+            body {
+                font-family: 'OpenSans'
+            }
+
+            p, a {
+                font-size: 120%;
+                white-space: break-spaces;
+            }
+            span {font-size: 50%;}
+
+            hr {
+                border-bottom: 1vw solid #101010;
+            }
+            #js-err {display:inline}
+            .js-exclusive {display: none;}
+        </style>
+
+        <script src="../js/theme.js"></script>
+        <script src="../js/language.js"></script>
+        <script src="../js/main.js"></script>
+        <script src="../js/input.js"></script>
+        <script src="../js/inputVisual.js"></script>
+        <script src="../js/ui.js"></script>
+
+        <link rel="icon" type="image/x-icon" href="../favicon.png">
+        <link rel="alternate" href="./tool-char-count.html"/>
+        <link rel="alternate" href="./tool-note.html"/>
+        <link rel="alternate" href="./tool-calculator.html"/>
+        <link rel="alternate" href="../en-us/index.html" hreflang="en-us"/>
+
+    </head>
+    <body onload="websiteLoaded(1); langSet('br');">
+   
+        <h1 id="website-title">Herramienta Violeta<p id="titlev"></p></h1>
+        
+        <div id="menu">
+            <button class="menu js-exclusive" id="mn-1" onclick="switchPage('home-div')">🏠 PRINCIPAL </button>
+            <button class="menu js-exclusive" id="mn-2" onclick="switchPage('info-div')">📺 MEDIA </button>
+            <button class="menu js-exclusive" id="mn-3" onclick="switchPage('skill-div')">📜 CURRÍCULUM </button>
+            <button class="menu js-exclusive" id="mn-4" onclick="switchPage('tools-div')">🛠️ HERRAMIENTAS </button>
+            <button class="menu js-exclusive" id="mn-5" onclick="switchPage('about-div')">ℹ️ SOBRE </button>
+            <button class="menu js-exclusive" id="mn-6" onclick="switchPage('settings-div')">⚙️ AJUSTES</button>
+        </div>
+
+        <div id="screen">
+            <div id="home-div" class="sdiv">
+                <p id="screen-alert">modo limitado: Activado.</p>
+                <div>
+                    <p>
+                        Esse sitio es compatible con recursos estándar del teclado.
+                        TAB/SHIFT+TAB para moverse, ENTER/ESPAÇO para confirmar o saltar al primer elemento.
+                    </p>
+                    <h2>¿Que hay de nuevo?</h2>
+                    <p id="version">2025.06 AC</p>
+                    <ul>
+                        <li>Traducción parcialmente al español</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="info-div" class="sdiv">
+                <!-- <button id="info-div-goback"></button> -->
+                <h2 class="screen-title">Artículos (solo en portugués, traducción en curso)</h2>
+                <a id="info-div-1" class="info-div-elements" href="./specs-info.html" id="comp-specs-info" class="info-list-item">[SUGESTÃO] Como escolher um computador, notebook ou celular? Quais especificações devo prestar atenção?</a>
+                <a class="info-div-elements" href="../pt/como-viver-uma-vida-feliz.html" class="info-list-item">[SUGESTÃO] 12 coisas para fazer de 2025 um ótimo ano:</a>
+                <a class="info-div-elements" href="../pt/microsoft-teams-ransomware-jan2024-portuguese.html" class="info-list-item">[NOTÍCIAS] (24 Jan, 2024) Hackers utilizam o Microsoft Teams para atacar vítimas.</a>
+                <a class="info-div-elements" href="../pt/2025-ameacas-ciberneticas-portugues-brasil.html" class="info-list-item">[INFORMAÇÃO] Ameaças Cibernéticas Modernas</a>
+                <a class="info-div-elements" href="../pt/por-que-devo-reiniciar-meu-computador.html" class="info-list-item">[INFORMAÇÃO] Por Que Devo Reiniciar Meu Computador?</a>
+                <a class="info-div-elements" href="../pt/por-que-devo-atualizar-meu-dispositivo-aplicativos.html" class="info-list-item">[INFORMAÇÃO] Por Que Devo Atualizar Meu Dispositivo/Aplicativos?</a>
+                <a class="info-div-elements" href="../pt/o-que-sao-bugs-de-computadores.html" class="info-list-item">[INFORMAÇÃO] O Que São Bugs de Computadores</a>
+                <a class="info-div-elements" href="../pt/virus-de-computador-e-software-de-antivirus.html" class="info-list-item">[INFORMAÇÃO] Vírus de Computador e Software de Antivírus</a>
+                <a class="info-div-elements" href="../pt/nunca-caia-em-golpes.html" class="info-list-item">[INFORMAÇÃO] Como Nunca Cair Em Golpes, Ter Sua Conta Hackeada Ou O Computador Infectado Com Um Vírus?</a>
+                <a class="info-div-elements" href="../pt/inteligencia-artificial-geral.html" class="info-list-item">[INFORMAÇÃO] O Que É Inteligência Artificial Geral</a>
+                <a class="info-div-elements" href="../pt/o-que-sao-requisitos-de-hardware.html" class="info-list-item">[INFORMAÇÃO] O Que São Requisitos de Hardware</a>
+                <a class="info-div-elements" href="../pt/como-prevenir-seu-computador-notebook-celular-de-superaquecer.html" class="info-list-item">[INFORMAÇÃO] Como Previnir Seu Computador ou Notebook de Superaquecer</a>
+                <a class="info-div-elements" href="../pt/extensoes-de-arquivo-que-voce-precisa-conhecer.html" class="info-list-item">[INFORMAÇÃO] Extensões de Arquivos que Você Precisa Conhecer</a>
+                <a class="info-div-elements" href="../pt/o-que-e-uma-vpn.html" class="info-list-item">[INFORMAÇÃO] O Que É Uma VPN?</a>
+                <a class="info-div-elements" href="../pt/como-corretamente-desligar-seu-dispositivo.html" class="info-list-item">[INFORMAÇÃO] Como Corretamente Desligar Seu Dispositivo?</a>
+                <a class="info-div-elements" href="../pt/ms-office-365-gratis.html" class="info-list-item">[INFORMAÇÃO] O Pacote Microsoft Office e como conseguí-lo gratuitamente</a>
+                <a class="info-div-elements" href="../pt/o-que-e-a-lgpd.html" class="info-list-item">[INFORMAÇÃO] O que é a LGPD? Lei Geral de Proteção de Dados Pessoais</a>
+                <a class="info-div-elements" href="../pt/o-que-e-active-directories.html" class="info-list-item">[INFORMAÇÃO] O que são Active Directories (diretórios ativos)?</a>
+
+                <h2 class="screen-title">Vídeos y YouTube</h2>
+                <a class="info-div-elements" href="https://youtu.be/DXbbWhK0mag" class="ytv">[YOUTUBE] Anúncio de Notebook</a>
+                <a class="info-div-elements" href="https://www.youtube.com/@AprendaInglesAgoraNow" class="ytv">[YOUTUBE] Aprenda Inglês Online (Inglês para Português Brasileiro)</a>
+                          
+                <h2 class="screen-title">Libros virtuales (e-books)</h2>
+                <a class="info-div-elements" href="https://www.amazon.com.br/dp/B0DCTY9LXD">[AMAZON] Where Life Rebooted (Apenas em inglês)</a>
+                <a class="info-div-elements" href="https://www.amazon.com.br/dp/B0DRH844LN">[AMAZON] Aprender Inglẽs Ebook</a>
+                
+                <h2 class="screen-title">Mundo</h2>
+               <a class="info-div-elements" href="../brazil.html">Brasil</a>
+
+                <h2 class="screen-title">Diversión</h2>
+                <a class="info-div-elements" href="../math.html">Matemática</a>
+              
+                <h2 class="screen-title">Sitios web (ejemplos)</h1>
+                    <a class="info-div-elements" href="../samples/e-commerce/index.html">Site de notebook (exemplo de loja e-commerce (comércio digital); Apenas em inglês)</a>
+            </div>
+
+            <div id="skill-div" class="sdiv">
+                <div class="skill-tab">
+                    <button id="skill-div-1" class="skill-div-elements cv" onclick="skillsTabFunction(1)">Currículum</button>
+                    <button class="skill-div-elements" onclick="skillsTabFunction(2)">Resumen</button>
+                </div>
+
+                <div id="skills-info">
+                    <h1 class="screen-title">Currículo (solo en portugués, traducción en curso)</h1>
+                    <h3>Informação e Contato</h3>
+                    <a class="skills-list" href="mailto:raquelvioleta.contato@gmail.com">E-mail: raquelvioleta.contato@gmail.com</a>
+                    <a class="skills-list" href="https://www.linkedin.com/in/raquel-soares-820037314/" target="_blank">LinkedIn: Raquel Soares</a>
+                    <p class="skills-list">Localização: Brazil</p>
+                    <p class="skills-list">Minha missão é prover o melhor serviço possível, trabalhando em equipe e priorizando o bem-estar das pessoas.</p>
+                    <h3>Formação acadêmica</h3>
+                    <p class="skills-list">Ensino médio completo</p>
+                    <p class="skills-list">Curso Superior de Tecnologia em Gestão da Segurança e Defesa Cibernética (cursando)</p>
+                    <h3>Certificados</h3>
+                    <p class="skills-list">Criação de Algoritmos em Python — Centro de Apoio ao Trabalho e Empreendedorismo</p>
+                    <p class="skills-list">Soft Skills: habilidades dos profissionais do futuro — Centro de Apoio ao Trabalho e Empreendedorismo</p>
+                    <h3>Experiência Profissional</h3>
+                    <p class="skills-list">Para mais informações, por favor, entre em contato comigo.</p>
+                    <p class="skills-list">Operadora de Telemarketing (Julho de 2023 ~ Outubro de 2024)</p>
+                    <h3>Línguas</h3>
+                    <p class="skills-list">Português (Nativo)</p>
+                    <p class="skills-list">Inglês (Fluente)</p>
+                    <p class="skills-list">Espanhol (Básico, aprendendo)</p>
+                     <div id="skills-skills-list">
+                        <div>
+                            <h3>Hard Skills</h3>
+                            <p class="skills-list">Microsoft Office e Google Suite (Avançado)</p>
+                            <p class="skills-list">HTML, JavaScript e CSS (Avançado)</p>
+                            <p class="skills-list">Microsoft Windows e Linux (Avançado)</p>
+                            <p class="skills-list">Photoshop e GIMP (Básico)</p>
+                        </div>
+                        <div>
+                            <h3>Soft Skills</h3>
+                            <p class="skills-list">Adaptabilidade</p>
+                            <p class="skills-list">Trabalho em equipe</p>
+                            <p class="skills-list">Pensamento crítico</p>
+                            <p class="skills-list">Proatividade</p>
+                            <p class="skills-list">Solução de problemas</p>
+                        </div>
+                     </div>
+                </div>
+
+                <div id="skills-summary">
+                    <h1 class="screen-title">Resumo (solo en portugués, traducción en curso)</h1>
+                    <p>
+Olá, eu sou Raquel. Minha missão é prover os melhores serviços possíveis.
+Eu tenho habilidades úteis relacionadas a TI, escrita e adminstração.
+Sou uma ótima colaboradora em uma equipe.
+                    </p>
+                </div>
+            </div>
+
+            <div id="tools-div" class="sdiv js-exclusive">
+                <h1 class="screen-title">Ferramentas (solo en portugués, traducción en curso)</h1>
+                <div id="tools-list">
+                    <a id="tools-div-1" class="tools-div-elements" href="../tool-char-count.html">Contagem de Caracteres</a>
+                    <a class="tools-div-elements" href="../tool-calculator.html">Calculadora</a>
+                    <a class="tools-div-elements" href="../tool-note.html">Anotações</a>
+                    <a class="tools-div-elements" href="../tool-text.html">Edição de Texto</a>
+                    <a class="tools-div-elements" href="../tool-text-copying.html">Cópia de Texto</a>
+                    <a class="tools-div-elements" href="../tool-article-creator.html">Criador de Artigo</a>
+                    <!-- <a id="tools-div-4" class="tools-div-elements" href="../tool-data-management.html">Gerenciamento de Dados</a> -->
+                </div>
+
+            </div>
+
+            <div id="settings-div" class="sdiv js-exclusive">
+                <h1 class="screen-title">Ajustes</h1>
+                <!-- <button id="settings-div-1" class="settings-div-elements" onclick="toggleClassicTheme()">Alterar entre o Tema Clássico e o Tema Moderno</button> -->
+                <button id="settings-div-1" class="settings-div-elements" onclick="toggleDarkTheme()">Alternar entre el Modo Claro y el Modo Oscuro</button>
+
+            </div>
+
+            <div id="about-div" class="sdiv">
+                <h1 class="screen-title">Sobre (solo en portugués, traducción en curso)</h1>
+                <h2>O site</h2>
+                <p>
+Boas-vindas ao site Ferramenta Violeta, onde informações e ferramentas são acessíveis para todas as pessoas!
+O código desse site (e apenas o código) é licensiado sob a <a id="about-div-1" style="font-weight: bold;" href=https://www.gnu.org/licenses/gpl-3.0.en.html">licença GPLv3.</a>
+</p>
+                <h2>Raquel Violeta</h2>
+                <p>
+Olá, eu sou Raquel Violeta (Rachel Violet)! Minha missão é causar um impacto positivo e tornar o mundo um lugar melhor.
+Para mais informações sobre minhas habilidades, verifique a Aba Currículo
+Para mais informações sobre minhas criações, verifique a Aba Conteúdo
+                </p>
+            </div>
+        </div>
+        <div id="languages">
+                <a href="../en/index.html" class="nojs">(Q) English</a>
+                <a href="../pt/index.html" class="nojs">(W) Português Brasileiro</a>
+                <a href="../es/index.html" class="nojs">(E) Español</a>
+                <!-- <a href="../ru/index.html" class="nojs">(R) Русский</a> -->
+        </div>
+    </body>
+</html>
