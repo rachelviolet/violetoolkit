@@ -75,7 +75,7 @@ document.addEventListener('keydown', function(event) {
       //   inputOption = 1;
       //   document.getElementById(`mn-1`).click();
     }
-    inputVisualCheck();
+    // inputVisualCheck();
   }
 });
 

@@ -10,6 +10,7 @@ var Languages = {
         "create": "Create article",
         "date": "Date",
         update: function() {
+            document.title = "Ferramenta Violeta - Article Creator";
             document.getElementById("label-1").textContent = Languages.English.title;
             document.getElementById("label-2").textContent = Languages.English.content;
             document.getElementById("label-3").textContent = Languages.English.author;
@@ -28,6 +29,7 @@ var Languages = {
         "create": "Criar artigo",
         "date": "Data",
         update: function() {
+            document.title = "Ferramenta Violeta - Criador de artigo";
             document.getElementById("label-1").textContent = Languages.Portuguese.title;
             document.getElementById("label-2").textContent = Languages.Portuguese.content;
             document.getElementById("label-3").textContent = Languages.Portuguese.author;

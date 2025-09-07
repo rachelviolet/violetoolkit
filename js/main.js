@@ -4,6 +4,7 @@ const nameEnglish = "Violet Toolkit"
 var version;
 const freezeMode = false;
 const fontList = [0, 1, 2]
+var FirstTime = localStorage.getItem("violetool-firsttime");
 
 if (localStorage.getItem("violetool-retro-font") == 1) Page.font = "VT323";
 else if (localStorage.getItem("violetool-retro-font") == 2) Page.font = "RobotoMono";
@@ -38,6 +39,14 @@ function websiteLoaded(source) {
 
         switchPage("home-div");
 
+        if (FirstTime == "143") {
+            skipThemeIntro();
+        }
+        else {
+            document.getElementById("preparation").style.display = "block";
+            document.getElementById("menu").style.display = "none";
+            document.getElementById("screen").style.display = "none";
+        }
 
         console.log("JavaScript is ON! Hurray!");
     }

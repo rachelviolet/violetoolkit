@@ -10,6 +10,7 @@ var Languages = {
         "num1-text": "Number 1",
         "num2-text": "Number 2",
         "update": function() {
+            document.title = "Ferramenta Violeta - Calculator";
             document.getElementById("num1-text").textContent = this["num1-text"];
             document.getElementById("num2-text").textContent = this["num2-text"];
         }
@@ -18,6 +19,7 @@ var Languages = {
         "num1-text": "Número 1",
         "num2-text": "Número 2",
         "update": function() {
+            document.title = "Ferramenta Violeta - Calculadora";
             document.getElementById("num1-text").textContent = this["num1-text"];
             document.getElementById("num2-text").textContent = this["num2-text"];
         }

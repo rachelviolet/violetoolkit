@@ -31,6 +31,7 @@ var Languages = {
         "tl1-count-space0": "0 character(s), no spaces.",
         "tl1-count-space1": "0 space character(s).",
         "update": function() {
+            document.title = "Ferramenta Violeta - Character Count";
         this["tl1-count-full"] =  `${charCount.full} characters, spaces included.`;
         this["tl1-count-space0"] = `${charCount.space0} characters, no spaces.`;
         this["tl1-count-space1"] = `${charCount.space1} characters, only spaces.`;
@@ -44,6 +45,7 @@ var Languages = {
         "tl1-count-space0": "0 caractere(s), sem espaços.",
         "tl1-count-space1": "0 espaço(s).",
         "update": function() {
+            document.title = "Ferramenta Violeta - Contagem de caracteres";
         this["tl1-count-full"] = `${charCount.full} caractere(s), com espaços.`;
         this["tl1-count-space0"] = `${charCount.space0} caractere(s), sem espaços.`;
         this["tl1-count-space1"] = `${charCount.space1} espaços.`;

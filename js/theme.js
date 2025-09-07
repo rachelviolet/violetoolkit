@@ -34,11 +34,6 @@ if (Page.theme == undefined && Page.theme != "x") {
     localStorage.setItem("violetool-theme", 0);
 }
 
-function toggleClassicTheme() {
-    console.error("Feature not implemented yet.")
-    return // TODO
-}
-
 function toggleDarkTheme() {
     if (localStorage.getItem("violetool-theme") == "1") {
         localStorage.setItem("violetool-theme", "0")

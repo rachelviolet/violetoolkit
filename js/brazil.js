@@ -382,6 +382,7 @@ function languageSwitch(change) {;
         default:
             console.log("Current Language: English (default option)");
             localStorage.setItem("violetool-lang", "en");
+            document.title = "Ferramenta Violeta - Brazil";
             document.getElementById("brazil-federative-units").textContent = `${English.Units}`;
             document.getElementById("last-update").textContent = `${English.Last}`;
             document.getElementById("state-title").textContent = `${English.Title}${Brazil[currentState].Title}`;
@@ -396,6 +397,7 @@ function languageSwitch(change) {;
         case "br":
             console.log("Ídioma atual: Português Brasileiro");
             localStorage.setItem("violetool-lang", "br");
+            document.title = "Ferramenta Violeta - Brasil"; 
             document.getElementById("brazil-federative-units").textContent = `${Portuguese.Units}`;
             document.getElementById("last-update").textContent = `${Portuguese.Last}`;
             document.getElementById("state-title").textContent = `${Portuguese.Title}${Brazil[currentState].Title}`;

@@ -19,6 +19,7 @@ var Languages = {
         "bra": "Cover with brackets",
         "chat": "Text formatting tips",
         update: function() {
+            document.title = "Ferramenta Violeta - Text Editing";
             document.getElementById("text-l").textContent = Languages.English.label;
             document.getElementById("tx-clear").textContent = Languages.English.clear;
             document.getElementById("copy").textContent = Languages.English.copy;
@@ -53,6 +54,7 @@ var Languages = {
         "bra": "Cobrir com colchetes",
         "chat": "Dicas para formatação de texto",
         update: function() {
+            document.title = "Ferramenta Violeta - Edição de Texto";
             document.getElementById("text-l").textContent = Languages.Portuguese.label;
             document.getElementById("copy").textContent = Languages.Portuguese.copy;
             document.getElementById("tx-clear").textContent = Languages.Portuguese.clear;

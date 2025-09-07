@@ -22,6 +22,7 @@ Compatible with every country, including Brazil, Canada and the United States of
         "num4-text": "Phone Number",
         "num5-text": "Extra Number Suffix",
         "update": function() {
+            document.title = "Ferramenta Violeta - Phone Number Formatting";
             document.getElementById("copy-txt").textContent = this["copy-tt"];
             document.getElementById("disclaimer").textContent = this["disclaimer"];
             document.getElementById("disclaimer-2").textContent = this["disclaimer-2"];
@@ -50,6 +51,7 @@ Comatível com qualquer país, incluíndo o Brasil, o Canada e os Estados Unidos
         "num4-text": "Número de Telefone",
         "num5-text": "Súfixo Extra no Número",
         "update": function() {
+            document.title = "Ferramenta Violeta - Formatação de Número de Telefone";
             document.getElementById("copy-txt").textContent = this["copy-tt"];
             document.getElementById("disclaimer").textContent = this["disclaimer"];
             document.getElementById("disclaimer-2").textContent = this["disclaimer-2"];

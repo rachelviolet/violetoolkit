@@ -9,6 +9,7 @@ var Languages = {
         "insert": "Insert",
         "remove": "Remove 🗑️",
         update: function() {
+            document.title = "Ferramenta Violeta - Text Copying";
             document.getElementById("text-l").textContent = Languages.English.label;
             document.getElementById("text-ins").textContent = Languages.English.insert;
             // document.getElementById("text-del").textContent = Languages.English.remove;
@@ -19,6 +20,7 @@ var Languages = {
         "insert": "Inserir",
         "remove": "Remover 🗑️",
         update: function() {
+            document.title = "Ferramenta Violeta - Cópia de Texto";
             document.getElementById("text-l").textContent = Languages.Portuguese.label;
             document.getElementById("text-ins").textContent = Languages.Portuguese.insert;
             // document.getElementById("text-del").textContent = Languages.Portuguese.remove;

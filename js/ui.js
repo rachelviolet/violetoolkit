@@ -79,6 +79,12 @@ function themeSet() {
         document.body.getElementsByTagName("input")[i].style.backgroundColor = Page.backgroundColor;
         document.body.getElementsByTagName("input")[i].style.color = Page.fontColor;
     }
+    try {
+        skipThemeIntro();
+    }
+    catch {
+        
+    }
 }
 
 console.log("ui.js loaded");
