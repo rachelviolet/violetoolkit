@@ -36,6 +36,7 @@
         </style>
 
         <script src="../js/theme.js"></script>
+        <script src="../js/themePicker.js"></script>
         <script src="../js/language.js"></script>
         <script src="../js/main.js"></script>
         <script src="../js/input.js"></script>
@@ -50,8 +51,13 @@
 
     </head>
     <body onload="websiteLoaded(1); langSet('br');">
-   
-        <h1 id="website-title">Ferramenta Violeta<p id="titlev"></p></h1>
+        
+        <div id="preparation">
+            <p>Olá! Por favor, escolha o seu tema preferido:</p>
+            <p>Tenha em mente que você sempre pode mudá-lo nas configurações.</p>
+            <button onclick="websiteThemePick('Modern')">Tema Moderno</button>
+            <button onclick="websiteThemePick('Classic')">Tema Retrô</button>
+        </div>
         
         <div id="menu">
             <button class="menu js-exclusive" id="mn-1" onclick="switchPage('home-div')">🏠 PRINCIPAL </button>
@@ -60,9 +66,16 @@
             <button class="menu js-exclusive" id="mn-4" onclick="switchPage('tools-div')">🛠️ FERRAMENTAS </button>
             <button class="menu js-exclusive" id="mn-5" onclick="switchPage('about-div')">ℹ️ SOBRE </button>
             <button class="menu js-exclusive" id="mn-6" onclick="switchPage('settings-div')">⚙️ CONFIGURAÇÕES</button>
+
+            <div id="languages">
+                <a href="../en/index.html" class="nojs">(Q) English</a>
+                <a href="../pt/index.html" class="nojs">(W) Português Brasileiro</a>
+                <a href="../es/index.html" class="nojs">(E) Español</a>
+            </div>
         </div>
 
         <div id="screen">
+            <h1 id="website-title">Ferramenta Violeta<p id="titlev"></p></h1>
             <div id="home-div" class="sdiv">
                 <p id="screen-alert">modo limitado: Ativado.</p>
                 <div>
@@ -71,9 +84,11 @@
                         TAB/SHIFT+TAB para mover, ENTER/ESPAÇO para confirmar ou pular para o primeiro item.
                     </p>
                     <h2>O que há de novo?</h2>
-                    <p id="version">2025.07 AA</p>
+                    <p id="version">2025.09 A</p>
                     <ul>
-                        <li>Adcionado a Ferramenta De Formatação de Número de Telefone</li>
+                        <li>Adicionado Duas Novas Interfaces</li>
+                        <li>Adicionado um Jogo de Matemática (Modo Preço)</li>
+                        <li>Consertado Problemas Mínimos</li>
                     </ul>
                 </div>
             </div>
@@ -113,6 +128,7 @@
                
                 <h2 class="screen-title">Diversão</h2>
                 <a class="info-div-elements" href="../math.html">Matemática</a>
+                <a class="info-div-elements" href="../price-game.html">Jogo de Preços</a>
               
                 <h2 class="screen-title">Websites (exemplos)</h1>
                 <a class="info-div-elements" href="../samples/e-commerce/index.html">Site de notebook (exemplo de loja e-commerce (comércio digital); Apenas em inglês)</a>
@@ -192,6 +208,7 @@ Sou uma ótima colaboradora em uma equipe.
                 <h1 class="screen-title">Configurações</h1>
                 <!-- <button id="settings-div-1" class="settings-div-elements" onclick="toggleClassicTheme()">Alterar entre o Tema Clássico e o Tema Moderno</button> -->
                 <button id="settings-div-1" class="settings-div-elements" onclick="toggleDarkTheme()">Alterar entre o Modo Claro e o Modo Escuro</button>
+                <button id="settings-div-2" class="settings-div-elements" onclick="websiteThemePick(undefined, 'config')">Alterar entre o Tema Modern e Tema Retrô</button>
 
             </div>
 
@@ -209,11 +226,6 @@ Para mais informações sobre minhas habilidades, verifique a Aba Currículo
 Para mais informações sobre minhas criações, verifique a Aba Conteúdo
                 </p>
             </div>
-        </div>
-        <div id="languages">
-                <a href="../en/index.html" class="nojs">(Q) English</a>
-                <a href="../pt/index.html" class="nojs">(W) Português Brasileiro</a>
-                <a href="../es/index.html" class="nojs">(E) Español</a>
         </div>
     </body>
 </html>
