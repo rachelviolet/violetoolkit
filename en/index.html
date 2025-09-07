@@ -28,6 +28,7 @@
         </style>
 
         <script src="../js/theme.js"></script>
+        <script src="../js/themePicker.js"></script>
         <script src="../js/language.js"></script>
         <script src="../js/main.js"></script>
         <script src="../js/input.js"></script>
@@ -42,8 +43,14 @@
 
     </head>
     <body onload="websiteLoaded(1); langSet('en');">
+
+        <div id="preparation">
+            <p>Hello! Please, choose your preferred theme:</p>
+            <p>Keep in mind that you can always change it on the settings.</p>
+            <button onclick="websiteThemePick('Modern')">Modern Theme</button>
+            <button onclick="websiteThemePick('Classic')">Retro Theme</button>
+        </div>
    
-        <h1 id="website-title">Violet Toolkit<p id="titlev"></p></h1>
         
         <div id="menu">
             <button class="menu js-exclusive" id="mn-1" onclick="switchPage('home-div')">🏠 HOME </button>
@@ -52,20 +59,27 @@
             <button class="menu js-exclusive" id="mn-4" onclick="switchPage('tools-div')">🛠️ TOOLS </button>
             <button class="menu js-exclusive" id="mn-5" onclick="switchPage('about-div')">ℹ️ ABOUT </button>
             <button class="menu js-exclusive" id="mn-6" onclick="switchPage('settings-div')">⚙️ SETTINGS</button>
+
+            <div id="languages">
+                <a href="../en/index.html" class="nojs">(Q) English</a>
+                <a href="../pt/index.html" class="nojs">(W) Português Brasileiro</a>
+                <a href="../es/index.html" class="nojs">(E) Español</a>
+            </div>
         </div>
 
         <div id="screen">
+            <h1 id="website-title">Violet Toolkit<p id="titlev"></p></h1>
             <div id="home-div" class="sdiv">
                 <p id="screen-alert">limited mode: ON.</p>
                 <div>
-                    <p>
-                        This website is compatible with standard keyboard features.
-                        TAB/SHIFT+TAB to move, ENTER/SPACE to confirm or skip to the first item.
+                    <p>This website is compatible with standard keyboard features.<br>TAB/SHIFT+TAB to move, ENTER/SPACE to confirm or skip to the first item.
                     </p>
                     <h2>What's new?</h2>
-                    <p id="version">2025.07 AA</p>
+                    <p id="version">2025.09 A</p>
                     <ul>
-                        <li>Added Phone Format Tool</li>
+                        <li>Added Two New Designs</li>
+                        <li>Added a Math game (Price Mode)</li>
+                        <li>Fixed Minor Issues</li>
                     </ul>
                 </div>
             </div>
@@ -95,17 +109,18 @@
                 <a class="info-div-elements" href="https://youtu.be/DXbbWhK0mag" class="ytv">[YOUTUBE] Laptop Ad</a>
                 <a class="info-div-elements" href="https://www.youtube.com/@AprendaInglesAgoraNow" class="ytv">[YOUTUBE] Learn English Online (English to Brazilian Portuguese)</a>
                
-                <h2 class="screen-ttitle">E-books</h2>
+                <h2 class="screen-title">E-books</h2>
                 <a class="info-div-elements" href="https://www.amazon.com.br/dp/B0DCTY9LXD">[AMAZON] Where Life Rebooted (English only; Link to Amazon)</a>
                 <a class="info-div-elements" href="https://www.amazon.com.br/dp/B0DRH844LN">[AMAZON] Learn English Ebook</a>
                 
-                <h2 class="screen-ttitle">World</h2>
+                <h2 class="screen-title">World</h2>
                 <a ilass="info-div-elements" href="../brazil.html">Brazil</a>
                
-                <h2 class="screen-ttitle">Fun</h2>
+                <h2 class="screen-title">Fun</h2>
                 <a class="info-div-elements" href="../math.html">Math</a>
+                <a class="info-div-elements" href="../price-game.html">Price Game</a>
               
-                <h2 class="screen-ttitle">Websites (examples)</h1>
+                <h2 class="screen-title">Websites (examples)</h1>
                 <a class="info-div-elements" href="../samples/e-commerce/index.html">Laptop website (e-commerce store sample; English only)</a>
             </div>
 
@@ -183,6 +198,7 @@ I am a great co-worker to have in a team.
                 <h1 class="screen-title">Settings</h1>
                 <!-- <button id="settings-div-1" class="settings-div-elements" onclick="toggleClassicTheme()">Toggle between Classic Theme and Modern Theme</button> -->
                 <button id="settings-div-1" class="settings-div-elements" onclick="toggleDarkTheme()">Toggle between Light Mode and Dark Mode</button>
+                <button id="settings-div-2" class="settings-div-elements" onclick="websiteThemePick(undefined, 'config')">Toggle between Modern Theme and Retro Theme</button>
 
             </div>
 
@@ -200,11 +216,7 @@ For more information on my skills, check out the CV Tab.
 For more information on my creations, check out the Content Tab.
                 </p>
             </div>
-        </div>
-        <div id="languages">
-                <a href="../en/index.html" class="nojs">(Q) English</a>
-                <a href="../pt/index.html" class="nojs">(W) Português Brasileiro</a>
-                <a href="../es/index.html" class="nojs">(E) Español</a>
+            <a href="#mn-1">&#8593;</a>
         </div>
     </body>
 </html>
