@@ -36,6 +36,7 @@
         </style>
 
         <script src="../js/theme.js"></script>
+        <script src="../js/themePicker.js"></script>
         <script src="../js/language.js"></script>
         <script src="../js/main.js"></script>
         <script src="../js/input.js"></script>
@@ -50,8 +51,13 @@
 
     </head>
     <body onload="websiteLoaded(1); langSet('br');">
-   
-        <h1 id="website-title">Herramienta Violeta<p id="titlev"></p></h1>
+
+        <div id="preparation">
+            <p>Olá! Por favor, escolha o seu tema preferido:</p>
+            <p>Tenha em mente que você sempre pode mudá-lo nas configurações.</p>
+            <button onclick="websiteThemePick('Modern')">Tema Moderno</button>
+            <button onclick="websiteThemePick('Classic')">Tema Retrô</button>
+        </div>
         
         <div id="menu">
             <button class="menu js-exclusive" id="mn-1" onclick="switchPage('home-div')">🏠 PRINCIPAL </button>
@@ -60,9 +66,17 @@
             <button class="menu js-exclusive" id="mn-4" onclick="switchPage('tools-div')">🛠️ HERRAMIENTAS </button>
             <button class="menu js-exclusive" id="mn-5" onclick="switchPage('about-div')">ℹ️ SOBRE </button>
             <button class="menu js-exclusive" id="mn-6" onclick="switchPage('settings-div')">⚙️ AJUSTES</button>
+
+            <div id="languages">
+                <a href="../en/index.html" class="nojs">(Q) English</a>
+                <a href="../pt/index.html" class="nojs">(W) Português Brasileiro</a>
+                <a href="../es/index.html" class="nojs">(E) Español</a>
+                <!-- <a href="../ru/index.html" class="nojs">(R) Русский</a> -->
+            </div>
         </div>
 
         <div id="screen">
+            <h1 id="website-title">Herramienta Violeta<p id="titlev"></p></h1>
             <div id="home-div" class="sdiv">
                 <p id="screen-alert">modo limitado: Activado.</p>
                 <div>
@@ -71,9 +85,10 @@
                         TAB/SHIFT+TAB para moverse, ENTER/ESPAÇO para confirmar o saltar al primer elemento.
                     </p>
                     <h2>¿Que hay de nuevo?</h2>
-                    <p id="version">2025.06 AC</p>
+                    <p id="version">2025.09 A</p>
                     <ul>
                         <li>Traducción parcialmente al español</li>
+                        <li>Novo Juego y Estilo (inglés y portugués)[</li>
                     </ul>
                 </div>
             </div>
@@ -113,6 +128,7 @@
 
                 <h2 class="screen-title">Diversión</h2>
                 <a class="info-div-elements" href="../math.html">Matemática</a>
+                <a class="info-div-elements" href="../price-game.html">Jogo de Preços</a>
               
                 <h2 class="screen-title">Sitios web (ejemplos)</h1>
                     <a class="info-div-elements" href="../samples/e-commerce/index.html">Site de notebook (exemplo de loja e-commerce (comércio digital); Apenas em inglês)</a>
@@ -208,12 +224,6 @@ Para mais informações sobre minhas habilidades, verifique a Aba Currículo
 Para mais informações sobre minhas criações, verifique a Aba Conteúdo
                 </p>
             </div>
-        </div>
-        <div id="languages">
-                <a href="../en/index.html" class="nojs">(Q) English</a>
-                <a href="../pt/index.html" class="nojs">(W) Português Brasileiro</a>
-                <a href="../es/index.html" class="nojs">(E) Español</a>
-                <!-- <a href="../ru/index.html" class="nojs">(R) Русский</a> -->
         </div>
     </body>
 </html>
