@@ -39,13 +39,6 @@ button, p, a, input, label, h1, h2, h3 {
     white-space: break-spaces;
 }
 
-button:hover, a:hover {
-    /* #2A002A for light theme ; #cf9fff for dark theme */
-    font-weight: bold;
-    cursor: pointer;
-    color: #2A002A
-}
-
 button:disabled {
     color: #600000;
 }
