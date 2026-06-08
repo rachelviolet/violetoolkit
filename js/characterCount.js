@@ -98,7 +98,7 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
-fontSet();
+// fontSet();
 themeSet();
 console.log("characterCount.js loaded");
 
