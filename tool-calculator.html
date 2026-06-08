@@ -15,10 +15,11 @@
 
         <script src="./js/languageGlobal.js"></script>
         <script src="./js/theme.js"></script>
+        <script src="./js/toolsetTheme.js"></script>
         <script src="./js/ui.js"></script>
         <script src="./js/calculator.js" defer></script>
     </head>
-    <body onload="languageSwitch(false); themeSet(); document.getElementById('js-err').remove();">
+    <body onload="languageSwitch(false); themeSet(); document.getElementById('js-err').remove(); calcTypeChange(1); defaultSetupCalc()">
         <h1 id="js-err">(JAVASCRIPT_ERR) No JavaScript Detected</h1>
         <div id="top-right">
             <button id="l-eng" class="ub1" onclick="languageSwitch('en')">English</button>
@@ -27,6 +28,14 @@
 
         <button id="return" onclick="window.open('./index.html', '_self')">&lt;-- (ESC)</button>
         <div>
+            <div id="calctypes">
+                <select id="ct" onchange="calcTypeChange(document.getElementById('ct').value)">
+                    <option value="1">123, 14.3...</option>
+                    <option value="2">Kg, Km...</option>
+                    <option value="3">2026/12/25...2030/12/25</option>
+                    <option value="4">2026/12/25 +25d</option>
+                </select>
+            </div>
             <div class="calcs">
                 <div>
                     <label id="num1-text">Number 1:</label>
@@ -37,14 +46,72 @@
                     <input id="num2" type="number" value="1" class="num" onchange="Calculator.calculate(Calculator.memory)" onkeydown="Calculator.calculate(Calculator.memory)">
                 </div>
             </div>
-            <div class="calcs">
+            <div id="calctype-num" class="calcs">
                 <button id="math-plus" class="op" onclick="Calculator.calculate(1)">+</button>
                 <button id="math-minus" class="op" onclick="Calculator.calculate(2)">-</button>
                 <button id="math-multiplication" class="op" onclick="Calculator.calculate(3)">*</button>
                 <button id="math-division" class="op" onclick="Calculator.calculate(4)">/</button>
             </div>
-            <div>
-                <input id="results" type="number" disabled value="2" class="num">
+            <div id="calctype-con">
+                <select name="unit" id="convert-1">
+                    <option value="kl">Kl</option>
+                    <option value="hl">Hl</option>
+                    <option value="dal">Dal</option>
+                    <option value="l">L</option>
+                    <option value="dl">Dl</option>
+                    <option value="cl">Cl</option>
+                    <option value="ml">Ml</option>
+                    <option value="km">Km</option>
+                    <option value="hm">Hm</option>
+                    <option value="dam">Dam</option>
+                    <option value="m">M</option>
+                    <option value="dm">Dm</option>
+                    <option value="cm">Cm</option>
+                    <option value="mm">Mm</option>
+                    <option value="kg">Kg</option>
+                    <option value="hg">Hg</option>
+                    <option value="dag">Dag</option>
+                    <option value="g">G</option>
+                    <option value="dg">Dg</option>
+                    <option value="cg">Cg</option>
+                    <option value="mg">Mg</option>
+                </select>
+                <select name="unit" id="convert-2">
+                    <option value="kl">Kl</option>
+                    <option value="hl">Hl</option>
+                    <option value="dal">Dal</option>
+                    <option value="l">L</option>
+                    <option value="dl">Dl</option>
+                    <option value="cl">Cl</option>
+                    <option value="ml">Ml</option>
+                    <option value="km">Km</option>
+                    <option value="hm">Hm</option>
+                    <option value="dam">Dam</option>
+                    <option value="m">M</option>
+                    <option value="dm">Dm</option>
+                    <option value="cm">Cm</option>
+                    <option value="mm">Mm</option>
+                    <option value="kg">Kg</option>
+                    <option value="hg">Hg</option>
+                    <option value="dag">Dag</option>
+                    <option value="g">G</option>
+                    <option value="dg">Dg</option>
+                    <option value="cg">Cg</option>
+                    <option value="mg">Mg</option>
+                </select>
+            </div>
+            <div id="calctype-dat">
+                <button id="dat-add-1">Normal Count</button>
+                <button id="dat-add-2">Count Today</button>
+                <button id="dat-add-3">Count Today and Final Day</button>
+                <button id="dat-add-4">Count Final Day</button>
+            </div>
+            <div id="calctype-com">
+                <button id="dat-add">Add</button>
+                <button id="dat-sub">Subtract</button>
+            </div>
+            <div id="calctype-res">
+                <p id="results" class="num">...</p>
             </div>
         </div>
     </body>
