@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Raquel Violeta">
+        <meta name="description" content="Welcome To The Violet Toolkit Website, where information and tools are accessible to all! Te dou as boas-vindas ao site Ferramenta Violeta, onde informações e ferramentas são accessíveis para todas as pessoas!">
+        <meta name="keywords" content="Raquel Violeta, Rachel Violet, violetoolkit, Violet Toolkit, Ferramenta Violeta, ferramentavioleta, Toolkit Website">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rachel Violet</title>
+    
+        <link rel="icon" type="image/x-icon" href="./favicon.png">
+        <link rel="alternate" href="./en/index.html" hreflang="en-us"/>
+        <link rel="alternate" href="./pt/index.html" hreflang="pt-br"/>
+        <link rel="alternate" href="./es/index.html" hreflang="es-es"/>
+        <!-- <link rel="alternate" href="./ru/index.html" hreflang="ru-ru"/> -->
+    </head>
+</html>
+<body>
+    <script>
+        if (localStorage.getItem("violetool-lang") == "br") window.open("./pt/index.html", "_self");
+        else if (localStorage.getItem("violetool-lang") == "es") window.open("./es/index.html", "_self");
+        // else if (localStorage.getItem("violetool-lang") == "ru") window.open("./es/index.html", "_self");
+        else window.open("./en/index.html", "_self");
+    </script>
+</body>

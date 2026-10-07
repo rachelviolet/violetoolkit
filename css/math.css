@@ -1,0 +1,32 @@
+#mode *, #difficulty *, #start-math {display: block;}
+
+#mode, #difficulty {
+    display: table-cell;
+    margin: auto;
+}
+
+#difficulty * {
+    text-align: end;
+    margin-left: auto;
+}
+
+.diff5-input {
+    width: 250px;
+}
+
+#choices {
+    display: table;
+    width: 100%;
+    margin: auto;
+}
+
+#exercises {display: none;}
+
+#start-math {
+    display: block;
+    margin: auto;
+}
+
+#info {
+    font-style: italic;
+}

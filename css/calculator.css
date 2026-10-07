@@ -1,0 +1,16 @@
+.num, .op {
+    border: 0.3px solid #cf9fff;
+}
+
+div {
+    width: auto;
+}
+
+#results {
+    margin-top: 10px;
+    width: 350px;
+}
+
+.calcs {
+    display: inline-block;
+}

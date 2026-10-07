@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+p, h1, h2, h3, h4, h5, h6, a, button, input, ul, li {
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    /* width: 60%; */
+    width: fit-content;
+}
+
+h1 {
+    font-size: 175%;
+}
+h2 {
+    font-size: 150%;
+}
+h3 {
+    font-size: 143%;
+}
+h4, h5, h6 {
+    font-size: 125%;
+}
+
+p, button, a, ul, li {
+    font-size: 120%;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+main div {
+    border: 1px solid #000;
+    margin-bottom: 0.5%;
+}
+
+a {
+    color: #8f00ff;
+    margin-bottom: 1%;
+    font-size: 125%;
+}
+
+footer p, footer  a, footer div {
+    font-size: small;
+    display: inline;
+    width: fit-content;
+}
+
+.links {
+    display: block;
+}

@@ -1,0 +1,40 @@
+@font-face {
+    font-family: "OpenSans";
+    src: url("../../../font/open-sans.ttf");
+}
+
+body, p, h1, h2 {
+    font-family: "OpenSans";
+}
+
+div {
+    /* border: 1px solid #000; */
+}
+/* div {
+    border: 1px solid red !important;
+} */
+
+#content1, #top, #catalogue, #catalogue #laptops {
+    display: contents;
+}
+
+#main-content {
+    border: 0;
+}
+
+#icon {
+    width: 75px;
+    height: 75px;
+    transition: 0.1s;
+}
+
+#icon:hover {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+#catalogue {
+    /* position: absolute; */
+    top: 30%
+}

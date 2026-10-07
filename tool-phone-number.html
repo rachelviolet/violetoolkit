@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Raquel Violeta">
+        <meta name="description" content="Character counting web app">
+        <meta name="keywords" content="Raquel Violeta, Rachel Violet, violetoolkit, Violet Toolkit, Ferramenta Violeta, ferramentavioleta, Toolkit Website, foss app, foss phone number edit app, foss phone number edit, phone number edit">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ferramenta Violeta</title>
+
+        <link rel="icon" type="image/x-icon" href="./favicon.png">
+        <link href="./css/layout.css" rel="stylesheet">
+        <link href="./css/toolset.css" rel="stylesheet">
+        <link href="./css/phoneNumber.css" rel="stylesheet">
+
+        <script src="./js/languageGlobal.js"></script>
+        <script src="./js/theme.js"></script>
+        <script src="./js/ui.js"></script>
+        <script src="./js/phoneNumberFormat.js" defer></script>
+    </head>
+    <body onload="languageSwitch(false); themeSet(); document.getElementById('js-err').remove(); massUpdate();">
+        <h1 id="js-err">(JAVASCRIPT_ERR) No JavaScript Detected</h1>
+        <div id="top-right">
+            <button id="l-eng" class="ub1" onclick="languageSwitch('en')">English</button>
+            <button id="l-por" class="ub2" onclick="languageSwitch('br')">Português</button>
+        </div>
+
+        <button id="return" onclick="window.open('./index.html', '_self')">&lt;-- (ESC)</button>
+        <div>
+            <p id="copy-txt">Click a number to automatically copy it</p>
+            <p id="disclaimer">If you're having trouble with the Phone Number Formatting Tool (BR or CA/US), try using the number format as described in the examples.</p>
+            <h1>Brazil/Brasil (+55)</h1>
+            <div>
+                <p id="num-br-prefix-text">Extra Number Prefix</p>
+                <input id="num-br-prefix" value="" class="num" onchange="massUpdate()" onkeydown="massUpdate()">
+            </div>
+            <div>
+                <p id="num-br-text">Phone Number/Número de telefone<br>I.E: +55 (11) 98765-4321 /<br>+55 (11) 8765-4321 /<br>551187654321 /<br>5511987654321</p>
+                <input id="num-br" value="+55 (11) 98765-4321" class="num" onchange="massUpdate()" onkeydown="massUpdate()">
+            </div>
+            <p onclick="copyNumber('b1')" id="br-number-par">+55 (11) 99999-9999</p>
+            <p onclick="copyNumber('b2')" id="br-number-nospace-1">+5511999999999</p>
+            <p onclick="copyNumber('b3')" id="br-number-nospace-2">5511999999999</p>
+
+            <h1>Canada/(USA/EUA) (+1)</h1>
+            <div>
+                <p id="num-north-prefix-text">Extra Number Prefix</p>
+                <input id="num-north-prefix" class="num" onchange="massUpdate()" onkeydown="massUpdate()">
+            </div>
+            <div>
+                <p id="num-north-text">Phone Number/Número de telefone<br>I.E: +1 (123) 456-7890 /<br>11234567890</p>
+                <input id="num-north" value="+1 123 456-7890" class="num" onchange="massUpdate()" onkeydown="massUpdate()">
+            </div>
+            <p onclick="copyNumber('n1')" id="north-number-par">+1 (111) 999-9999</p>
+            <p onclick="copyNumber('n2')" id="north-number-nospace-1">+11119999999</p>
+            <p onclick="copyNumber('n3')" id="north-number-nospace-2">11119999999</p>
+
+            <h1>Other/Outro</h1>
+            <p id="disclaimer-2">Please, don't forget to use one of the two formats:<br>+xx xxx xxxx-xxxx<br>+xxxxxxxxxxxxx<br>
+                With the first set of digits being the country code, the second set of digits being the area/city/state code and the third set of digits being the phone number.<br>
+                Compatible with every country out there, including Brazil, Canada and the United States of America (USA / US)</p>
+            <div>
+                <div>
+                    <p id="num-other-prefix-text">Extra Number Prefix</p>
+                    <input id="num-other-prefix" class="num" onchange="massUpdate()" onkeydown="massUpdate()">
+                </div>
+                <div>
+                    <p id="num2-text">Country Code</p>
+                    <input id="num2" class="num" onchange="massUpdate()" onkeydown="massUpdate()">
+                </div>
+                <div>
+                    <p id="num3-text">Area Code</p>
+                    <input id="num3" class="num" onchange="massUpdate()" onkeydown="massUpdate()">
+                </div>
+                <div>
+                    <p id="num4-text">Phone Number</p>
+                    <input id="num4" class="num" onchange="massUpdate()" onkeydown="massUpdate()">
+                </div>
+                <div>
+                    <p id="num5-text">Extra Number Suffix</p>
+                    <input id="num5" class="num" onchange="massUpdate()" onkeydown="massUpdate()">
+                </div>
+            </div>
+            <div>
+                <p onclick="copyNumber('o1')" id="other-number-detail">Number with spaces and parenthesis</p>
+                <p onclick="copyNumber('o1')" id="other-number-par">Number with spaces and parenthesis</p>
+                <p onclick="copyNumber('o2')" id="other-number-no-space-1">Number without spaces separated</p>
+                <p onclick="copyNumber('o3')" id="other-number-no-space-2">Number without spaces</p>
+            </div>
+        </div>
+    </body>
+</html>

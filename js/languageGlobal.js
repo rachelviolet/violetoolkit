@@ -1,0 +1,61 @@
+'use strict'
+const Languages = {
+    "English": {
+        "update": function() {
+            document.getElementById("title").innerText = "PDF Line break fixer";
+            document.getElementById("label-2").innerText = "Content";
+        }
+    },
+    "Portuguese": {
+        "update": function() {
+            document.getElementById("title").innerText = "Consertador de quebra de linha de PDF";
+            document.getElementById("label-2").innerText = "Conteúdo";
+        }
+    }
+}
+
+function languageSwitch(change) {;
+    console.log("Writing words into elements!");
+    if (change !== false) {
+        console.log("Changing language.")
+        if (change == "en") {
+            Page.language = "en";
+        }
+        else if (change == "es") {
+            Page.language = "es";
+        }
+        else if (change == "br") {
+            Page.language = "br";
+        }
+    }
+    else {
+        Page.language = localStorage.getItem("violetool-lang");
+    }
+    switch (Page.language) {
+        case "en":
+        default:
+            console.log("Current Language: English (default option)");
+            localStorage.setItem("violetool-lang", "en");
+            try {
+                Languages.English.update();
+            }
+            catch {
+                console.debug("LANGUAGE-TRY-CATCH is a temporary solution! Promise I'll find a permanent solution EVENTUALLY!")
+            }
+            break;
+        case "es":
+            // console.log("Ídioma atual: Português Brasileiro");
+            // localStorage.setItem("violetool-lang", "br");
+            // break;
+        case "br":
+            console.log("Ídioma atual: Português Brasileiro");
+            localStorage.setItem("violetool-lang", "br");
+            try {
+                Languages.Portuguese.update();
+            }
+            catch {
+                console.debug("LANGUAGE-TRY-CATCH is a temporary solution! Promise I'll find a permanent solution EVENTUALLY!")
+            }
+            break;
+    }
+}

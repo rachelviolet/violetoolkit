@@ -1,0 +1,141 @@
+/* #top-left, #top-right, #bottom, #screen, #top, #bottom {position: fixed;} */
+/* #top-left, #top-right, #bottom, #screen, #top, #bottom, #top-left * {display: inline;} */
+#home-div, #info-div, #skill-div, #tools-div, #tool-t1-char-count, #settings-div, #about-div {display: none; width: 100%;}
+#settings-div *, a {display: block;}
+#tools-list * {display: block;}
+
+.skill-tab, #languages {
+    border: 1px solid #cf9fff;
+    border-radius: 5%;
+}
+
+#skills-summary {
+    display: none;
+}
+
+#skills-skills-list div {
+    display: inline-grid;
+    width: fit-content;
+}
+
+.ytv {display: block;}
+
+#titlev {
+    font-size: 10px;
+}
+
+#screen-alert {
+    display: none;
+}
+
+#top, #bottom {
+    position: absolute;
+    width: 100%;
+}
+
+#top {
+    top: 0;
+    border-bottom: #000 solid 0.25px;
+}
+
+#top * {
+    padding: 0;
+    margin: 0;
+}
+
+#menu {
+    position: absolute;
+    width: 50% !important;
+    left: 0%;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.menu {
+    width: 50% !important;
+    display: block !important;
+    padding-bottom: 10px;
+    text-align: left;
+    align-items: start;
+    align-self: start;
+    align-content: start;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#screen, #preparation {
+    position: absolute !important;
+    top: 0%;
+    left: 15%;
+    z-index: 2 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#languages {
+    margin-top: 25px;
+}
+#website-title, #skill-tab, .skill-tab {
+    width: fit-content !important;
+}
+
+#languages * {display: block;}
+
+#screen {
+    display: block;
+    z-index: -1;
+}
+
+#screen * {
+    width: auto;
+    padding: 2px;
+    margin: 5px;
+}
+
+#tools-list a {
+    display: block;
+}
+
+#top-left {
+    top: 0.5px;
+    left: 2px;
+}
+#top-right {
+    top: 0.5px;
+    right: 2px;
+}
+
+/* @media (orientation: landscape) {
+    #screen, #preparation {
+        width: 100%;
+    }
+} */
+
+@media (max-width: 450px) {
+    /* #top-left *, #top-right * {
+        overflow: hidden;
+        display: block;
+    }
+    #top-left, #top-right, #bottom, #screen, #top, #bottom {
+        position: relative;
+        display: block;
+    }
+    p, a {font-size: 16px !important;}
+    button {font-size: 6px !important;}
+    h1 {font-size: 10px !important;}
+    h3 {font-size: 8px;}
+    #screen {border: 0;}
+    #titlev {display: none;} */
+}
+@media (max-width: 639px) {
+    p, a, label, li {font-size: 10px !important;}
+    button {font-size: 10px !important;}
+    h1 {font-size: 14px !important;}
+    h3 {font-size: 12px;}
+    #titlev {font-size: 8px !important;}
+}
+@media (max-height: 680px) {
+    /* #screen {
+        top: 6.5%;
+        height: 81%;
+    } */
+}

@@ -1,0 +1,19 @@
+#screen {
+    background-color: #101010;
+    border-left: 1px solid #fafafa;
+    border-right: 1px solid #fafafa;
+}
+button:hover {
+    color: #101010 !important;
+    background-color: #fafafa;
+}
+a:hover {
+    color: #101010 !important;
+    background-color: #fafafa;
+}
+#languages {
+    width: 50% !important;
+}
+button, a {
+    width: 100%;
+}

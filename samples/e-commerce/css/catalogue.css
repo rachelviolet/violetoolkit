@@ -1,0 +1,33 @@
+#catalogue {
+    width: 50%;
+    text-align: center;
+}
+
+#laptop1 div, #laptop2 div {
+    width: auto;
+}
+
+#laptops {
+    display: block !important;
+    border: 1px solid #000;
+    left: 20%;
+    width: 50%;
+    height: 30%;
+    margin: auto;
+}
+
+#catalogue div:hover {
+    cursor: pointer;
+}
+
+#laptops div {
+    display: inline-block;
+    /* text-align: center; */
+    width: 35%;
+    text-align: center;
+    border: 0;
+
+    /* display: inline;
+    text-align: center;
+    width: 35%; */
+}

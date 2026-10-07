@@ -1,0 +1,61 @@
+'use strict'
+const namePortuguese = "Ferramenta Violeta";
+const nameEnglish = "Violet Toolkit"
+var version;
+const freezeMode = false;
+const fontList = [0, 1, 2]
+var FirstTime = localStorage.getItem("violetool-firsttime");
+
+if (localStorage.getItem("violetool-retro-font") == 1) Page.font = "VT323";
+else if (localStorage.getItem("violetool-retro-font") == 2) Page.font = "RobotoMono";
+
+else {
+    Page.font = "OpenSans";
+    localStorage.setItem("violetool-retro-font", 0);
+}
+
+function websiteLoaded(source) {
+    version = document.getElementById("version").textContent;
+    document.getElementById("titlev").textContent = version;
+    themeSet();
+    if (source == 1) {
+        document.getElementById("no-js-style").remove();
+
+        for(var i = 0; i < document.getElementsByClassName("js-exclusive").length; i++) {
+            document.getElementsByClassName("js-exclusive")[i].style.display = "inline";
+        }
+
+        let layoutCSS = document.createElement("link");
+        document.head.appendChild(layoutCSS);
+        layoutCSS.setAttribute("id", "layout")
+        layoutCSS.setAttribute("href", "../css/layout.css")
+        layoutCSS.setAttribute("rel", "stylesheet")
+
+        let screenCSS = document.createElement("link");
+        document.head.appendChild(screenCSS);
+        screenCSS.setAttribute("id", "screen-css")
+        screenCSS.setAttribute("href", "../css/screen.css")
+        screenCSS.setAttribute("rel", "stylesheet")
+
+        switchPage("home-div");
+
+        if (FirstTime == "143") {
+            skipThemeIntro();
+        }
+        else {
+            document.getElementById("preparation").style.display = "block";
+            document.getElementById("menu").style.display = "none";
+            document.getElementById("screen").style.display = "none";
+        }
+
+        console.log("JavaScript is ON! Hurray!");
+    }
+    else {
+        document.getElementById("js-err").style.display = "none";
+        console.warn("Modified code detected.");
+    }
+    // inputVisualCheck();
+    document.getElementById("home-div").style.display = "block";
+}
+
+console.log("main.js loaded");

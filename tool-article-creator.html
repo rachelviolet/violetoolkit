@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Raquel Violeta">
+        <meta name="description" content="Web article creation web app">
+        <meta name="keywords" content="Raquel Violeta, Rachel Violet, violetoolkit, Violet Toolkit, Ferramenta Violeta, ferramentavioleta, Toolkit Website, foss app, foss text editing app, foss text, text editing">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ferramenta Violeta</title>
+
+        <link rel="icon" type="image/x-icon" href="./favicon.png">
+        <link href="./css/layout.css" rel="stylesheet">
+        <link href="./css/toolset.css" rel="stylesheet">
+        <link href="./css/textEdit.css" rel="stylesheet">
+
+        <script src="./js/languageGlobal.js"></script>
+        <script src="./js/theme.js"></script>
+        <script src="./js/ui.js"></script>
+        <script src="./js/articleMaker.js" defer></script>
+    </head>
+    <body onload="languageSwitch(false); themeSet(); document.getElementById('js-err').remove();">
+        <h1 id="js-err">(JAVASCRIPT_ERR) No JavaScript Detected</h1>
+        <div id="top-right">
+            <button id="l-eng" class="ub1" onclick="languageSwitch('en')">English</button>
+            <button id="l-por" class="ub2" onclick="languageSwitch('br')">Português</button>
+        </div>
+
+        <button id="return" onclick="window.open('./index.html', '_self')">&lt;-- (ESC)</button>
+        <div class="inn-all-block">
+            <label id="label-1">Title / Título</label>
+            <input id="text-1" type="text">
+        </div>
+        <div class="inn-all-block">
+            <label id="label-2">Content / Conteúdo</label>
+            <textarea id="text-2"></textarea>
+        </div>
+        <div class="inn-all-block">
+            <label id="label-3">Author / Autor</label>
+            <input id="text-3" type="text">
+        </div>
+        <div class="inn-all-block">
+            <label id="label-4">Description / Descrição</label>
+            <textarea id="text-4"></textarea>
+        </div>
+        <div class="inn-all-block">
+            <label id="label-5">Keywords / Palavras-chave</label>
+            <textarea id="text-5"></textarea>
+        </div>
+        <div class="inn-all-block">
+            <label id="label-6">Keywords / Palavras-chave</label>
+            <input id="text-6" type="date">
+        </div>
+        <button id="create" onclick="writeArticle()">Create Article / Criar Artigo</button>
+        <hr>
+        <p id="code"></p>
+    </body>
+</html>
