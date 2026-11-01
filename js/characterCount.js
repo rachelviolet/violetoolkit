@@ -68,18 +68,18 @@ function languageSwitch(change) {;
         }
     }
     else {
-        Page.language = localStorage.getItem("violetool-lang");
+        Page.language = localStorage.getItem("violetoolkit-language");
     }
     switch (Page.language) {
         case "en":
         default:
             console.log("Current Language: English (default option)");
-            localStorage.setItem("violetool-lang", "en");
+            localStorage.setItem("violetoolkit-language", "en");
             Languages.English.update();
             break;
         case "br":
             console.log("Ídioma atual: Português Brasileiro");
-            localStorage.setItem("violetool-lang", "br");
+            localStorage.setItem("violetoolkit-language", "br");
             Languages.Portuguese.update();
             break;
     }

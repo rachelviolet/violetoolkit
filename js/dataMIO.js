@@ -5,7 +5,7 @@ function displayTool(tool) {
         document.getElementById("data-input-output").style.display = "inline";
         onTool = true;
     }
-    else if (tool = 2) {
+    else if (tool == 2) {
         document.getElementById("text-alter-tools").style.display = "inline";
         onTool = true;
     }

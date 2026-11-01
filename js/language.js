@@ -30,15 +30,15 @@ function langSet(change) {
         case "en":
         default:
             console.log("Current Language: English (default option)");
-            localStorage.setItem("violetool-lang", "en");
+            localStorage.setItem("violetoolkit-language", "en");
             break;
         case "es":
             // console.log("Ídioma atual: Português Brasileiro");
-            // localStorage.setItem("violetool-lang", "br");
+            // localStorage.setItem("violetoolkit-language", "br");
             // break;
         case "br":
             console.log("Ídioma atual: Português Brasileiro");
-            localStorage.setItem("violetool-lang", "br");
+            localStorage.setItem("violetoolkit-language", "br");
             break;
     }
 }

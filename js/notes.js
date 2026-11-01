@@ -17,17 +17,17 @@ function noteStart() {
 const Languages = {
     "English": {
         "tl2-note-load": "(F1) Load note",
-        "tl2-note-load2": "(F2) Load note (encrypted)",
+        "tl2-note-load2": "(F2) Load note (encoded)",
         "tl2-note-save": "(F3) Save note",
-        "tl2-note-save2": "(F4) Save note (encrypted)",
-        "encrypt-disclaimer": "UTF-8 bytes encryption"
+        "tl2-note-save2": "(F4) Save note (encoded)",
+        "encrypt-disclaimer": "UTF-8 bytes encoding is not cryptography."
     },
     "Portuguese": {
         "tl2-note-load": "(F1) Carregar anotação",
-        "tl2-note-load2": "(F2) Carregar anotação (criptografada)",
+        "tl2-note-load2": "(F2) Carregar anotação (codificada)",
         "tl2-note-save": "(F3) Salvar anotação",
-        "tl2-note-save2": "(F4) Salvar anotação (criptografada)",
-        "encrypt-disclaimer": "Criptografia de bytes UTF-8"
+        "tl2-note-save2": "(F4) Salvar anotação (codificada)",
+        "encrypt-disclaimer": "Codificação de bytes UTF-8 não é criptografia."
     }
 }
 
@@ -44,13 +44,13 @@ function languageSwitch(change) {;
         }
     }
     else {
-        Page.language = localStorage.getItem("violetool-lang");
+        Page.language = localStorage.getItem("violetoolkit-language");
     }
     switch (Page.language) {
         case "en":
         default:
             console.log("Current Language: English (default option)");
-            localStorage.setItem("violetool-lang", "en");
+            localStorage.setItem("violetoolkit-language", "en");
             document.getElementById("load-note").textContent = Languages.English["tl2-note-load"];
             document.getElementById("load-note2").textContent = Languages.English["tl2-note-load2"];
             document.getElementById("save-note").textContent = Languages.English["tl2-note-save"];
@@ -59,7 +59,7 @@ function languageSwitch(change) {;
             break;
         case "br":
             console.log("Ídioma atual: Português Brasileiro");
-            localStorage.setItem("violetool-lang", "br");
+            localStorage.setItem("violetoolkit-language", "br");
             document.getElementById("load-note").textContent = Languages.Portuguese["tl2-note-load"];
             document.getElementById("load-note2").textContent = Languages.Portuguese["tl2-note-load2"];
             document.getElementById("save-note").textContent = Languages.Portuguese["tl2-note-save"];
@@ -162,6 +162,6 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
-fontSet();
+// fontSet();
 themeSet();
 console.log("notes.js loaded");

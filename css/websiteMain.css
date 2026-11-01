@@ -1,20 +1,17 @@
 @font-face {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 p, h1, h2, h3, h4, h5, h6, a, button, input, ul, li {
-    margin: 0 auto;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    /* width: 60%; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: fit-content;
 }
 
 h1 {
-    font-size: 175%;
+    font-size: 200%;
 }
 h2 {
-    font-size: 150%;
+    font-size: 155%;
 }
 h3 {
     font-size: 143%;
@@ -24,7 +21,7 @@ h4, h5, h6 {
 }
 
 p, button, a, ul, li {
-    font-size: 120%;
+    font-size: 115%;
 }
 
 footer {
@@ -40,9 +37,13 @@ main div {
 }
 
 a {
-    color: #8f00ff;
+    color: #1a00aa;
     margin-bottom: 1%;
     font-size: 125%;
+}
+a:hover {
+    color: #cf00ff;
+    font-size: 130%;
 }
 
 footer p, footer  a, footer div {

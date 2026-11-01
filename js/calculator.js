@@ -144,6 +144,6 @@ function defaultSetupCalc() {
     Calculator.unitCalculate();
 }
 
-fontSet();
+// fontSet();
 themeSet();
 console.log("calculator.js loaded");

@@ -130,13 +130,13 @@ function languageSwitch(change) {;
         }
     }
     else {
-        Page.language = localStorage.getItem("violetool-lang");
+        Page.language = localStorage.getItem("violetoolkit-language");
     }
     switch (Page.language) {
         case "en":
         default:
             console.log("Current Language: English (default option)");
-            localStorage.setItem("violetool-lang", "en");
+            localStorage.setItem("violetoolkit-language", "en");
             English.settle();
             document.title = "Ferramenta Violeta - Math";
             document.getElementById("title-ops").textContent = English["title-ops"];
@@ -161,7 +161,7 @@ function languageSwitch(change) {;
             break;
         case "br":
             console.log("Ídioma atual: Português Brasileiro");
-            localStorage.setItem("violetool-lang", "br");
+            localStorage.setItem("violetoolkit-language", "br");
             Portuguese.settle();
             document.title = "Ferramenta Violeta - Matemática";
             document.getElementById("title-ops").textContent = Portuguese["title-ops"];

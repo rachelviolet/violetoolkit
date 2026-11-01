@@ -3,7 +3,7 @@ var Page = {
     current: "tool",
     font: localStorage.getItem("violetool-retro-font"),
     theme: undefined,
-    language: localStorage.getItem("violetool-lang"),
+    language: localStorage.getItem("violetoolkit-language"),
     fontColor: localStorage.getItem("violetool-color-fg"),
     backgroundColor: localStorage.getItem("violetool-color-bg"),
     bodyColor: localStorage.getItem("violetool-color-body"),
