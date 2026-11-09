@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Raquel Violeta">
+        <meta name="description" content="Welcome To The Violet Toolkit Website, where information and tools are accessible to all! Te dou as boas-vindas ao site Ferramenta Violeta, onde informações e ferramentas são accessíveis para todas as pessoas!">
+        <meta name="keywords" content="Raquel Violeta, Rachel Violet, violetoolkit, Violet Toolkit, Ferramenta Violeta, ferramentavioleta, Toolkit Website">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Webtoolkit - Article</title>
+    
+        <link rel="icon" type="image/x-icon" href="./favicon.png">
+        <script src="./js/articlePicker.js"></script>
+
+        <style>
+            a {
+                display: inline;
+                color: #111111;
+                overflow: hidden;
+            }
+            a:hover {
+                color: #8f00ff;
+                font-size: 105%
+            }
+            div.inner {
+                display: inline-flex;
+                width: 28%;
+                height: 40vh;
+                margin: 0 auto;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+            }
+            div.outer {
+                display: flex;
+                height: 40%;
+                justify-content: center;
+                align-items: center;
+                height: 90vh;
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+            #d-eng {
+                border: 1px solid #eeaaaa;
+                background-color: #ffbbbb;
+            }
+            #d-por {
+                border: 1px solid #aaeeaa;
+                background-color: #bbffbb;
+            }
+            #d-esp {
+                border: 1px solid #eeeeaa;
+                background-color: #ffffbb;
+            }
+            @media (max-height: 300px) OR (max-width: 600px) {
+                a, a:hover {
+                    font-size: 100%;
+                    margin-bottom: 5% !important;
+                }
+                div {
+                    padding: 0 !important;
+                    margin: 0 !important
+                }
+                div.inner {
+                    width: 100%;
+                    display: block;
+                }
+                div.outer {
+                    display:block
+                }
+            }
+        </style>
+    </head>
+</html>
+<body onload="articleDisplayName()">
+    <div class="outer">
+        <div class="inner" id="d-eng">
+            <a id="eng">I want to read [ARTICLENAME] in English</a>
+        </div>
+        <div class="inner" id="d-por">
+            <a id="por">Eu quero ler [ARTICLENAME] em português</a>
+        </div>
+        <div class="inner" id="d-esp">
+            <a id="esp">Quiero leer [ARTICLENAME] en español</a>
+        </div>
+    </div>
+</body>
